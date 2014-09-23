@@ -7,9 +7,18 @@ import java.sql.ResultSetMetaData;
 import java.sql.Statement;
 import java.util.*;
 
- 
+/**
+ * DatabaseVerification.java contains database operation methods
+ * 
+ * @author Abhay Bharti 
+ */
 public class DatabaseVerification {
  
+	/**
+	 * Purpose : 
+	 * @param firstName
+	 * @return
+	 */
 	public List<String> getSAVDatafromDB(String firstName){
 		
 		String db_connect_string="jdbc:sqlserver://EQXTESTSQL";
@@ -44,6 +53,11 @@ public class DatabaseVerification {
 	return resultSet;
    }
 	
+	/**
+	 * 
+	 * @param firstName
+	 * @return
+	 */
 	public List<String> getDataSourceIdfromDB(String firstName){
 		
 		String db_connect_string="jdbc:sqlserver://EQXTESTSQL";
@@ -66,7 +80,15 @@ public class DatabaseVerification {
       }
 	return resultSet;
    }
-	
+	/**
+	 * Purpose : 
+	 * @param db_connect_string
+	 * @param db_userid
+	 * @param db_password
+	 * @param queryString
+	 * @return
+	 * @throws Exception
+	 */
 	public ResultSet getDataFromDB(String db_connect_string, String db_userid, String db_password, String queryString) throws Exception{
 		 	Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		 	Connection conn = DriverManager.getConnection(db_connect_string, db_userid, db_password);

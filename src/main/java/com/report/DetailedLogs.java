@@ -9,6 +9,11 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.Reporter;
 
+/**
+ * DetailedLogs.java generates log file & contains method to write log
+ * @author Abhay Bharti
+ *
+ */
 public class DetailedLogs {
 	public static org.apache.log4j.Logger AppLogs = Logger
 			.getLogger(DetailedLogs.class);

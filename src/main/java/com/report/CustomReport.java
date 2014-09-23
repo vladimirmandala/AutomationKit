@@ -24,10 +24,9 @@ import org.testng.log4testng.Logger;
 import org.testng.xml.XmlSuite;
 
 /**
- * Reporter that generates a single-page HTML report of the suite test results.
- * <p>
+ * CustomReport.java that generates a single-page HTML report of the suite test results.
  * Based on TestNG built-in implementation: org.testng.reporters.EmailableReporter2
- * </p>
+ * @author Abhay Bharti
  */
 public class CustomReport implements IReporter {
 
@@ -42,6 +41,7 @@ public class CustomReport implements IReporter {
     protected List<SuiteResult> suiteResults = Lists.newArrayList();
     private StringBuilder buffer = new StringBuilder();
 
+    
     @Override
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
     	try {

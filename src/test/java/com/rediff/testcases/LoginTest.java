@@ -8,6 +8,11 @@ import com.exception.MyException;
 import com.rediff.pages.HomePage;
 import com.rediff.pages.MailPage;
 
+/**
+ * LoginTest.java is test class for login feature test
+ * @author AbhayB
+ *
+ */
 public class LoginTest extends TestBase {
 	
 	MailPage mailPage = null;
@@ -29,15 +34,12 @@ public class LoginTest extends TestBase {
 	public void sucessfullLoginTest() throws MyException {
 		AppLogs.info("sucessfullLoginTest() starts..");
 		mailPage.doLogin("abcd", "aaae");
-		// Assert.assertTrue(Dashboard.getWelcomeMessage(driver).getText().contains("Welcome"));
 		AppLogs.info("sucessfullLoginTest() ends..");
 	}
 
 	@Test
 	public void rightUserNameWrongPasswordLoginTest() throws MyException {
-
 		mailPage.doLogin("qamate", "qamaet");
-		// Assert.assertTrue(HomePage.getErrorMessage(driver).getText().contains("Invalid credentials"));
 	}
 
 	@Test

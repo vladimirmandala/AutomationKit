@@ -7,12 +7,16 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
-/*The use of this Class is to hit the Jira REST API to update the jira test case. 
+/*
+ * To be Corrected
+ * 
+ * The use of this Class is to hit the Jira REST API to update the jira test case. 
  * It has only one method "EditJiraStatus" to update the jira status and it 3 arguments.
  * Example Call
  *  	  JiraIntegration JI = new JiraIntegration();
  *		  JI.EditJiraStatus("TCM-6150","FAIL","2.10");
-Developed by: AMIT RAWAT
+Developed by: Abhay Bharti
+
 */
 public class JiraIntegration {
 	/*

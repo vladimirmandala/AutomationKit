@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Rediff Mail Execution Suite" parallel="classes" thread-count="2">
-	<parameter name="hubAddress" value="http://localhost:4444/wd/hub"></parameter>
+	<parameter name="hubAddress" value="localhost"></parameter>
 	<listeners>
 		<listener class-name="com.report.CustomReport" />
 		<listener class-name="com.report.CustomLogging" />

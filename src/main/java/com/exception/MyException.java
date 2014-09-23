@@ -1,7 +1,5 @@
 package com.exception;
 
-import org.openqa.selenium.NoSuchElementException;
-
 import com.report.DetailedLogs;
 
 

@@ -9,22 +9,41 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.TestListenerAdapter;
+
+/**
+ * CustomLogging.java contains method to write in logs for test pass, fail, skipp, success
+ * @author Abhay Bharti
+ *
+ */
+
 public class CustomLogging extends TestListenerAdapter implements ITestListener {
   
 	DetailedLogs AppLogs = new DetailedLogs();
-  //Called when the test-method execution starts  
+
+
+/**
+ * Purpose : Called when the test-method execution starts
+ * @param result 
+ */
   @Override
   public void onTestStart(ITestResult result) {
         AppLogs.info("Test method started: "+ result.getName()+ " and time is: "+getCurrentTime());
    }
 
-  //Called when the test-method execution is a success
+
+  /**
+   * Purpose : Called when the test-method execution is a success
+   * @param result
+   */
   @Override
   public void onTestSuccess(ITestResult result) {
        AppLogs.info("Test method success: "+ result.getName()+ "  and time is: "+getCurrentTime());
   }
-  
-  //Called when the test-method execution fails
+
+  /**
+   * Purpose : Called when the test-method execution fails
+   * @param result
+   */
   @Override
   public void onTestFailure(ITestResult result) {
 	  AppLogs.error("Test method failed: "+ result.getName()+ "  and time is: "+getCurrentTime());
@@ -34,32 +53,45 @@ public class CustomLogging extends TestListenerAdapter implements ITestListener 
 	  Reporter.log("<a href= /selenium-reports/html/" + result.getName() + ".jpg'> <img src='C:\\Users\\abhayb\\Pictures\\2014-04-24\\016.PNG'/> </a>");
   }
 
-  //Called when the test-method is skipped
+  /**
+   * Purpose : Called when the test-method is skipped
+   * @param result
+   */
   @Override
   public void onTestSkipped(ITestResult result) {
 	  AppLogs.info("Test method skipped: "+ result.getName()+ " and time is: "+getCurrentTime());    
   }
 
-  //Called when the test-method fails within success percentage
+  /**
+   * Purpose :  Called when the test-method fails within success percentage 
+   */
   @Override
   public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-    // Leaving blank
+    // TO DO
     
   }
 
-  //Called when the test in xml suite starts
+  /**
+   * Purpose : Called when the test in xml suite starts
+   * @param context
+   */
   @Override
   public void onStart(ITestContext context) {
 	  AppLogs.info("Test in a suite started: "+ context.getName()+ " and time is: "+getCurrentTime());
   }
 
-  //Called when the test in xml suite finishes
+  /**
+   * Purpose : Called when the test in xml suite finishes
+   * @param context
+   */
   @Override
   public void onFinish(ITestContext context) {
 	  AppLogs.info("Test in a suite finished: "+ context.getName()+ " and time is: "+getCurrentTime());
   }
   
-  //Returns the current time when the method is called
+  /**
+   * Purpose : Returns the current time when the method is called
+   */
   public String getCurrentTime(){
 	  DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss:SSS");
 	  Date dt = new Date();

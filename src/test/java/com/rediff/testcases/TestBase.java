@@ -17,11 +17,13 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import com.exception.MyException;
@@ -32,7 +34,12 @@ import com.util.BrowserType;
 import com.util.CommonFunctionLib;
 import com.util.Reader;
 
-
+/**
+ * TestBase.java is inherited by all test classes & contains method to setup, teardown, load test data, set capabilities etc.
+ * 
+ * @author Abhay Bharti
+ * 
+ */
 public class TestBase {
 
 	private static ResourceBundle _prop = ResourceBundle.getBundle("Env");
@@ -44,11 +51,17 @@ public class TestBase {
 	
 	CaptureBrowserScreenShot captureBrowserScreenShot = new CaptureBrowserScreenShot();
 	
+	/**
+	 * Purpose : This method starts browser on available node & connect wih HUB 
+	 * @param hubAddress
+	 * @throws MalformedURLException
+	 */
 	@BeforeClass
 	@Parameters("hubAddress")
-	public void startDriver(String hubAddress) throws MalformedURLException {
+	public void startDriver(@Optional("localhost") String hubAddress) throws MalformedURLException {
 		AppLogs.info("startDriver starts..");
-		driver = new RemoteWebDriver(new URL(hubAddress), generateDesiredCapabilities(browserType));
+		driver = new RemoteWebDriver(new URL("http://" + hubAddress+ ":" + "4444/wd/hub"), generateDesiredCapabilities(browserType));
+		
 		AppLogs.debug("hubAddress : "+ hubAddress + "browserType : " +browserType);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -56,6 +69,9 @@ public class TestBase {
 		AppLogs.info("startDriver ends..");
 	}
 
+	/**
+	 * Purpose : This method close/quit driver once test class execution is complete
+	 */
 	@AfterClass
 	public void stopDriver() {
 		AppLogs.info("stopDriver starts..");
@@ -64,6 +80,11 @@ public class TestBase {
 		AppLogs.info("stopDriver ends..");
 	}
 	
+	/**
+	 * Purpose : This method reads data from TestDate file for respective test case
+	 * @param testName
+	 * @return
+	 */
 	@DataProvider
 	public Object[][] readData(Method testName){
 		AppLogs.info("readData starts..");
@@ -71,6 +92,9 @@ public class TestBase {
 		
 	}
 
+	/**
+	 * Purpose : This method loads browser enum from .properties file & BrowserType class before suite execution starts
+	 */
 	@BeforeSuite
 	public void setUpTest() {
 		AppLogs.info("setUpTest starts..");
@@ -89,16 +113,30 @@ public class TestBase {
 	}
 
 
+	/**
+	 * Purpose : This method performs tearDown after a test case execution & takes browser screen shot in case of test fail
+	 * @param result
+	 * @throws MyException
+	 * @throws IOException
+	 */
 	@AfterMethod
-	public void TearDown() throws MyException, IOException {
+	public void TearDown(ITestResult result) throws MyException, IOException {
 		AppLogs.info("TearDown starts..");
+		if (!result.isSuccess()){
+			captureBrowserScreenShot.embedScreenShotIntoReport(driver);
+		}
 		if (!(driver.getCurrentUrl()=="http://www.rediff.com/")){
 			driver.get("http://www.rediff.com/");
 		}
-		//captureBrowserScreenShot.embedScreenShotIntoReport(driver);
+		
 		AppLogs.info("TearDown ends..");
 	}
 
+	/**
+	 * Purpose : This method set capability in browser
+	 * @param capabilityType
+	 * @return
+	 */
 	private DesiredCapabilities generateDesiredCapabilities(BrowserType capabilityType) {
 		AppLogs.info("generateDesiredCapabilities starts..");
 		DesiredCapabilities capabilities;
