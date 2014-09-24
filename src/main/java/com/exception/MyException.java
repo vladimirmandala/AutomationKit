@@ -1,5 +1,8 @@
 package com.exception;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+
 import com.report.DetailedLogs;
 
 
@@ -37,6 +40,27 @@ public class MyException extends Exception {
 		AppLogs.error(this.message);
 	}
 	
+	/**
+	 * Purpose : overloaded constructor to accept custom message and exception object
+	 * @param message
+	 * @param exe
+	 */
+	public MyException(String message , MalformedURLException exeception) {
+		super(message);
+		this.message = message + exeception.getMessage();
+		AppLogs.error(this.message);
+	}
+	
+	/**
+	 * Purpose : overloaded constructor to accept custom message and exception object
+	 * @param message
+	 * @param exe
+	 */
+	public MyException(String message , IOException exeception) {
+		super(message);
+		this.message = message + exeception.getMessage();
+		AppLogs.error(this.message);
+	}
 	/**
 	 * Purpose : This is an overridden method which is used to fetch the custom exception message
 	 */

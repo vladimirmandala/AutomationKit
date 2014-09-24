@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.Reporter;
@@ -15,8 +16,9 @@ import org.testng.Reporter;
  *
  */
 public class DetailedLogs {
-	public static org.apache.log4j.Logger AppLogs = Logger
-			.getLogger(DetailedLogs.class);
+	//public static org.apache.log4j.Logger AppLogs = Logger.getLogger(DetailedLogs.class);
+	
+	public static Logger AppLogs = Logger.getLogger(DetailedLogs.class); 
 
 	/**
 	 * Purpose : This method setup Apache Logger

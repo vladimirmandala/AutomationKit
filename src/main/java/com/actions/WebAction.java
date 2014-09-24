@@ -1,7 +1,10 @@
 package com.actions;
 
+import java.io.IOException;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -9,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
 
 import com.exception.MyException;
 import com.report.DetailedLogs;
@@ -45,7 +49,7 @@ public abstract class WebAction {
 	 * @param attribute
 	 */
 	public void ReadFromWebElement(WebElement object, String attribute) {
-		AppLogs.info("ReadFromWebElement starts..");
+		AppLogs.info("ReadFromWebElement starts.. "+ "1st Arg : "+object.getText() + "2nd Arg : "+ attribute);
 		object.getAttribute(attribute);
 		AppLogs.info("ReadFromWebElement ends..");
 	}
@@ -56,7 +60,7 @@ public abstract class WebAction {
 	 * @param input
 	 */
 	public void EnterValueText(WebElement object,String input) {
-		AppLogs.info("EnterValueText starts..");
+		AppLogs.info("EnterValueText starts.."+ "1st Arg : "+object.getTagName() + "2nd Arg : "+ input);
 		object.clear();
 		object.sendKeys(input);
 		AppLogs.info("EnterValueText ends..");
@@ -68,7 +72,7 @@ public abstract class WebAction {
 	 * @param input
 	 */
 	public void EnterValueTextWithShit(WebElement object,String input) {
-		AppLogs.info("EnterValueTextWithShit starts..");
+		AppLogs.info("EnterValueTextWithShit starts.." + "1st Arg : "+object.getTagName() + "2nd Arg : "+ input);
 		object.sendKeys(Keys.chord(Keys.SHIFT,input));
 		AppLogs.info("EnterValueTextWithShit ends..");
 	}
@@ -80,7 +84,7 @@ public abstract class WebAction {
 	 * @param ProprertyName
 	 */
 	public void ReadCSSFromWebElement(WebElement object, String ProprertyName) {
-		AppLogs.info("ReadCSSFromWebElement starts..");
+		AppLogs.info("ReadCSSFromWebElement starts.."+ "1st Arg : "+object.getTagName() + "2nd Arg : "+ ProprertyName);
 		object.getCssValue(ProprertyName);
 		// getCssValue("font-family"));
 		// getCssValue("background-color"));
@@ -93,7 +97,7 @@ public abstract class WebAction {
 	 * @param object
 	 */
 	public void WeGetLocation(WebElement object) {
-		AppLogs.info("WEGetLocation starts..");
+		AppLogs.info("WEGetLocation starts.."+ "1st Arg : "+object.getTagName());
 		object.getLocation();
 		AppLogs.info("WEGetLocation ends..");
 	}
@@ -103,7 +107,7 @@ public abstract class WebAction {
 	 * @param object
 	 */
 	public void WeGetSize(WebElement object) {
-		AppLogs.info("ReadFromWebElement starts..");
+		AppLogs.info("ReadFromWebElement starts.."+ "1st Arg : "+object.getTagName());
 		object.getSize();
 		AppLogs.info("WeElement ends..");
 	}
@@ -114,7 +118,7 @@ public abstract class WebAction {
 	 * @param object
 	 */
 	public void WeGetText(WebElement object) {
-		AppLogs.info("WeGetText starts..");
+		AppLogs.info("WeGetText starts.."+ "1st Arg : "+object.getTagName());
 		object.getText();
 		AppLogs.info("WeGetText ends..");
 	}
@@ -125,7 +129,7 @@ public abstract class WebAction {
 	 * @param object
 	 */
 	public void WeGetTagName(WebElement object) {
-		AppLogs.info("WeGetTagName starts..");
+		AppLogs.info("WeGetTagName starts.."+ "1st Arg : "+object.getTagName() );
 		object.getTagName();
 		AppLogs.info("WeGetTagName ends..");
 	}
@@ -135,7 +139,7 @@ public abstract class WebAction {
 	 * @param object
 	 */
 	public void iSElementDisplayed(WebElement object) {
-		AppLogs.info("iSElementDisplayed starts..");
+		AppLogs.info("iSElementDisplayed starts.."+ "1st Arg : "+object.getTagName());
 		object.isDisplayed();
 		AppLogs.info("iSElementDisplayed ends..");
 	}
@@ -145,7 +149,7 @@ public abstract class WebAction {
 	 * @param object
 	 */
 	public void iSElementEnabled(WebElement object) {
-		AppLogs.info("iSElementEnabled starts..");
+		AppLogs.info("iSElementEnabled starts.."+ "1st Arg : "+object.getTagName());
 		object.isEnabled();
 		AppLogs.info("iSElementEnabled ends..");
 	}
@@ -156,7 +160,7 @@ public abstract class WebAction {
 	 * @param object
 	 */
 	public void WeIsSelected(WebElement object) {
-		AppLogs.info("WeIsSelected starts..");
+		AppLogs.info("WeIsSelected starts.."+ "1st Arg : "+object.getTagName());
 		object.isSelected();
 		AppLogs.info("WeIsSelected ends..");
 	}
@@ -170,7 +174,7 @@ public abstract class WebAction {
 	 * @param ToYPoint
 	 */
 	public void WeMouseOffset(WebElement object, int ToXPoint, int ToYPoint) {
-		AppLogs.info("WeMouseOffset starts..");
+		AppLogs.info("WeMouseOffset starts.."+ "1st Arg : "+object.getTagName() + "2nd Arg : "+ToXPoint+ "3rd Arg : "+ToYPoint);
 		builder.moveByOffset(object.getLocation().getX() + ToXPoint, object.getLocation().getY() + ToYPoint);
 		builder.perform();
 		AppLogs.info("WeMouseOffset ends..");
@@ -183,7 +187,7 @@ public abstract class WebAction {
 	 * @param object
 	 */
 	public void WeMouseLeftClick(WebElement object) {
-		AppLogs.info("WeMouseLeftClick starts..");
+		AppLogs.info("WeMouseLeftClick starts.."+ "1st Arg : "+object.getTagName());
 		builder.moveByOffset(object.getLocation().getX() + 1,object.getLocation().getY() + 1).click();
 		builder.perform();
 		AppLogs.info("WeMouseLeftClick ends..");
@@ -198,7 +202,7 @@ public abstract class WebAction {
 	 * @param toYposition
 	 */
 	public void WeMouseLeftClick(WebElement object, int toXposition, int toYposition) {
-		AppLogs.info("WeMouseLeftClick starts..");
+		AppLogs.info("WeMouseLeftClick starts.."+ "1st Arg : "+object.getTagName() + "2nd Arg : "+toXposition+ "3rd Arg : "+toYposition);
 		builder.moveByOffset(object.getLocation().getX() + toXposition,object.getLocation().getY() + toXposition).click();
 		builder.perform();
 		AppLogs.info("WeMouseLeftClick ends..");
@@ -209,7 +213,7 @@ public abstract class WebAction {
 	 * @param object
 	 */
 	public void ClickOnWebElement(WebElement object) {
-		AppLogs.info("ClickOnWebElement starts..");
+		AppLogs.info("ClickOnWebElement starts.."+ "1st Arg : "+object.getTagName());
 		builder.click(object);
 		builder.build().perform();
 		AppLogs.info("ClickOnWebElement ends..");
@@ -221,7 +225,7 @@ public abstract class WebAction {
 	 * @param object
 	 */
 	public void ClickAndHold(WebElement object) {
-		AppLogs.info("ClickAndHold starts..");
+		AppLogs.info("ClickAndHold starts.."+ "1st Arg : "+object.getTagName());
 		builder.moveByOffset(200, 20).clickAndHold().moveByOffset(120, 0).perform();
 		AppLogs.info("ClickAndHold ends..");
 	}
@@ -233,7 +237,7 @@ public abstract class WebAction {
 	 * @param target
 	 */
 	public void ClickAndHoldAndRelease(WebElement source, WebElement target) {
-		AppLogs.info("ClickAndHoldAndRelease starts..");
+		AppLogs.info("ClickAndHoldAndRelease starts.."+ "1st Arg : "+source.getTagName()+ " 2nd Arg : "+target.getTagName());
 		builder.clickAndHold(source).release(target).perform();
 		AppLogs.info("ClickAndHoldAndRelease ends..");
 	}
@@ -243,7 +247,7 @@ public abstract class WebAction {
 	 * @param object
 	 */
 	public void moveToElement(WebElement object) {
-		AppLogs.info("moveToElement starts..");
+		AppLogs.info("moveToElement starts.." +"1st Arg : "+object.getTagName());
 		builder.moveToElement(object).clickAndHold().moveByOffset(120, 0).perform();
 		AppLogs.info("moveToElement ends..");
 	}
@@ -253,7 +257,7 @@ public abstract class WebAction {
 	 * @param object
 	 */
 	public void dragMe(WebElement object) {
-		AppLogs.info("dragMe starts..");
+		AppLogs.info("dragMe starts.."+"1st Arg : "+object.getTagName());
 		builder.dragAndDropBy(object, 300, 200).perform();
 		AppLogs.info("dragMe ends..");
 	}
@@ -275,7 +279,7 @@ public abstract class WebAction {
 	 * @param object
 	 */
 	public void DoubleClickOnWe(WebElement object) {
-		AppLogs.info("DoubleClickOnWe starts..");
+		AppLogs.info("DoubleClickOnWe starts.."+"1st Arg : "+object.getTagName());
 		builder.moveToElement(object).doubleClick().perform();
 		AppLogs.info("DoubleClickOnWe ends..");
 	}
@@ -287,17 +291,46 @@ public abstract class WebAction {
 	 * @param item4
 	 */
 	public void RightClickOnWe(WebElement object, String item4) {
-		AppLogs.info("RightClickOnWe starts..");
+		AppLogs.info("RightClickOnWe starts.."+"1st Arg : "+object.getTagName());
 		builder.contextClick(object).click(driver.findElement(By.name("Item 4"))).perform();
 		AppLogs.info("RightClickOnWe ends..");
 	}
 	
+	
 	/**
-	 * 
-	 * @param link
+	 * Purpose : returns HTTP code for a given URL
+	 * @param urlString
 	 * @return
 	 */
-	
+	public boolean getResponseCode(String urlString) throws MyException{
+		AppLogs.info("getResponseCode starts.. for URL : "+urlString);
+	    boolean isValid = false;
+	    int code = 0;
+        try {
+            URL url = new URL(urlString);
+            HttpURLConnection httpURLConnect = (HttpURLConnection)url.openConnection();
+            httpURLConnect.setRequestMethod("GET");
+            httpURLConnect.connect();
+            code = httpURLConnect.getResponseCode();
+            if (code == 200){
+            	AppLogs.debug(urlString +" - "+httpURLConnect.getResponseMessage());
+            	isValid = true;
+            }
+            if(code == HttpURLConnection.HTTP_NOT_FOUND)  
+            {
+            	AppLogs.debug(urlString +" - "+httpURLConnect.getResponseMessage() + " - "+ HttpURLConnection.HTTP_NOT_FOUND);
+            	isValid = true;
+            }
+         } catch (MalformedURLException e) {
+            throw new MyException("MalformedURLException Error : "+e +" , "+ urlString);
+         } catch (IOException e) {
+        	  throw new MyException("IOException Error : "+e+" , "+ urlString);
+         } catch (Exception e) {
+        	  throw new MyException("Exception Error : "+e+" , "+ urlString);
+         }
+        AppLogs.info("getResponseCode ends..");
+        return isValid;
+    }
 	
 	/**
 	 * Purpose : This method is useful when you have multiple links on a page and instead of click each link and verifying the page 
@@ -307,39 +340,112 @@ public abstract class WebAction {
 	 * @throws MyException
 	 */
 	public boolean isFileDownloadable(String link) throws MyException{
-		AppLogs.info("isFileDownloadable starts..");
-		int code = 0;
+		AppLogs.info("isFileDownloadable starts.. for URL : "+link);
+		boolean isValid = false;
 		AppLogs.debug("Link: " + link);
 		try {
-			URL url = new URL(link);
-			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-			connection.setRequestMethod("GET");
-			code = connection.getResponseCode();
+			if (getResponseCode(link)){
+				isValid = true;
+			}
 		} catch (Exception e) {
-			AppLogs.error("isFileDownloadable ends.."+e);
-			return false;
+			throw new MyException("isFileDownloadable ends.."+e);
 		}
-		AppLogs.debug("code : " + code);
 		AppLogs.info("isFileDownloadable ends..");
-		return code == 200 || code == 302;
+		return isValid;
 	}
 		
+	
+
+	/**
+	 * Purpose : Verifies if link on a given page is broken
+	 * @throws MyException
+	 */
+	public String isLinkBroken() throws MyException{
+	   AppLogs.info("isLinkBroken starts.. for URL : "+driver.getCurrentUrl());
+	   String link = null;
+       List <WebElement>linksList = driver.findElements(By.tagName("a")); 
+        for(WebElement linkElement: linksList){
+          link =linkElement.getAttribute("href");
+          if(link!=null){
+            if (getResponseCode(link)){
+            	Reporter.log(link + " is works fine");
+            }else {
+            	Reporter.log(link + " is broken");
+            }
+          }
+      }
+        AppLogs.info("isLinkBroken starts.. for URL : "+driver.getCurrentUrl());
+      return link;
+  } 
+  
+	/**
+	 * Purpose : Parameterize form of isLinkBroken method, verifies if link on a given page is broken
+	 * @throws MyException
+	 */
+	public boolean isLinkBroken(String urlString) throws MyException{
+	   AppLogs.info("isLinkBroken starts .. for URL : "+ urlString);
+	    boolean isValid = false;
+	      if(urlString!=null){
+            if (getResponseCode(urlString)){
+            	isValid = true;
+            }else {
+            	isValid = false;
+            }
+          }
+	    AppLogs.info("isLinkBroken ends .. for URL : "+ urlString);
+      return isValid;
+  } 
+	
 	/**
 	 * Purpose : This method switches to browser based on provided URL
 	 * @param currentUrl
 	 */
 	public void SwitchToBrowser(String currentUrl) {
-		AppLogs.info("ReadFromWebElement starts..");
+		AppLogs.info("ReadFromWebElement starts.. for URL : "+currentUrl);
 		for(String winHandle :driver.getWindowHandles()){
 			driver.switchTo().window(winHandle);
 			if(driver.getCurrentUrl().equals(currentUrl)){
-				System.out.println("You are in required window : " + driver.getCurrentUrl());
-				AppLogs.debug("You are in required window : " + driver.getCurrentUrl());
+				AppLogs.info("You are in required window : " + driver.getCurrentUrl());
 				break;
             } 
 			else{
-				AppLogs.debug("URL of the page after - switchingTo: " + driver.getCurrentUrl());
+				AppLogs.error("URL of the page after - switchingTo: " + driver.getCurrentUrl());
 			}
 		}
 	}
+	
+	/**
+	 * Purpose : Download a file
+	 */
+	/**
+	Load the page
+	Get the URL of the first download link
+	Perform a GET action against the URL with an HTTP library
+	Store the response
+	Assert that the file type is correct
+	Assert that the file is not empty
+	*/
+	
+	
+	/**
+	 * Purpose : Upload a file
+	 */
+	/**
+	 * Load the page
+		Find the form element that stores the path of the file we want to upload
+		Inject the path of the file we want to upload
+		Find the form submit button and click it
+		Grab the text from the uploaded file list that gets rendered
+		Assert that the uploaded file is what we expect
+	 */
+	
+	/**
+	 * 
+	 */
+	/**
+	 * Find all images on the page
+Iterate through each image, finding a match for the src attribute with a 404 status code
+Store the broken images in a collection
+Assert that the broken images collection is empty
+	 */
 }
