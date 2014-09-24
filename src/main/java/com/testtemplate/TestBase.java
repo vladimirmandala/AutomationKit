@@ -149,16 +149,19 @@ public class TestBase {
 			capabilities.setCapability("requireWindowFocus", true);
 			capabilities.setBrowserName("iexplore"); 
 			capabilities.setPlatform(org.openqa.selenium.Platform.WINDOWS);
+			capabilities.setCapability("takesScreenShot", true);
 			//capability.setVersion("");
 			break;
 		case SAFARI:
 			capabilities = DesiredCapabilities.safari();
 			capabilities.setCapability("safari.cleanSession", true);
+			capabilities.setCapability("takesScreenShot", true);
 			//capability.setVersion("");
 			break;
 		case OPERA:
 			capabilities = DesiredCapabilities.opera();
 			capabilities.setCapability("opera.arguments", "-nowin -nomail");
+			capabilities.setCapability("takesScreenShot", true);
 			//capability.setVersion("");
 			break;
 		case CHROME:
@@ -167,11 +170,14 @@ public class TestBase {
 			HashMap<String, String> chromePreferences = new HashMap<String, String>();
 			chromePreferences.put("profile.password_manager_enabled", "false");
 			capabilities.setCapability("chrome.prefs", chromePreferences);
+			capabilities.setCapability("takesScreenShot", true);
 			//capability.setVersion("");
 			break;
 		case FIREFOX:
 			capabilities = DesiredCapabilities.firefox();
-			capabilities.setBrowserName("firefox"); 
+			capabilities.setBrowserName("firefox");
+			capabilities.setCapability("takesScreenShot", true);
+			capabilities.setCapability("acceptSSLCerts", true);
 			capabilities.setPlatform(org.openqa.selenium.Platform.ANY);
 			//capability.setVersion("");
 			break;

@@ -15,9 +15,10 @@ public class HomePageTest extends TestBase{
 	
 	@BeforeMethod
 	public void HomePageTestSetUp(Method testName){
-	  try{
-		homePage = PageFactory.initElements(driver, HomePage.class);
-		AppLogs.info("LoginTestSetUp ends..");
+		AppLogs.info("HomePageTestSetUp class ends..");
+		try{
+			homePage = PageFactory.initElements(driver, HomePage.class);
+			AppLogs.info("HomePageTestSetUp class ends..");
 		}catch(Exception e){
 			AppLogs.error("LoginTestSetup()"+e);
 		}

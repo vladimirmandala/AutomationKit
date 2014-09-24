@@ -142,7 +142,7 @@ public class CommonFunctionLib {
 	}
 
 	/**
-	 * Purpose : set focus to newly opend browser
+	 * Purpose : set focus to newly opened browser
 	 */
 	public void SetWindowHandles() {
 		try {
@@ -272,25 +272,7 @@ public class CommonFunctionLib {
 		return doFullReset;
 	}
 
-	public boolean AcceptAlert() {
-		try {
-			Alert alert = driver.switchTo().alert();
-			alert.accept();
-			return true;
-		} catch (Exception e) {
-			return false;
-		}
-	}
-
-	public boolean declineAlert() {
-		try {
-			Alert alert = driver.switchTo().alert();
-			alert.dismiss();
-			return true;
-		} catch (Exception e) {
-			return false;
-		}
-	}
+	
 
 	public void SwipeRight(WebElement element) {
 		// Executing swipe on in the case of iOS simulators. Skipping it for

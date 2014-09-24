@@ -61,6 +61,13 @@ public class MyException extends Exception {
 		this.message = message + exeception.getMessage();
 		AppLogs.error(this.message);
 	}
+	
+	public MyException(String message , IllegalArgumentException exeception) {
+		super(message);
+		this.message = message + exeception.getMessage();
+		AppLogs.error(this.message);
+	}
+	
 	/**
 	 * Purpose : This is an overridden method which is used to fetch the custom exception message
 	 */

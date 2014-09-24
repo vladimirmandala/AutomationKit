@@ -6,6 +6,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -67,14 +68,18 @@ public abstract class WebAction {
 	}
 
 	/**
-	 * Purpose : This method Type special key like Shift,Backspace, Enter, Tab, Shift,
+	 * Purpose : Parameterized version, This method Type special key like Shift,Backspace, Enter, Tab, Shift along with text
 	 * @param object
 	 * @param input
 	 */
-	public void EnterValueTextWithShit(WebElement object,String input) {
+	public void EnterValueText(WebElement object,Keys theKey, String input) throws MyException{
 		AppLogs.info("EnterValueTextWithShit starts.." + "1st Arg : "+object.getTagName() + "2nd Arg : "+ input);
-		object.sendKeys(Keys.chord(Keys.SHIFT,input));
-		AppLogs.info("EnterValueTextWithShit ends..");
+		 try{
+			 object.sendKeys(Keys.chord(Keys.SHIFT,input));
+		 }catch(IllegalArgumentException e){
+			 throw new MyException("WebAction -> EnterValueText(WebElement object,Keys theKey, String input)" + e);
+		 }
+			 AppLogs.info("EnterValueTextWithShit ends..");
 	}
 	
 	/**
@@ -396,8 +401,9 @@ public abstract class WebAction {
       return isValid;
   } 
 	
+	//---------------------Working on Multiple Browser/Switching Frame/Handling Alert-------------------------
 	/**
-	 * Purpose : This method switches to browser based on provided URL
+	 * Purpose : This method switches to browser based on browser URL
 	 * @param currentUrl
 	 */
 	public void SwitchToBrowser(String currentUrl) {
@@ -411,6 +417,53 @@ public abstract class WebAction {
 			else{
 				AppLogs.error("URL of the page after - switchingTo: " + driver.getCurrentUrl());
 			}
+		}
+	}
+	
+	/**
+	 * Purpose : switch target to a Frame of a browser
+	 * @param frameIndex
+	 */
+	public void SwitchToFrame(String frameIndex){
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame(0);      
+	}      
+	
+	/**
+	 * Purpose : switch target to a second Frame of a browser where target is set to first frame
+	 * @param frameIndex
+	 */
+	public void SwitchToFrame(String frameIndex1,String frameIndex2){
+		driver.switchTo().frame(frameIndex1);
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame(frameIndex2);      
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public boolean AcceptAlert() {
+		try {
+			Alert alert = driver.switchTo().alert();
+			alert.accept();
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public boolean declineAlert() {
+		try {
+			Alert alert = driver.switchTo().alert();
+			alert.dismiss();
+			return true;
+		} catch (Exception e) {
+			return false;
 		}
 	}
 	
