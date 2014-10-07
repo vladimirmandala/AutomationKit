@@ -97,7 +97,6 @@ public class CommonFunctionLib {
 	 */
 	public CommonFunctionLib(WebDriver driver) {
 		this.driver = driver;
-		initPropertiesFile();
 		locationServiceEnabled = Boolean.parseBoolean(properties
 				.getProperty("locationServiceEnabled").trim().toLowerCase());
 		doFullReset = true;
@@ -110,19 +109,7 @@ public class CommonFunctionLib {
 
 	}
 
-	/**
-	 * Purpose : Loads qa_config.propertis file
-	 */
-	private void initPropertiesFile() {
 
-		properties = new Properties();
-		try {
-			FileReader reader = new FileReader("qa_config.properties");
-			properties.load(reader);
-		} catch (IOException e) {
-			System.out.println("Failed to load Properties file");
-		}
-	}
 
 	/**
 	 * Purpose : Set implicit wait to dirver object

@@ -3,6 +3,9 @@ package com.exception;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.remote.UnreachableBrowserException;
+
 import com.report.DetailedLogs;
 
 
@@ -67,6 +70,19 @@ public class MyException extends Exception {
 		this.message = message + exeception.getMessage();
 		AppLogs.error(this.message);
 	}
+	
+	public MyException(String message , NoAlertPresentException exeception) {
+		super(message);
+		this.message = message + exeception.getMessage();
+		AppLogs.error(this.message);
+	}
+	
+	public MyException(String message , UnreachableBrowserException exeception) {
+		super(message);
+		this.message = message + exeception.getMessage();
+		AppLogs.error(this.message);
+	}
+	
 	
 	/**
 	 * Purpose : This is an overridden method which is used to fetch the custom exception message

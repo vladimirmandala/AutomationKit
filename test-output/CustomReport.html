@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>BANC Selenium RC Execution Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<b>Execution Parameters</b>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>baseUrl</th><th>hubUrl</th><th>osType</th><th>browser</th><th>browserVersion</th><th>resolution</th><th>variable</th></tr>
+<td class="numi">baseUrl</td><td class="numi">hubUrl</td><td class="numi">osType</td><td class="numi">browser</td><td class="numi">browserVersion</td><td class="numi">resolution</td><td class="numi">variable</td></table>
+<p></p>
+<b align="center">Execution Summary</b>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br>Passed</th><th>Scenarios<br>Passed</th><th># skipped</th><th># failed</th><th>Total<br>Time</th><th>Included<br>Groups</th><th>Excluded<br>Groups</th></tr>
+<tr><th colspan="8">Rediff Mail Execution Suite</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">Rediff WebSite Testing</a></td><td class="numi">9</td><td class="numi">9</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0h:8m:38s</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">9</td><td class="numi">9</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">9999</td><td colspan="2">&nbsp;</td></tr>
+</table>
+<p></p>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<b align="center">Result Summary Table</b>
+<tr><th>Class</th><th>Method</th><th># of<br>Scenarios</th><th>Start</th><th>Time<br>elapsed</th><th>Custom</th></tr>
+<tr id="t1"><th colspan="6">Rediff WebSite Testing — failed</th></tr>
+<tr class="failedodd"><td>com.rediff.testcases.HomePageTest</td><td><a href="#m1"><b>verifyBrokenLink</b> (Selenium) </a></td><td class="numi">1</td><td> Sep 30 at 05:24 PM</td><td class="numi">0h:2m:56s</td><td><a href='emailable-report.html'>Test</a></td></tr>
+<tr><th colspan="6">Rediff WebSite Testing — passed</th></tr>
+<tr class="passedodd"><td rowspan="9">com.rediff.testcases.LoginTest</td><td><a href="#m2"><b>blankUserNameBlankPasswordLoginTest</b> (Selenium) </a></td><td class="numi">1</td><td> Sep 30 at 05:19 PM</td><td class="numi">0h:0m:2s</td><td><a href='emailable-report.html'>Test</a></td></tr><tr class="passedodd"><td><a href="#m3"><b>blankUserNameRightPasswordLoginTest</b> (Selenium) </a></td><td class="numi">1</td><td> Sep 30 at 05:19 PM</td><td class="numi">0h:0m:0s</td><td><a href='emailable-report.html'>Test</a></td></tr><tr class="passedodd"><td><a href="#m4"><b>blankUserNameWrongPasswordLoginTest</b> (Selenium) </a></td><td class="numi">1</td><td> Sep 30 at 05:20 PM</td><td class="numi">0h:0m:0s</td><td><a href='emailable-report.html'>Test</a></td></tr><tr class="passedodd"><td><a href="#m5"><b>rightUserNameBlankPasswordLoginTest</b> (Selenium) </a></td><td class="numi">1</td><td> Sep 30 at 05:20 PM</td><td class="numi">0h:0m:1s</td><td><a href='emailable-report.html'>Test</a></td></tr><tr class="passedodd"><td><a href="#m6"><b>rightUserNameWrongPasswordLoginTest</b> (Selenium) </a></td><td class="numi">1</td><td> Sep 30 at 05:22 PM</td><td class="numi">0h:0m:0s</td><td><a href='emailable-report.html'>Test</a></td></tr><tr class="passedodd"><td><a href="#m7"><b>sucessfullLoginTest</b> (Selenium) </a></td><td class="numi">1</td><td> Sep 30 at 05:22 PM</td><td class="numi">0h:0m:1s</td><td><a href='emailable-report.html'>Test</a></td></tr><tr class="passedodd"><td><a href="#m8"><b>wrongUserNameBlankPasswordLoginTest</b> (Selenium) </a></td><td class="numi">1</td><td> Sep 30 at 05:23 PM</td><td class="numi">0h:0m:1s</td><td><a href='emailable-report.html'>Test</a></td></tr><tr class="passedodd"><td><a href="#m9"><b>wrongUserNameRightPasswordLoginTest</b> (Selenium) </a></td><td class="numi">1</td><td> Sep 30 at 05:23 PM</td><td class="numi">0h:0m:1s</td><td><a href='emailable-report.html'>Test</a></td></tr><tr class="passedodd"><td><a href="#m10"><b>wrongUserNameWrongPasswordLoginTest</b> (Selenium) </a></td><td class="numi">1</td><td> Sep 30 at 05:23 PM</td><td class="numi">0h:0m:2s</td><td><a href='emailable-report.html'>Test</a></td></tr>
+</table>
+<br/><b align="center">Method Summaries</b><br/>
+<h1>Rediff Mail Execution Suite</h1>
+<h3>Rediff WebSite Testing</h3>
+<h2 id="m1">com.rediff.testcases.HomePageTest : verifyBrokenLink</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><td><i>Test did not have parameters.</i></td></tr> 
+<div>
+<h3>Test Results</h3>
+isLinkBroken : http://www.rediff.com/  works fine<br>
+isLinkBroken : https://mail.rediff.com/cgi-bin/login.cgi  works fine<br>
+isLinkBroken : http://register.rediff.com/register/register.php?FormName=user_details  works fine<br>
+isLinkBroken : http://mail.rediff.com/cgi-bin/login.cgi  works fine<br>
+isLinkBroken : http://businessemail.rediff.com/?sc_cid=inhome  works fine<br>
+isLinkBroken : http://money.rediff.com/  works fine<br>
+isLinkBroken : http://mypage.rediff.com/  works fine<br>
+isLinkBroken : http://mypage.rediff.com/  works fine<br>
+isLinkBroken : http://ishare.rediff.com/  works fine<br>
+isLinkBroken : http://track.rediff.com/click?url=___http://vuplanner.vubites.com/static_html/campaign/___&cmp=vubites&lnk=vubites_icon&nsrv1=inhome  works fine<br>
+isLinkBroken : http://shopping.rediff.com/  works fine<br>
+isLinkBroken : http://shopping.rediff.com/customer-care/order-list  works fine<br>
+isLinkBroken : http://shopping.rediff.com/  works fine<br>
+isLinkBroken : http://books.rediff.com/Amish%20Tripathi?sc_cid=inhome_top|Amish-Tripathi  works fine<br>
+isLinkBroken : http://books.rediff.com/Rashmi%20Bansal?sc_cid=inhome_top|Rashmi-Bansal  works fine<br>
+isLinkBroken : http://books.rediff.com/Chetan%20Bhagat?sc_cid=inhome_top|Chetan-Bhagat  works fine<br>
+isLinkBroken : http://books.rediff.com/Khaled%20Hosseini?sc_cid=inhome_top|Khaled-Hosseini  works fine<br>
+isLinkBroken : http://realtime.rediff.com/news/Modi?src=home_cue1  works fine<br>
+isLinkBroken : http://realtime.rediff.com/news/Hong-Kong-?src=home_cue2  works fine<br>
+isLinkBroken : http://realtime.rediff.com/news/Asian-Games?src=home_cue3  works fine<br>
+isLinkBroken : http://realtime.rediff.com/news/Haider?src=home_cue4  works fine<br>
+isLinkBroken : http://ads.rediff.com/5c/inrediffHP.com/mainhome.htm/L-27/198030856/Top/OasDefault/Shop_HP_Top01_AMJ14_EXP1/diwali14_RT_V1_Exp1.jpg/793853506f3151716d64594144623331  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/men-s-wear/cat-2/?sc_cid=inhome_top|fixcat_mens_lifestyle  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/women-s-apparel/cat-57?sc_cid=inhome_top|fixcat_womensclothing  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/mobile-phones---accessories/cat-8248?sc_cid=inhome_top|fixcat_mobile  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/electronics/cat-453?sc_cid=inhome_top|fixcat_electronics  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/computers---it-peripherals/cat-7611?sc_cid=inhome_top|fixcat_computers  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/automobiles/cat-430?sc_cid=inhome_top|fixcat_car_accs  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/home-decor---furnishings/cat-615?sc_cid=inhome_top|fixcat_home  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/kitchen-utilities---appliances/cat-8828?sc_cid=inhome_top|fixcat_kitchen  works fine<br>
+isLinkBroken : http://books.rediff.com/  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories  works fine<br>
+isLinkBroken : http://clients.rediff.com/rediff_advertisewithus/contact.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://www.rediff.com/business  works fine<br>
+isLinkBroken : http://www.rediff.com/movies  works fine<br>
+isLinkBroken : http://www.rediff.com/sports  works fine<br>
+isLinkBroken : http://www.rediff.com/cricket  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead  works fine<br>
+isLinkBroken : http://www.rediff.com/news/modi-in-america  works fine<br>
+isLinkBroken : http://www.rediff.com/appstore/rediffnews  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://news.rediff.com/commentary/2014/sep/30/liveupdates.htm  works fine<br>
+isLinkBroken : http://news.rediff.com/commentary/2014/sep/30/liveupdates.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://www.rediff.com/sports  works fine<br>
+isLinkBroken : http://www.rediff.com/sports/report/india-down-south-korea-to-enter-asian-games-mens-hockey-final/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/sports/report/india-down-south-korea-to-enter-asian-games-mens-hockey-final/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/sports  works fine<br>
+isLinkBroken : http://www.rediff.com/business  works fine<br>
+isLinkBroken : http://www.rediff.com/business/report/pix-column-from-rs-20k-to-rs-8000-crore-emamis-amazing-success-story/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/business/report/pix-column-from-rs-20k-to-rs-8000-crore-emamis-amazing-success-story/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/business  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead/report/glamour-pix-milan-fashion-week-what-would-you-like-to-wear-today/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead/report/glamour-pix-milan-fashion-week-what-would-you-like-to-wear-today/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead  works fine<br>
+isLinkBroken : http://www.rediff.com/business  works fine<br>
+isLinkBroken : http://www.rediff.com/business/report/pix-auto-six-6-stunning-cars-maruti-will-launch-by-march/20140929.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/business/report/pix-auto-six-6-stunning-cars-maruti-will-launch-by-march/20140929.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/business  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://www.rediff.com/news/report/modi-in-us-rajdeep-pm-must-tell-those-who-spread-hate-stop-spreading-hate/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news/report/modi-in-us-rajdeep-pm-must-tell-those-who-spread-hate-stop-spreading-hate/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://www.rediff.com/sports  works fine<br>
+isLinkBroken : http://www.rediff.com/sports/report/asian-games-boxer-sarita-robbed-of-chance-at-golden-glory-mary-kom-south-korea-incheon-2014/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/sports/report/asian-games-boxer-sarita-robbed-of-chance-at-golden-glory-mary-kom-south-korea-incheon-2014/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/sports  works fine<br>
+isLinkBroken : http://www.rediff.com/movies  works fine<br>
+isLinkBroken : http://www.rediff.com/movies/report/pix-vidya-huma-vishal-bharadwaj-at-haider-screening/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/movies/report/pix-vidya-huma-vishal-bharadwaj-at-haider-screening/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/movies  works fine<br>
+isLinkBroken : http://www.rediff.com/cricket  works fine<br>
+isLinkBroken : http://www.rediff.com/cricket/report/kkrs-primary-weapon-narine-reported-for-suspect-action-clt20/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/cricket/report/kkrs-primary-weapon-narine-reported-for-suspect-action-clt20/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/cricket  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead/report/food-festive-recipe-how-to-make-aval-payasam/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead/report/food-festive-recipe-how-to-make-aval-payasam/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead  works fine<br>
+isLinkBroken : http://www.rediff.com/business  works fine<br>
+isLinkBroken : http://www.rediff.com/business/report/pix-tech-xperia-z3-the-phone-with-three-zs/20140929.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/business/report/pix-tech-xperia-z3-the-phone-with-three-zs/20140929.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/business  works fine<br>
+isLinkBroken : http://www.rediff.com/movies  works fine<br>
+isLinkBroken : http://www.rediff.com/movies/report/hrithik-roshan-on-bang-bang-i-am-not-a-positive-person/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/movies/report/hrithik-roshan-on-bang-bang-i-am-not-a-positive-person/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/movies  works fine<br>
+isLinkBroken : http://www.rediff.com/business  works fine<br>
+isLinkBroken : http://www.rediff.com/business/special/pix-indias-top-7-philanthropic-billionaires-/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/business/special/pix-indias-top-7-philanthropic-billionaires-/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/business  works fine<br>
+isLinkBroken : http://www.rediff.com/sports  works fine<br>
+isLinkBroken : http://www.rediff.com/sports/report/asian-games-sania-happy-to-mentor-to-rising-tennis-stars-in-indian-contingent/20140929.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/sports/report/asian-games-sania-happy-to-mentor-to-rising-tennis-stars-in-indian-contingent/20140929.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/sports  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://www.rediff.com/news/special/modi-in-us-the-tireless-prime-minister/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news/special/modi-in-us-the-tireless-prime-minister/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://www.rediff.com/news/report/modi-in-us-namo-has-warm-water-barack-has-red-wine/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news/report/modi-in-us-namo-has-warm-water-barack-has-red-wine/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://www.rediff.com/movies  works fine<br>
+isLinkBroken : http://www.rediff.com/movies/report/bollywoods-most-memorable-shakespeare-adaptations/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/movies/report/bollywoods-most-memorable-shakespeare-adaptations/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/movies  works fine<br>
+isLinkBroken : http://www.rediff.com/sports  works fine<br>
+isLinkBroken : http://www.rediff.com/sports/report/asian-games-gowda-wins-silver-in-discuss-throw-incheon-2014/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/sports/report/asian-games-gowda-wins-silver-in-discuss-throw-incheon-2014/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/sports  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead/report/gadgets-and-gaming-10-reasons-why-blackberry-passport-will-be-a-big-hit/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead/report/gadgets-and-gaming-10-reasons-why-blackberry-passport-will-be-a-big-hit/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead  works fine<br>
+isLinkBroken : http://www.rediff.com/business  works fine<br>
+isLinkBroken : http://www.rediff.com/business/special/nitin-gadkari-has-many-plans-for-india/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/business/special/nitin-gadkari-has-many-plans-for-india/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/business  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead/report/specials-a-unique-navratri-and-dussehra-in-a-tamil-nadu-temple/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead/report/specials-a-unique-navratri-and-dussehra-in-a-tamil-nadu-temple/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead  works fine<br>
+isLinkBroken : http://www.rediff.com/business  works fine<br>
+isLinkBroken : http://www.rediff.com/business/report/pix-jeff-bezos-reminds-flipkart-he-is-the-boss/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/business/report/pix-jeff-bezos-reminds-flipkart-he-is-the-boss/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/business  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://www.rediff.com/news/report/maa-durga-is-here-lets-go-pandal-hopping-pix/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news/report/maa-durga-is-here-lets-go-pandal-hopping-pix/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://www.rediff.com/movies  works fine<br>
+isLinkBroken : http://www.rediff.com/movies/report/5-reasons-why-haider-could-trump-bang-bang-at-the-box-office/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/movies/report/5-reasons-why-haider-could-trump-bang-bang-at-the-box-office/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/movies  works fine<br>
+isLinkBroken : http://www.rediff.com/cricket  works fine<br>
+isLinkBroken : http://www.rediff.com/cricket/report/clt20-pix-doing-things-professionally-is-the-reason-for-kkrs-success-robin-uthappa/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/cricket/report/clt20-pix-doing-things-professionally-is-the-reason-for-kkrs-success-robin-uthappa/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/cricket  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead/report/glamour-pix-aditi-rao-hydari-just-made-us-weak-in-our-knees/20140929.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead/report/glamour-pix-aditi-rao-hydari-just-made-us-weak-in-our-knees/20140929.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://www.rediff.com/news/column/tvr-shenoy-campaign-for-2019-starts-in-maharashtra/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news/column/tvr-shenoy-campaign-for-2019-starts-in-maharashtra/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://ishare.rediff.com/  works fine<br>
+isLinkBroken : http://ishare.rediff.com/  works fine<br>
+isLinkBroken : http://ishare.rediff.com/video/entertainment/i-am-lost-explain-how-he-does-this-/9839073  works fine<br>
+isLinkBroken : http://ishare.rediff.com/video/entertainment/i-am-lost-explain-how-he-does-this-/9839073  works fine<br>
+isLinkBroken : http://ishare.rediff.com/  works fine<br>
+isLinkBroken : http://money.rediff.com/  works fine<br>
+isLinkBroken : http://money.rediff.com/  works fine<br>
+isLinkBroken : http://labs.rediff.com/  works fine<br>
+isLinkBroken : http://www.rediff.com/news/report/rediff-labs-visualised-passenger-traffic-at-indian-airports/20140926.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news/report/rediff-labs-visualised-passenger-traffic-at-indian-airports/20140926.htm  works fine<br>
+isLinkBroken : http://labs.rediff.com/  works fine<br>
+isLinkBroken : http://www.rediff.com/editors-choice  works fine<br>
+isLinkBroken : http://www.rediff.com/news/interview/obama-wont-promise-modi-100-billion/20140929.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news/interview/obama-wont-promise-modi-100-billion/20140929.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/editors-choice  works fine<br>
+isLinkBroken : http://ishare.rediff.com/  works fine<br>
+isLinkBroken : http://ishare.rediff.com/  works fine<br>
+isLinkBroken : http://ishare.rediff.com/video/entertainment/sonakshi-s-sizzling-new-look-in-action-jackson/9821700  works fine<br>
+isLinkBroken : http://ishare.rediff.com/video/entertainment/sonakshi-s-sizzling-new-look-in-action-jackson/9821700  works fine<br>
+isLinkBroken : http://ishare.rediff.com/  works fine<br>
+isLinkBroken : http://www.rediff.com/editors-choice  works fine<br>
+isLinkBroken : http://www.rediff.com/sports/report/seema-punia-wins-asian-games-discus-gold-naveen-kumar-jaisha-bronze-medal/20140929.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/sports/report/seema-punia-wins-asian-games-discus-gold-naveen-kumar-jaisha-bronze-medal/20140929.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/editors-choice  works fine<br>
+isLinkBroken : http://pages.rediff.com/  works fine<br>
+isLinkBroken : http://pages.rediff.com/video/195758/9826818/car-trash-in-jewellery-shop-video  works fine<br>
+isLinkBroken : http://pages.rediff.com/video/195758/9826818/car-trash-in-jewellery-shop-video  works fine<br>
+isLinkBroken : http://pages.rediff.com/haider/2022455  works fine<br>
+isLinkBroken : http://pages.rediff.com/  works fine<br>
+isLinkBroken : http://zarabol.rediff.com/Swachh-Bharat/9692431  works fine<br>
+isLinkBroken : http://zarabol.rediff.com/Swachh-Bharat/9692431  works fine<br>
+isLinkBroken : http://zarabol.rediff.com/  works fine<br>
+isLinkBroken : http://ishare.rediff.com/  works fine<br>
+isLinkBroken : http://ishare.rediff.com/  works fine<br>
+isLinkBroken : http://ishare.rediff.com/video/entertainment/watch-the-trailer-of-ungli/9839482  works fine<br>
+isLinkBroken : http://ishare.rediff.com/video/entertainment/watch-the-trailer-of-ungli/9839482  works fine<br>
+isLinkBroken : http://ishare.rediff.com/  works fine<br>
+isLinkBroken : http://zarabol.rediff.com/Bang-Bang-Hit-Ya-Flop/9691200  works fine<br>
+isLinkBroken : http://zarabol.rediff.com/Bang-Bang-Hit-Ya-Flop/9691200  works fine<br>
+isLinkBroken : http://zarabol.rediff.com/  works fine<br>
+isLinkBroken : http://realtime.rediff.com/topnews/india  works fine<br>
+isLinkBroken : http://realtime.rediff.com/news/india/New-grandparents-Clintons-keep-their-date-with-Modi/5ff7bf267a3ae3c4  works fine<br>
+isLinkBroken : http://realtime.rediff.com/news/india/New-grandparents-Clintons-keep-their-date-with-Modi/5ff7bf267a3ae3c4  works fine<br>
+isLinkBroken : http://realtime.rediff.com/topnews/india  works fine<br>
+isLinkBroken : http://www.rediff.com/movies  works fine<br>
+isLinkBroken : http://www.rediff.com/movies/report/pix-rani-mukerji-and-cousins-at-durga-puja-celebrations/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/movies/report/pix-rani-mukerji-and-cousins-at-durga-puja-celebrations/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/movies  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead/report/achievers-this-it-engineer-is-urging-people-to-sell-waste-online/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead/report/achievers-this-it-engineer-is-urging-people-to-sell-waste-online/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://www.rediff.com/news/report/mission-possible-a-daring-search-and-destroy-op-pix/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news/report/mission-possible-a-daring-search-and-destroy-op-pix/20140930.htm  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://books.rediff.com/book/sachin-tendulkar--playing-it-my-way---my-autobiography/9781473605206?sc_cid=bk_inhome_promo_tendulkar  works fine<br>
+isLinkBroken : http://books.rediff.com/book/sachin-tendulkar--playing-it-my-way---my-autobiography/9781473605206?sc_cid=bk_inhome_promo_tendulkar  works fine<br>
+isLinkBroken : http://books.rediff.com/book/sachin-tendulkar--playing-it-my-way---my-autobiography/9781473605206?sc_cid=bk_inhome_promo_tendulkar  works fine<br>
+isLinkBroken : http://track.rediff.com/click?url=___http://businessemail.rediff.com/email-ids-for-companies-with-less-than-50-employees?sc_cid=inhome-promo___&cmp=host&lnk=inhome-promo&nsrv1=host  works fine<br>
+isLinkBroken : http://track.rediff.com/click?url=___http://businessemail.rediff.com/email-ids-for-companies-with-less-than-50-employees?sc_cid=inhome-promo___&cmp=host&lnk=inhome-promo&nsrv1=host  works fine<br>
+isLinkBroken : http://track.rediff.com/click?url=___http://businessemail.rediff.com/email-ids-for-companies-with-less-than-50-employees?sc_cid=inhome-promo___&cmp=host&lnk=inhome-promo&nsrv1=host  works fine<br>
+isLinkBroken : http://track.rediff.com/click?url=___http://businessemail.rediff.com/email-ids-for-companies-with-less-than-50-employees?sc_cid=inhome-promo___&cmp=host&lnk=inhome-promo&nsrv1=host  works fine<br>
+isLinkBroken : http://track.rediff.com/click?url=___http://businessemail.rediff.com/email-ids-for-companies-with-less-than-50-employees?sc_cid=inhome-promo___&cmp=host&lnk=inhome-promo&nsrv1=host  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/sports-shoes/cat-243?sc_cid=inhome_cat_243  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=12&prodid=12786613  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=12&prodid=12786613  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/sports-shoes/cat-243?sc_cid=inhome_like_243  works fine<br>
+isLinkBroken : http://shopping.rediff.com/newlaunch/corporategifts.html?sc_cid=inhome_Catban_corporategifts  works fine<br>
+isLinkBroken : http://shopping.rediff.com/newlaunch/corporategifts.html?sc_cid=inhome_Catban_corporategifts  works fine<br>
+isLinkBroken : http://shopping.rediff.com/newlaunch/corporategifts.html?sc_cid=inhome_Catban_corporategifts  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/power-tools/cat-754?sc_cid=inhome_cat_754  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=15&prodid=12433663  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=15&prodid=12433663  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/power-tools/cat-754?sc_cid=inhome_like_754  works fine<br>
+isLinkBroken : http://books.rediff.com/  works fine<br>
+isLinkBroken : http://books.rediff.com/?bksrno=10  works fine<br>
+isLinkBroken : http://books.rediff.com/?bksrno=10  works fine<br>
+isLinkBroken : http://books.rediff.com/similarbooks/9780143423621  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/action-figures/cat-893?sc_cid=inhome_cat_893  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=16&prodid=13306409  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=16&prodid=13306409  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/action-figures/cat-893?sc_cid=inhome_like_893  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/power-banks/cat-10228?sc_cid=inhome_cat_10228  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=18&prodid=13127181  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=18&prodid=13127181  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/power-banks/cat-10228?sc_cid=inhome_like_10228  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/other-laptop-accessories/cat-7657?sc_cid=inhome_cat_7657  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=20&prodid=12352364  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=20&prodid=12352364  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/other-laptop-accessories/cat-7657?sc_cid=inhome_like_7657  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/leather-watch-for-men/cat-9646?sc_cid=inhome_cat_9646  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=2&prodid=12645144  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=2&prodid=12645144  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/leather-watch-for-men/cat-9646?sc_cid=inhome_like_9646  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/tablets-amp-e-book-readers/cat-9471?sc_cid=inhome_cat_9471  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=4&prodid=13250985  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=4&prodid=13250985  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/tablets-amp-e-book-readers/cat-9471?sc_cid=inhome_like_9471  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/men-s-formal-shirts/cat-8076/price-400-5000/sort-1?sc_cid=inhome_Catban_formalshirts  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/men-s-formal-shirts/cat-8076/price-400-5000/sort-1?sc_cid=inhome_Catban_formalshirts  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/men-s-formal-shirts/cat-8076/price-400-5000/sort-1?sc_cid=inhome_Catban_formalshirts  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/casual-shirts-for-men/cat-8188?sc_cid=inhome_cat_8188  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=6&prodid=13143411  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=6&prodid=13143411  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/casual-shirts-for-men/cat-8188?sc_cid=inhome_like_8188  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/emergency-lamps/cat-728?sc_cid=inhome_cat_728  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=10&prodid=13213259  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=10&prodid=13213259  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/emergency-lamps/cat-728?sc_cid=inhome_like_728  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/health-supplements/cat-9988?sc_cid=inhome_cat_9988  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=11&prodid=11747226  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=11&prodid=11747226  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/health-supplements/cat-9988?sc_cid=inhome_like_9988  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/fm-radios/cat-7906?sc_cid=inhome_cat_7906  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=13&prodid=12990621  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=13&prodid=12990621  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/fm-radios/cat-7906?sc_cid=inhome_like_7906  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/pendants/cat-8745?sc_cid=inhome_cat_8745  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=14&prodid=13217287  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=14&prodid=13217287  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/pendants/cat-8745?sc_cid=inhome_like_8745  works fine<br>
+isLinkBroken : http://books.rediff.com/  works fine<br>
+isLinkBroken : http://books.rediff.com/?bksrno=9  works fine<br>
+isLinkBroken : http://books.rediff.com/?bksrno=9  works fine<br>
+isLinkBroken : http://books.rediff.com/similarbooks/9788129129390  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/clocks/cat-731?sc_cid=inhome_cat_731  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=17&prodid=11599587  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=17&prodid=11599587  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/clocks/cat-731?sc_cid=inhome_like_731  works fine<br>
+isLinkBroken : http://books.rediff.com/  works fine<br>
+isLinkBroken : http://books.rediff.com/?bksrno=1  works fine<br>
+isLinkBroken : http://books.rediff.com/?bksrno=1  works fine<br>
+isLinkBroken : http://books.rediff.com/similarbooks/9789381506547  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/digital-slr-cameras/cat-7963?sc_cid=inhome_Catban_digicam  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/digital-slr-cameras/cat-7963?sc_cid=inhome_Catban_digicam  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/digital-slr-cameras/cat-7963?sc_cid=inhome_Catban_digicam  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/car-cleaning-products/cat-440?sc_cid=inhome_cat_440  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=19&prodid=13302013  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=19&prodid=13302013  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/car-cleaning-products/cat-440?sc_cid=inhome_like_440  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/mini-home-theater/cat-7901?sc_cid=inhome_cat_7901  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=1&prodid=13275981  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=1&prodid=13275981  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/mini-home-theater/cat-7901?sc_cid=inhome_like_7901  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/shavers/cat-10002?sc_cid=inhome_cat_10002  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=3&prodid=12671975  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=3&prodid=12671975  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/shavers/cat-10002?sc_cid=inhome_like_10002  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/toasters-amp-grillers/cat-8853?sc_cid=inhome_cat_8853  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=5&prodid=12061804  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=5&prodid=12061804  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/toasters-amp-grillers/cat-8853?sc_cid=inhome_like_8853  works fine<br>
+isLinkBroken : http://books.rediff.com/  works fine<br>
+isLinkBroken : http://books.rediff.com/?bksrno=2  works fine<br>
+isLinkBroken : http://books.rediff.com/?bksrno=2  works fine<br>
+isLinkBroken : http://books.rediff.com/similarbooks/9781447281993  works fine<br>
+isLinkBroken : http://www.rediff.com/news  works fine<br>
+isLinkBroken : http://www.rediff.com/business  works fine<br>
+isLinkBroken : http://www.rediff.com/movies  works fine<br>
+isLinkBroken : http://www.rediff.com/sports  works fine<br>
+isLinkBroken : http://www.rediff.com/cricket  works fine<br>
+isLinkBroken : http://www.rediff.com/getahead  works fine<br>
+isLinkBroken : http://www.rediff.com/moreservices.html  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=1&prodid=13275981  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=2&prodid=12645144  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=3&prodid=12671975  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=4&prodid=13250985  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=5&prodid=12061804  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=6&prodid=13143411  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=7&prodid=12443425  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=8&prodid=11835031  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=9&prodid=11903257  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=10&prodid=13213259  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=11&prodid=11747226  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=12&prodid=12786613  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=13&prodid=12990621  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=14&prodid=13217287  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=15&prodid=12433663  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=16&prodid=13306409  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=17&prodid=11599587  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=18&prodid=13127181  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=19&prodid=13302013  works fine<br>
+isLinkBroken : http://shopping.rediff.com/shopping/index.html?sc_cid=inhome&prodnum=20&prodid=12352364  works fine<br>
+isLinkBroken : http://books.rediff.com/book?bksrno=1  works fine<br>
+isLinkBroken : http://books.rediff.com/book?bksrno=2  works fine<br>
+isLinkBroken : http://books.rediff.com/book?bksrno=3  works fine<br>
+isLinkBroken : http://books.rediff.com/book?bksrno=4  works fine<br>
+isLinkBroken : http://books.rediff.com/book?bksrno=5  works fine<br>
+isLinkBroken : http://books.rediff.com/book?bksrno=6  works fine<br>
+isLinkBroken : http://books.rediff.com/book?bksrno=7  works fine<br>
+isLinkBroken : http://books.rediff.com/book?bksrno=8  works fine<br>
+isLinkBroken : http://books.rediff.com/book?bksrno=9  works fine<br>
+isLinkBroken : http://books.rediff.com/book?bksrno=10  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/men-s-formal-shirts/cat-8076/price-400-5000/sort-1?sc_cid=inhome_Catban_formalshirts  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/digital-slr-cameras/cat-7963?sc_cid=inhome_Catban_digicam  works fine<br>
+isLinkBroken : http://shopping.rediff.com/product/american_tourister?sc_cid=inhome_Catban_bags  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/tablet-accessories/cat-9868?sc_cid=inhome_Catban_tabletacc  works fine<br>
+isLinkBroken : http://shopping.rediff.com/categories/kitchen-appliances/cat-8831?sc_cid=inhome_Catban_kitchenapp  works fine<br>
+isLinkBroken : http://shopping.rediff.com/newlaunch/corporategifts.html?sc_cid=inhome_Catban_corporategifts  works fine<br>
+Test Case failed: verifyBrokenLink<font face=Verdana size=2 color=red><a href=C:\Users\abhayb\Pictures\2014-04-24\016.PNG> Click to Open Screenshot of Error</a></font></td><br>
+<h3>Failure</h3>
+<div class="stacktrace">com.exception.MyException: MalformedURLException Error : java.net.MalformedURLException: unknown protocol: javascript , javascript:hideDiv1(&apos;trans_div&apos;);hideDiv1(&apos;div_mailsignin_ad&apos;);hideDiv1(&apos;frame_ad_hm_maillogin&apos;);
+	at com.actions.WebAction.getResponseCode(WebAction.java:333)
+	at com.actions.WebAction.isLinkBroken(WebAction.java:378)
+	at com.rediff.pages.HomePage.CheckHyperLinkOnPage(HomePage.java:57)
+	at com.rediff.testcases.HomePageTest.verifyBrokenLink(HomePageTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</div>
+</div>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">com.rediff.testcases.LoginTest : wrongUserNameRightPasswordLoginTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><td><i>Test did not have parameters.</i></td></tr> 
+<div>
+Test Case Success: wrongUserNameRightPasswordLoginTest  time is: 17:23:38:551<br>
+</div>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">com.rediff.testcases.LoginTest : rightUserNameBlankPasswordLoginTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><td><i>Test did not have parameters.</i></td></tr> 
+<div>
+Test Case Success: rightUserNameBlankPasswordLoginTest  time is: 17:20:29:849<br>
+</div>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">com.rediff.testcases.LoginTest : sucessfullLoginTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><td><i>Test did not have parameters.</i></td></tr> 
+<div>
+Test Case Success: sucessfullLoginTest  time is: 17:22:58:417<br>
+</div>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">com.rediff.testcases.LoginTest : wrongUserNameBlankPasswordLoginTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><td><i>Test did not have parameters.</i></td></tr> 
+<div>
+Test Case Success: wrongUserNameBlankPasswordLoginTest  time is: 17:23:03:433<br>
+</div>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">com.rediff.testcases.LoginTest : blankUserNameWrongPasswordLoginTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><td><i>Test did not have parameters.</i></td></tr> 
+<div>
+Test Case Success: blankUserNameWrongPasswordLoginTest  time is: 17:20:15:841<br>
+</div>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">com.rediff.testcases.LoginTest : blankUserNameBlankPasswordLoginTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><td><i>Test did not have parameters.</i></td></tr> 
+<div>
+Test Case Success: blankUserNameBlankPasswordLoginTest  time is: 17:19:33:657<br>
+</div>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">com.rediff.testcases.LoginTest : wrongUserNameWrongPasswordLoginTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><td><i>Test did not have parameters.</i></td></tr> 
+<div>
+Test Case Success: wrongUserNameWrongPasswordLoginTest  time is: 17:23:43:829<br>
+</div>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">com.rediff.testcases.LoginTest : blankUserNameRightPasswordLoginTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><td><i>Test did not have parameters.</i></td></tr> 
+<div>
+Test Case Success: blankUserNameRightPasswordLoginTest  time is: 17:19:54:260<br>
+</div>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">com.rediff.testcases.LoginTest : rightUserNameWrongPasswordLoginTest</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><td><i>Test did not have parameters.</i></td></tr> 
+<div>
+Test Case Success: rightUserNameWrongPasswordLoginTest  time is: 17:22:53:503<br>
+</div>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<center><h4>Customized TestNG Report</h4></center>
+</body></html>

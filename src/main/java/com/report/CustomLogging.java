@@ -1,5 +1,6 @@
 package com.report;
 
+import java.lang.reflect.Method;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -27,7 +28,8 @@ public class CustomLogging extends TestListenerAdapter implements ITestListener 
  */
   @Override
   public void onTestStart(ITestResult result) {
-        AppLogs.info("Test method started: "+ result.getName()+ " and time is: "+getCurrentTime());
+        AppLogs.info("Test Case Execution started: "+ result.getName()+ " time is: "+getCurrentTime());
+        Reporter.log("Test Case Execution started: "+ result.getName()+ " time is: "+getCurrentTime());
    }
 
 
@@ -37,7 +39,8 @@ public class CustomLogging extends TestListenerAdapter implements ITestListener 
    */
   @Override
   public void onTestSuccess(ITestResult result) {
-       AppLogs.info("Test method success: "+ result.getName()+ "  and time is: "+getCurrentTime());
+       AppLogs.info("Test Case Success: "+ result.getName()+ "  time is: "+getCurrentTime());
+       Reporter.log("Test Case Success: "+ result.getName()+ "  time is: "+getCurrentTime());
   }
 
   /**
@@ -46,11 +49,9 @@ public class CustomLogging extends TestListenerAdapter implements ITestListener 
    */
   @Override
   public void onTestFailure(ITestResult result) {
-	  AppLogs.error("Test method failed: "+ result.getName()+ "  and time is: "+getCurrentTime());
-	  
-//	  Reporter.log("<br> <img src=.\\screenshots\\" + fileName  + " /> <br>");
-	  //Reporter.log("<a href='"+ file.getAbsolutePath()+"/selenium-reports/html/" + result.getName() + ".jpg'> <img src='"+ file.getAbsolutePath()+"/selenium-reports/html/"+ result.getName() + ".jpg' height='100' width='100'/> </a>");
-	  Reporter.log("<a href= /selenium-reports/html/" + result.getName() + ".jpg'> <img src='C:\\Users\\abhayb\\Pictures\\2014-04-24\\016.PNG'/> </a>");
+	  String errorScreenShot = "C:\\Users\\abhayb\\Pictures\\2014-04-24\\016.PNG";
+	  AppLogs.error("Test Case failed: "+ result.getName()+ "  and time is: "+getCurrentTime());
+	  Reporter.log("Test Case failed: "+ result.getName()+ "<font face=Verdana size=2 color=red>" + "<a href="+ errorScreenShot + ">" + " Click to Open Screenshot of Error</a></font></td>");
   }
 
   /**

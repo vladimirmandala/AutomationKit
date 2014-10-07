@@ -9,10 +9,13 @@ import java.util.List;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 import com.exception.MyException;
@@ -373,9 +376,9 @@ public abstract class WebAction {
           link =linkElement.getAttribute("href");
           if(link!=null){
             if (getResponseCode(link)){
-            	Reporter.log(link + " is works fine");
+            	Reporter.log("isLinkBroken : "+link + "  works fine");
             }else {
-            	Reporter.log(link + " is broken");
+            	Reporter.log("isLinkBroken : "+link + "  works fine");
             }
           }
       }
@@ -443,13 +446,16 @@ public abstract class WebAction {
 	 * 
 	 * @return
 	 */
-	public boolean AcceptAlert() {
+	public boolean AcceptAlert() throws MyException {
 		try {
 			Alert alert = driver.switchTo().alert();
 			alert.accept();
 			return true;
-		} catch (Exception e) {
-			return false;
+		}catch(NoAlertPresentException e){
+			throw new MyException("WebAction -> AcceptAlert() , "+e);
+		}
+		catch (Exception e) {
+			throw new MyException("WebAction -> AcceptAlert() , "+e);
 		}
 	}
 
@@ -457,14 +463,131 @@ public abstract class WebAction {
 	 * 
 	 * @return
 	 */
-	public boolean declineAlert() {
+	public boolean DeclineAlert() throws MyException {
 		try {
 			Alert alert = driver.switchTo().alert();
 			alert.dismiss();
 			return true;
-		} catch (Exception e) {
-			return false;
+		} catch(NoAlertPresentException e){
+			throw new MyException("WebAction -> DeclineAlert() , "+e);
 		}
+		catch (Exception e) {
+			throw new MyException("WebAction -> DeclineAlert() , "+e);
+		}
+	}
+	
+	/**
+	 * 
+	 * @param input
+	 * @return
+	 * @throws MyException
+	 */
+	public boolean SetTextOnAlert(String keysToSend) throws MyException {
+		try {
+			Alert alert = driver.switchTo().alert();
+			alert.sendKeys(keysToSend);
+			return true;
+		} catch(NoAlertPresentException e){
+			throw new MyException("WebAction -> DeclineAlert() , "+e);
+		}
+		catch (Exception e) {
+			throw new MyException("WebAction -> DeclineAlert() , "+e);
+		}
+	}
+	
+	/**
+	 * 
+	 * @param input
+	 * @return
+	 * @throws MyException
+	 */
+	public String GetTextOfAlert() throws MyException {
+		try {
+			Alert alert = driver.switchTo().alert();
+			return alert.getText();
+		} catch(NoAlertPresentException e){
+			throw new MyException("WebAction -> DeclineAlert() , "+e);
+		}
+		catch (Exception e) {
+			throw new MyException("WebAction -> DeclineAlert() , "+e);
+		}
+	}
+	
+	/**
+	 * 
+	 * @param input
+	 * @return
+	 * @throws MyException
+	 */
+	public void BrowserRefresh() throws MyException {
+		try {
+			driver.navigate().refresh();
+		} catch(NoAlertPresentException e){
+			throw new MyException("WebAction -> DeclineAlert() , "+e);
+		}
+		catch (Exception e) {
+			throw new MyException("WebAction -> DeclineAlert() , "+e);
+		}
+	}
+	
+	/**
+	 * 
+	 * @param input
+	 * @return
+	 * @throws MyException
+	 */
+	public void BrowserForward() throws MyException {
+		try {
+			driver.navigate().forward();
+		} catch(NoAlertPresentException e){
+			throw new MyException("WebAction -> DeclineAlert() , "+e);
+		}
+		catch (Exception e) {
+			throw new MyException("WebAction -> DeclineAlert() , "+e);
+		}
+	}
+	
+	/**
+	 * 
+	 * @param input
+	 * @return
+	 * @throws MyException
+	 */
+	public void BrowserBack() throws MyException {
+		try {
+			driver.navigate().back();
+		} catch(NoAlertPresentException e){
+			throw new MyException("WebAction -> DeclineAlert() , "+e);
+		}
+		catch (Exception e) {
+			throw new MyException("WebAction -> DeclineAlert() , "+e);
+		}
+	}
+	
+	/**
+	 * 
+	 * @param input
+	 * @return
+	 * @throws MyException
+	 */
+	public boolean OpenURL(String URL) throws MyException {
+		boolean isValid = false;
+		try {
+			driver.navigate().to(URL);
+			if (getResponseCode(URL)){
+				AppLogs.info(URL + " successfully opened");
+				isValid = true;
+			}else {
+				AppLogs.info(URL + " not working");
+				isValid = false;
+			}
+		} catch(NoAlertPresentException e){
+			throw new MyException("WebAction -> DeclineAlert() , "+e);
+		}
+		catch (Exception e) {
+			throw new MyException("WebAction -> DeclineAlert() , "+e);
+		}
+		return isValid;
 	}
 	
 	/**
@@ -501,4 +624,19 @@ Iterate through each image, finding a match for the src attribute with a 404 sta
 Store the broken images in a collection
 Assert that the broken images collection is empty
 	 */
+	
+	//==============Page Synchronization Methods===============
+	public void waitForElementPresent(String xpath) {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebElement element = wait.until(
+		ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+	}
+	
+	public boolean isElementPresent(String xpath) {
+		return driver.findElements(By.xpath(xpath)).size() > 0;
+	}
+	
+	public boolean isElementPresent(By by) {
+		return driver.findElements(by).size() > 0;
+	}
 }

@@ -10,20 +10,20 @@
     <classes>
       <class name="com.rediff.testcases.HomePageTest">
         <methods>
+          <include name="classSetUp"/>
           <include name="verifyBrokenLink"/>
           <include name="HomePageTestSetUp"/>
           <include name="stopDriver"/>
           <include name="TearDown"/>
           <include name="setUpTest"/>
-          <include name="startDriver"/>
         </methods>
       </class> <!-- com.rediff.testcases.HomePageTest -->
       <class name="com.rediff.testcases.LoginTest">
         <methods>
           <include name="LoginTestSetUp"/>
           <include name="stopDriver"/>
+          <include name="classSetUp"/>
           <include name="TearDown"/>
-          <include name="startDriver"/>
         </methods>
       </class> <!-- com.rediff.testcases.LoginTest -->
     </classes>
