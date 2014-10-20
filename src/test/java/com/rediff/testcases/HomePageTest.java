@@ -13,9 +13,9 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.exception.MyException;
+import com.framework.exception.MyException;
+import com.framework.testtemplate.TestBase;
 import com.rediff.pages.HomePage;
-import com.testtemplate.TestBase;
 
 public class HomePageTest extends TestBase{
 	HomePage homePage = null;

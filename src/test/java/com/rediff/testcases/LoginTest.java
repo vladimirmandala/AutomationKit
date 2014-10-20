@@ -10,10 +10,10 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.exception.MyException;
+import com.framework.exception.MyException;
+import com.framework.testtemplate.TestBase;
 import com.rediff.pages.HomePage;
 import com.rediff.pages.MailPage;
-import com.testtemplate.TestBase;
 
 /**
  * LoginTest.java is test class for login feature test

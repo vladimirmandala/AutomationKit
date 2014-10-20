@@ -7,8 +7,8 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.exception.MyException;
-import com.testtemplate.TestBase;
+import com.framework.exception.MyException;
+import com.framework.testtemplate.TestBase;
 
 public class MobilTest extends TestBase{
 	
