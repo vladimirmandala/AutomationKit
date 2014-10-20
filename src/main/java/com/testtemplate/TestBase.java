@@ -22,8 +22,10 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.UnreachableBrowserException;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
@@ -279,6 +281,18 @@ public class TestBase {
 		} catch (IOException e) {
 			throw new MyException("Failed to load Properties file" + e);
 		}
+	}
+	
+	//run this single time before a group
+	@BeforeGroups("shopping")
+	public void beforeGroups() {
+		System.out.println("@BeforeGroups");
+	}
+
+	//run this single time after a group
+	@AfterGroups("shopping")
+	public void afterGroups() {
+		System.out.println("@AfterGroups");
 	}
 }
 

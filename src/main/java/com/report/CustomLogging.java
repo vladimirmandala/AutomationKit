@@ -1,10 +1,11 @@
 package com.report;
 
-import java.lang.reflect.Method;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.testng.IInvokedMethod;
+import org.testng.IInvokedMethodListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -17,7 +18,7 @@ import org.testng.TestListenerAdapter;
  *
  */
 
-public class CustomLogging extends TestListenerAdapter implements ITestListener {
+public class CustomLogging extends TestListenerAdapter implements ITestListener, IInvokedMethodListener {
   
 	DetailedLogs AppLogs = new DetailedLogs();
 
@@ -90,6 +91,7 @@ public class CustomLogging extends TestListenerAdapter implements ITestListener 
 	  AppLogs.info("Test in a suite finished: "+ context.getName()+ " and time is: "+getCurrentTime());
   }
   
+
   /**
    * Purpose : Returns the current time when the method is called
    */
@@ -98,4 +100,16 @@ public class CustomLogging extends TestListenerAdapter implements ITestListener 
 	  Date dt = new Date();
     return dateFormat.format(dt);    
   }
+
+
+	@Override
+	public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
+		// TODO Auto-generated method stub
+	}
+	
+	
+	@Override
+	public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
+		// TODO Auto-generated method stub
+	}
 }
