@@ -718,9 +718,6 @@ public class CommonFunctionLib {
 				break;
 			}
 		}
-		System.out.println("Test" + testName + " starts from "
-				+ testStartRowNum);
-
 		// cols
 		int colStartRowNum = testStartRowNum + 1;
 		int totalCols = 0;
@@ -728,8 +725,7 @@ public class CommonFunctionLib {
 				"")) {
 			totalCols++;
 		}
-		System.out.println("Total columns in test " + totalCols);
-
+	
 		// rows
 		int dataStartRowNum = testStartRowNum + 2;
 		int totalRows = 0;
