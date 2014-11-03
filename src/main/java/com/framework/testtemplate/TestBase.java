@@ -72,8 +72,7 @@ public class TestBase {
 			if (driver == null) {
 				AppLogs.info("startDriver starts..");
 				driver = new RemoteWebDriver(new URL("http://" + hubAddress + ":" + "4444/wd/hub"), generateDesiredCapabilities(browserType));
-				AppLogs.debug("hubAddress : " + hubAddress + "browserType : "
-						+ browserType);
+				AppLogs.debug("hubAddress : " + hubAddress + "browserType : "+ browserType);
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				driver.manage().window().maximize();
 				driver.get(properties.getProperty("BaseURL"));
@@ -200,6 +199,7 @@ public class TestBase {
 			capabilities.setBrowserName("iexplore");
 			capabilities.setPlatform(org.openqa.selenium.Platform.WINDOWS);
 			capabilities.setCapability("takesScreenShot", true);
+			System.setProperty("webdriver.ie.driver",System.getProperty("user.dir")+"\\Binary\\IEDriverServer.exe");
 			// capability.setVersion("");
 			break;
 		case SAFARI:
@@ -222,6 +222,7 @@ public class TestBase {
 			chromePreferences.put("profile.password_manager_enabled", "false");
 			capabilities.setCapability("chrome.prefs", chromePreferences);
 			capabilities.setCapability("takesScreenShot", true);
+			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\Binary\\chromedriver.exe"); 
 			// capability.setVersion("");
 			break;
 		case FIREFOX:
@@ -272,11 +273,11 @@ public class TestBase {
 		try {
 			FileReader MobileDevicereader = new FileReader(
 					System.getProperty("user.dir")
-							+ "//src//main//resources//MobileDevice.properties");
+							+ "//src//test//resources//MobileDevice.properties");
 			properties.load(MobileDevicereader);
 			FileReader Seleniumreader = new FileReader(
 					System.getProperty("user.dir")
-							+ "//src//main//resources//Selenium.properties");
+							+ "//src//test//resources//Selenium.properties");
 			properties.load(Seleniumreader);
 		} catch (IOException e) {
 			throw new MyException("Failed to load Properties file" + e);

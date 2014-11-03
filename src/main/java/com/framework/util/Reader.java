@@ -12,8 +12,6 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import com.framework.exception.MyException;
-
 /**
  * Reader.java contains method to read data from excel file
  * 
@@ -22,7 +20,7 @@ import com.framework.exception.MyException;
  */
 public class Reader {
 	public static String filename = System.getProperty("user.dir")
-			+ "\\src\\main\\resources\\com\\resources\\TestCases.xlsx";
+			+ "\\src\\test\\resources\\com\\resources\\TestCases.xlsx";
 	public String path;
 	public FileInputStream fis = null;
 	public FileOutputStream fileOut = null;

@@ -21,5 +21,6 @@ public class MobilTest extends TestBase{
 	@Test(groups = { "Mobile" })
 	public void TestOne(){
 		AppLogs.info("sucessfullLoginTest() starts..");
+		System.out.println("Mobile Test Case");
 	}
 }
