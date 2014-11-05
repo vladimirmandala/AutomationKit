@@ -711,9 +711,33 @@ public class CommonFunctionLib {
 		// number of rows
 		// put the data in hashtable and put hashtable in array
 		int testStartRowNum = 0;
+		String sheetName = null;
+		//String result[] = getTestDataRow(testName,xls);
+		String temp[];
+		temp = xls.getTestDataRow(testName,xls);
+		sheetName = temp[0];
+		testName= temp[1];
+		testStartRowNum = Integer.parseInt(temp[2]);
+		
+	/*	for (int i=0; i<workbook.getNumberOfSheets(); i++) {
+		    System.out.println(workbook.getSheetName(i));
+		    sheetName = workbook.getSheetName(i);
+		
+			// find the row num from which test start
+			for (int rNum = 1; rNum <= xls.getRowCount(sheetName); rNum++) {
+				if (xls.getCellData(sheetName, 0, rNum).equals(testName)) {
+					testStartRowNum = rNum;
+					System.out.println("Test Start Row Num - "+sheetName);
+					System.out.println("Test Start Row Num - "+testName);
+					System.out.println("Test Start Row Num - "+testStartRowNum);
+					break;
+				}
+			}
+		}*/
+		
 		// find the row num from which test start
-		for (int rNum = 1; rNum <= xls.getRowCount("Test Data"); rNum++) {
-			if (xls.getCellData("Test Data", 0, rNum).equals(testName)) {
+		for (int rNum = 1; rNum <= xls.getRowCount(sheetName); rNum++) {
+			if (xls.getCellData(sheetName, 0, rNum).equals(testName)) {
 				testStartRowNum = rNum;
 				break;
 			}
@@ -721,15 +745,14 @@ public class CommonFunctionLib {
 		// cols
 		int colStartRowNum = testStartRowNum + 1;
 		int totalCols = 0;
-		while (!xls.getCellData("Test Data", totalCols, colStartRowNum).equals(
-				"")) {
+		while (!xls.getCellData(sheetName, totalCols, colStartRowNum).equals("")) {
 			totalCols++;
 		}
 	
 		// rows
 		int dataStartRowNum = testStartRowNum + 2;
 		int totalRows = 0;
-		while (!xls.getCellData("Test Data", 0, dataStartRowNum + totalRows)
+		while (!xls.getCellData(sheetName, 0, dataStartRowNum + totalRows)
 				.equals("")) {
 			totalRows++;
 		}
@@ -741,9 +764,9 @@ public class CommonFunctionLib {
 		for (int rNum = dataStartRowNum; rNum < (dataStartRowNum + totalRows); rNum++) {
 			table = new Hashtable<String, String>();
 			for (int cNum = 0; cNum < totalCols; cNum++) {
-				table.put(xls.getCellData("Test Data", cNum, colStartRowNum),
-						xls.getCellData("Test Data", cNum, rNum));
-				System.out.print(xls.getCellData("Test Data", cNum, rNum)
+				table.put(xls.getCellData(sheetName, cNum, colStartRowNum),
+						xls.getCellData(sheetName, cNum, rNum));
+				System.out.print(xls.getCellData(sheetName, cNum, rNum)
 						+ " -- ");
 			}
 			data[index][0] = table;

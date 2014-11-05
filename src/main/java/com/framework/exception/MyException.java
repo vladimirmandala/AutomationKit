@@ -31,6 +31,22 @@ public class MyException extends Exception {
 		AppLogs.error(this.message);
 	}
 
+	/**
+	 * Purpose : Custom message for the Throwable will be set here.
+	 * @param message custom exception message
+	 */
+	public MyException(Throwable cause) {
+		super(cause);
+	}
+	
+	/**
+	 * Purpose : Custom message for the message and Throwable will be set here.
+	 * @param message custom exception message
+	 */	public MyException(String message,Throwable cause) {
+		super(message);
+		this.message = message;
+		AppLogs.error(this.message);
+	}
 
 	/**
 	 * Purpose : overloaded constructor to accept custom message and exception object

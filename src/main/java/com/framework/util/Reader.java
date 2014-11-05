@@ -28,6 +28,7 @@ public class Reader {
 	private XSSFSheet sheet = null;
 	private XSSFRow row = null;
 	private XSSFCell cell = null;
+	private String sheetName = null;
 
 	public Reader() {
 		this.path = filename;
@@ -229,4 +230,29 @@ public class Reader {
 		}
 		return -1;
 	}
+	
+	public String[] getTestDataRow(String testName,Reader xls){
+		String getTestDataRowresult[] = new String[3];
+		for (int i=0; i<workbook.getNumberOfSheets(); i++) {
+		    System.out.println(workbook.getSheetName(i));
+		    sheetName = workbook.getSheetName(i);
+		    int testStartRowNum =0;
+			// find the row num from which test start
+			for (int rNum = 1; rNum <= xls.getRowCount(sheetName); rNum++) {
+				if (xls.getCellData(sheetName, 0, rNum).equals(testName)) {
+					testStartRowNum = rNum;
+					System.out.println("Test Start Row Num - "+sheetName);
+					System.out.println("Test Start Row Num - "+testName);
+					System.out.println("Test Start Row Num - "+testStartRowNum);
+									
+					getTestDataRowresult[0] = sheetName;
+					getTestDataRowresult[1] = testName;
+					getTestDataRowresult[2] = String.valueOf(testStartRowNum);
+					break;
+				}
+			}
+		}
+		return (getTestDataRowresult);
+	}
+	
 }
