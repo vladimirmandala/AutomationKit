@@ -2020,3 +2020,13 @@
 2014-10-20 16:40:33,272 INFO  (DetailedLogs.java:61)     - Info : stopDriver starts..
 2014-10-20 16:41:11,983 INFO  (DetailedLogs.java:61)     - Info : stopDriver ends..
 2014-10-20 16:41:12,026 INFO  (DetailedLogs.java:61)     - Info : Test in a suite finished: Rediff WebSite Testing and time is: 16:41:12:025
+2014-11-05 14:33:02,892 INFO  (DetailedLogs.java:39)     - SDGSeleniumFramework - Logger is configured!
+2014-11-05 14:33:04,676 INFO  (DetailedLogs.java:39)     - SDGSeleniumFramework - Logger is configured!
+2014-11-05 14:33:04,686 INFO  (DetailedLogs.java:39)     - SDGSeleniumFramework - Logger is configured!
+2014-11-05 14:33:04,754 INFO  (DetailedLogs.java:39)     - SDGSeleniumFramework - Logger is configured!
+2014-11-05 14:33:05,120 INFO  (DetailedLogs.java:61)     - Info : sucessfullLoginTest() starts..
+2014-11-05 14:49:51,339 INFO  (DetailedLogs.java:39)     - SDGSeleniumFramework - Logger is configured!
+2014-11-05 14:49:52,315 INFO  (DetailedLogs.java:39)     - SDGSeleniumFramework - Logger is configured!
+2014-11-05 14:49:52,332 INFO  (DetailedLogs.java:39)     - SDGSeleniumFramework - Logger is configured!
+2014-11-05 14:49:52,406 INFO  (DetailedLogs.java:39)     - SDGSeleniumFramework - Logger is configured!
+2014-11-05 14:49:52,546 INFO  (DetailedLogs.java:61)     - Info : sucessfullLoginTest() starts..

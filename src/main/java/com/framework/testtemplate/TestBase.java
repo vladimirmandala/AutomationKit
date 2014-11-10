@@ -47,7 +47,7 @@ import com.framework.util.Reader;
  */
 public class TestBase {
 
-	private static ResourceBundle _prop = ResourceBundle.getBundle("Env");
+	private static ResourceBundle _prop = ResourceBundle.getBundle("Selenium");
 	private static BrowserType browserType;
 	protected WebDriver driver;
 	protected AppiumDriver Mobiledriver;
