@@ -719,22 +719,6 @@ public class CommonFunctionLib {
 		testName= temp[1];
 		testStartRowNum = Integer.parseInt(temp[2]);
 		
-	/*	for (int i=0; i<workbook.getNumberOfSheets(); i++) {
-		    System.out.println(workbook.getSheetName(i));
-		    sheetName = workbook.getSheetName(i);
-		
-			// find the row num from which test start
-			for (int rNum = 1; rNum <= xls.getRowCount(sheetName); rNum++) {
-				if (xls.getCellData(sheetName, 0, rNum).equals(testName)) {
-					testStartRowNum = rNum;
-					System.out.println("Test Start Row Num - "+sheetName);
-					System.out.println("Test Start Row Num - "+testName);
-					System.out.println("Test Start Row Num - "+testStartRowNum);
-					break;
-				}
-			}
-		}*/
-		
 		// find the row num from which test start
 		for (int rNum = 1; rNum <= xls.getRowCount(sheetName); rNum++) {
 			if (xls.getCellData(sheetName, 0, rNum).equals(testName)) {
@@ -742,6 +726,7 @@ public class CommonFunctionLib {
 				break;
 			}
 		}
+		
 		// cols
 		int colStartRowNum = testStartRowNum + 1;
 		int totalCols = 0;

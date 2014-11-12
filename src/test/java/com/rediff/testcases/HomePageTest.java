@@ -15,16 +15,22 @@ import com.framework.testtemplate.TestBase;
 import com.rediff.pages.HomePage;
 
 public class HomePageTest extends TestBase{
+	HomePageTest() throws MyException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 	HomePage homePage = null;
 	
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	@Parameters(value = {"hubAddress"})
 	public void classSetUp(@Optional("localhost") String hubAddress) throws MalformedURLException, MyException {
 		startWebDriver(hubAddress);
 	}
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void HomePageTestSetUp(Method testName){
 		AppLogs.info("HomePageTestSetUp class ends..");
 		try{

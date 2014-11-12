@@ -6,6 +6,7 @@ import java.net.MalformedURLException;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -22,16 +23,26 @@ import com.rediff.pages.MailPage;
  */
 public class LoginTest extends TestBase {
 	
+	protected LoginTest() throws MyException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	MailPage mailPage = null;
 	HomePage homePage = null;
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	@Parameters(value = {"hubAddress"})
 	public void classSetUp(@Optional("localhost") String hubAddress) throws MalformedURLException, MyException {
 		startWebDriver(hubAddress);
 	}
 	
-	@BeforeMethod
+	@BeforeTest(alwaysRun = true)
+	public void before(){
+		 initLogs(this.getClass());
+	}
+	
+	@BeforeMethod(alwaysRun = true)
 	public void LoginTestSetUp(Method testName){
 		try{
 		AppLogs.info("LoginTestSetUp starts..");

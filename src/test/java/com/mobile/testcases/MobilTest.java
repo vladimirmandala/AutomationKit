@@ -12,6 +12,11 @@ import com.framework.testtemplate.TestBase;
 
 public class MobilTest extends TestBase{
 	
+	protected MobilTest() throws MyException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@BeforeClass
 	@Parameters(value = {"Mobile","Device"})
 	public void classSetUp(@Optional("Yes") String Mobile, @Optional("Android") String Device) throws MalformedURLException, MyException {

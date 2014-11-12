@@ -75,6 +75,18 @@ public class MyException extends Exception {
 	 * @param message
 	 * @param exe
 	 */
+	public MyException(String message , NullPointerException exeception) {
+		super(message);
+		this.message = message + exeception.getMessage();
+		AppLogs.error(this.message);
+	}
+	
+	
+	/**
+	 * Purpose : overloaded constructor to accept custom message and exception object
+	 * @param message
+	 * @param exe
+	 */
 	public MyException(String message , IOException exeception) {
 		super(message);
 		this.message = message + exeception.getMessage();

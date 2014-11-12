@@ -3,6 +3,8 @@ package com.framework.testtemplate;
 import static com.framework.util.BrowserType.FIREFOX;
 import io.appium.java_client.AppiumDriver;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -14,6 +16,8 @@ import java.util.Properties;
 import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.FileAppender;
+import org.apache.log4j.PatternLayout;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
@@ -24,12 +28,10 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 
 import com.framework.exception.MyException;
 import com.framework.report.CaptureBrowserScreenShot;
@@ -48,12 +50,33 @@ import com.framework.util.Reader;
 public class TestBase {
 
 	private static ResourceBundle _prop = ResourceBundle.getBundle("Selenium");
-	private static BrowserType browserType;
+	private static String browserType;
 	protected WebDriver driver;
 	protected AppiumDriver Mobiledriver;
+	Properties TestExecution = new Properties();
 	Properties properties;
-
+	
+	
+	
 	public DetailedLogs AppLogs = new DetailedLogs();
+	
+	protected TestBase() throws MyException{
+		FileInputStream fs;
+		try {
+			fs = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\TestExecution.properties");
+		} catch (FileNotFoundException e) {
+			throw new MyException("Error in connecting with Remote WebDriver"+e);
+		}
+		
+		try {
+			TestExecution.load(fs);
+		} catch (IOException e) {
+			throw new MyException("Error in connecting with Remote WebDriver"+e);
+		}
+	}
+	
+	//public Logger AppLogs;
+	//public static Logger AppLogs = Logger.getLogger("devpinoyLogger");
 	Reader xls = new Reader();
 
 	CaptureBrowserScreenShot captureBrowserScreenShot = new CaptureBrowserScreenShot();
@@ -68,22 +91,33 @@ public class TestBase {
 	public void startWebDriver(@Optional("localhost") String hubAddress)
 			throws MalformedURLException, MyException {
 		initPropertiesFile();
-		try{
-			if (driver == null) {
-				AppLogs.info("startDriver starts..");
-				driver = new RemoteWebDriver(new URL("http://" + hubAddress + ":" + "4444/wd/hub"), generateDesiredCapabilities(browserType));
-				AppLogs.debug("hubAddress : " + hubAddress + "browserType : "+ browserType);
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				driver.manage().window().maximize();
-				driver.get(properties.getProperty("BaseURL"));
-				AppLogs.info("startDriver ends..");
+		
+		String BrowserList [] = TestExecution.getProperty("Browser").split(":");
+	    for(String browser : BrowserList)
+	    {		
+	    	if (browser == null) {
+	    			AppLogs.error("Unknown browser specified, defaulting to 'Firefox'...");
+	    			browserType = "Firefox";
+	    	}else {
+	    		browserType = browser.toUpperCase();
+	    	}
+	    	try{
+				if (driver == null) {
+					AppLogs.info("startDriver starts..");
+					driver = new RemoteWebDriver(new URL("http://" + hubAddress + ":" + "4444/wd/hub"), generateDesiredCapabilities(browserType));
+					AppLogs.debug("hubAddress : " + hubAddress + "browserType : "+ browserType);
+					driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+					driver.manage().window().maximize();
+					driver.get(properties.getProperty("BaseURL"));
+					AppLogs.info("startDriver ends..");
+				}
+			}catch(MalformedURLException e){
+				System.out.println("Error in Connecting with HUB URL  "+"http://" + hubAddress + ":" + "4444/wd/hub");
+				throw new MyException("Error in connecting with Remote WebDriver"+e);
+			}catch(Exception e){
+				throw new MyException("Error in connecting with Remote WebDriver"+e);
 			}
-		}catch(MalformedURLException e){
-			System.out.println("Error in Connecting with HUB URL  "+"http://" + hubAddress + ":" + "4444/wd/hub");
-			throw new MyException("Error in connecting with Remote WebDriver"+e);
-		}catch(Exception e){
-			throw new MyException("Error in connecting with Remote WebDriver"+e);
-		}
+	    }
 	}
 
 	public void startAppiumDriver(@Optional("Yes") String Mobile, @Optional("Android") String Device)
@@ -106,7 +140,7 @@ public class TestBase {
 	 * Purpose : This method close/quit driver once test class execution is
 	 * complete
 	 */
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void stopDriver() {
 		AppLogs.info("stopDriver starts..");
 		if (driver != null) {
@@ -142,18 +176,17 @@ public class TestBase {
 	@BeforeSuite
 	public void setUpTest() {
 		AppLogs.info("setUpTest starts..");
-		for (BrowserType browser : BrowserType.values()) {
-			AppLogs.debug("Value in browser variable = " + browser.toString());
-			AppLogs.debug("_prop.getString = " + _prop.getString("browser"));
-			if (browser.toString().toLowerCase()
-					.equals(_prop.getString("browser").toLowerCase())) {
-				browserType = browser;
-			}
+		String BrowserList [] = TestExecution.getProperty("Browser").split(":");
+		for (int browserLoop=0; browserLoop<BrowserList.length; browserLoop++){
+			System.out.println(BrowserList[browserLoop]);
+			browserType = BrowserList[browserLoop].toUpperCase();
 		}
+		
+		/*
 		if (browserType == null) {
 			AppLogs.error("Unknown browser specified, defaulting to 'Firefox'...");
-			browserType = FIREFOX;
-		}
+			browserType = "Firefox";
+		}*/
 		AppLogs.info("setUpTest ends..");
 	}
 
@@ -165,7 +198,7 @@ public class TestBase {
 	 * @throws MyException
 	 * @throws IOException
 	 */
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void TearDown(ITestResult result, Method testName) throws MyException, IOException {
 		AppLogs.info("-------------" + testName.getName()+ " ---------- TearDown starts..");
 		if (!result.isSuccess()) {
@@ -183,12 +216,12 @@ public class TestBase {
 	 * @param capabilityType
 	 * @return
 	 */
-	private DesiredCapabilities generateDesiredCapabilities(BrowserType capabilityType) {
-		AppLogs.info("generateDesiredCapabilities starts..");
-		DesiredCapabilities capabilities;
+	private DesiredCapabilities generateDesiredCapabilities(String capabilityType) {
+		AppLogs.info("generateDesiredCapabilities starts.. "+capabilityType);
+		DesiredCapabilities capabilities=null;
 
 		switch (capabilityType) {
-		case IE:
+		case "IE":
 			capabilities = DesiredCapabilities.internetExplorer();
 			capabilities.setCapability(
 					CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION,
@@ -202,19 +235,19 @@ public class TestBase {
 			System.setProperty("webdriver.ie.driver",System.getProperty("user.dir")+"\\Binary\\IEDriverServer.exe");
 			// capability.setVersion("");
 			break;
-		case SAFARI:
+		case "SAFARI":
 			capabilities = DesiredCapabilities.safari();
 			capabilities.setCapability("safari.cleanSession", true);
 			capabilities.setCapability("takesScreenShot", true);
 			// capability.setVersion("");
 			break;
-		case OPERA:
+		case "OPERA":
 			capabilities = DesiredCapabilities.opera();
 			capabilities.setCapability("opera.arguments", "-nowin -nomail");
 			capabilities.setCapability("takesScreenShot", true);
 			// capability.setVersion("");
 			break;
-		case CHROME:
+		case "CHROME":
 			capabilities = DesiredCapabilities.chrome();
 			capabilities.setCapability("chrome.switches",
 					Arrays.asList("--no-default-browser-check"));
@@ -225,7 +258,7 @@ public class TestBase {
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\Binary\\chromedriver.exe"); 
 			// capability.setVersion("");
 			break;
-		case FIREFOX:
+		case "FIREFOX":
 			capabilities = DesiredCapabilities.firefox();
 			capabilities.setBrowserName("firefox");
 			capabilities.setCapability("takesScreenShot", true);
@@ -233,13 +266,13 @@ public class TestBase {
 			capabilities.setPlatform(org.openqa.selenium.Platform.ANY);
 			// capability.setVersion("");
 			break;
-		case HTMLUNIT:
-
+		case "HTMLUNIT":
+			break;
 		default:
 			capabilities = DesiredCapabilities.htmlUnit();
 			capabilities.setCapability("javascriptEnabled", "true");
 		}
-		AppLogs.info("generateDesiredCapabilities ends..");
+		AppLogs.info("generateDesiredCapabilities ends.. "+capabilityType);
 		return capabilities;
 	}
 
@@ -294,6 +327,21 @@ public class TestBase {
 	@AfterGroups("shopping")
 	public void afterGroups() {
 		System.out.println("@AfterGroups");
+	}
+	
+	public void initLogs(Class<?> class1){
+		//To be done
+		
+		FileAppender appender = new FileAppender();
+		//Configure the appender here, with file location pic
+		appender.setFile(System.getProperty("user.dir")+"\\logs\\"+class1.getName()+".log");
+		appender.setLayout(new PatternLayout("%d %-5p[%c{1}] %m%n"));
+		appender.setAppend(false);
+		appender.activateOptions();
+		
+		//AppLogs = Logger.getLogger(class1);
+		//AppLogs.setLevel(Level.INFO);
+		//AppLogs.addAppender(appender);
 	}
 }
 

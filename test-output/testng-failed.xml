@@ -9,24 +9,32 @@
       </run>
     </groups>
     <classes>
-      <class name="com.rediff.testcases.HomePageTest">
-        <methods>
-          <include name="verifyBrokenLink"/>
-        </methods>
-      </class> <!-- com.rediff.testcases.HomePageTest -->
       <class name="com.rediff.testcases.LoginTest">
         <methods>
           <include name="wrongUserNameWrongPasswordLoginTest"/>
-          <include name="sucessfullLoginTest"/>
           <include name="blankUserNameRightPasswordLoginTest"/>
-          <include name="blankUserNameWrongPasswordLoginTest"/>
-          <include name="blankUserNameBlankPasswordLoginTest"/>
+          <include name="TearDown"/>
+          <include name="classSetUp"/>
+          <include name="before"/>
           <include name="wrongUserNameBlankPasswordLoginTest"/>
-          <include name="wrongUserNameRightPasswordLoginTest"/>
           <include name="rightUserNameWrongPasswordLoginTest"/>
+          <include name="sucessfullLoginTest"/>
+          <include name="blankUserNameWrongPasswordLoginTest"/>
+          <include name="stopDriver"/>
+          <include name="blankUserNameBlankPasswordLoginTest"/>
+          <include name="wrongUserNameRightPasswordLoginTest"/>
           <include name="rightUserNameBlankPasswordLoginTest"/>
         </methods>
       </class> <!-- com.rediff.testcases.LoginTest -->
+      <class name="com.rediff.testcases.HomePageTest">
+        <methods>
+          <include name="classSetUp"/>
+          <include name="verifyBrokenLink"/>
+          <include name="HomePageTestSetUp"/>
+          <include name="TearDown"/>
+          <include name="stopDriver"/>
+        </methods>
+      </class> <!-- com.rediff.testcases.HomePageTest -->
     </classes>
   </test> <!-- Rediff WebSite Testing(failed) -->
 </suite> <!-- Failed suite [Rediff Mail Execution Suite] -->
