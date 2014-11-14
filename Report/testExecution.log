@@ -4647,3 +4647,13 @@ Driver info: org.openqa.selenium.remote.RemoteWebDriver
 2014-11-12 16:09:00,250 INFO  (DetailedLogs.java:61)     - Info : ClickOnWebElement ends..
 2014-11-12 16:09:00,250 INFO  (DetailedLogs.java:61)     - Info : clickLogin() ends..
 2014-11-12 16:09:00,251 INFO  (DetailedLogs.java:61)     - Info : -------------blankUserNameBlankPasswordLoginTest ---------- TearDown starts..
+2014-11-14 15:30:24,306 INFO  (DetailedLogs.java:39)     - SDGSeleniumFramework - Logger is configured!
+2014-11-14 15:30:30,543 INFO  (DetailedLogs.java:39)     - SDGSeleniumFramework - Logger is configured!
+2014-11-14 15:30:30,553 INFO  (DetailedLogs.java:39)     - SDGSeleniumFramework - Logger is configured!
+2014-11-14 15:30:30,637 INFO  (DetailedLogs.java:39)     - SDGSeleniumFramework - Logger is configured!
+2014-11-14 15:30:31,387 INFO  (DetailedLogs.java:61)     - Info : startDriver starts..
+2014-11-14 15:30:31,387 INFO  (DetailedLogs.java:61)     - Info : startDriver starts..
+2014-11-14 15:30:31,639 INFO  (DetailedLogs.java:61)     - Info : generateDesiredCapabilities starts.. FIREFOX
+2014-11-14 15:30:31,639 INFO  (DetailedLogs.java:61)     - Info : generateDesiredCapabilities starts.. FIREFOX
+2014-11-14 15:30:31,646 INFO  (DetailedLogs.java:61)     - Info : generateDesiredCapabilities ends.. FIREFOX
+2014-11-14 15:30:31,646 INFO  (DetailedLogs.java:61)     - Info : generateDesiredCapabilities ends.. FIREFOX
