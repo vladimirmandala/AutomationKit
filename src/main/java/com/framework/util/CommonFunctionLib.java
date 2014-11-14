@@ -60,6 +60,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 
 import com.framework.report.CaptureBrowserScreenShot;
 import com.framework.report.DetailedLogs;
@@ -699,6 +700,29 @@ public class CommonFunctionLib {
 			return false;
 	}
 
+	
+	public boolean checkForTestNameInExcel(String testName, Reader xls){
+		int testStartRowNum = 0;
+		String sheetName = null;
+		boolean testNameExist = false;
+		//String result[] = getTestDataRow(testName,xls);
+		String temp[];
+		temp = xls.getTestDataRow(testName,xls);
+		sheetName = temp[0];
+		testName= temp[1];
+		testStartRowNum = Integer.parseInt(temp[2]);
+		
+		// find the row num from which test start
+		for (int rNum = 1; rNum <= xls.getRowCount(sheetName); rNum++) {
+			if (xls.getCellData(sheetName, 0, rNum).equals(testName)) {
+				if (testNameExist = true){
+					readData(testName, xls);
+				}
+			}
+		}
+		return true;
+	}
+	
 	/**
 	 * 
 	 * @param testName

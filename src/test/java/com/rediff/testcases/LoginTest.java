@@ -2,11 +2,13 @@ package com.rediff.testcases;
 
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
+import java.util.Hashtable;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -23,6 +25,7 @@ import com.rediff.pages.MailPage;
  */
 public class LoginTest extends TestBase {
 	
+			
 	protected LoginTest() throws MyException {
 		super();
 		// TODO Auto-generated constructor stub
@@ -48,7 +51,7 @@ public class LoginTest extends TestBase {
 		AppLogs.info("LoginTestSetUp starts..");
 		homePage = PageFactory.initElements(driver, HomePage.class);
 		mailPage = homePage.openRediffMail();
-		readData(testName);
+		//readData(testName);
 		AppLogs.info("LoginTestSetUp ends..");
 		}catch(Exception e){
 			AppLogs.error("LoginTestSetup()"+e);
@@ -56,10 +59,12 @@ public class LoginTest extends TestBase {
 	}
 
 	
-	@Test(groups = { "Selenium" })
-	public void sucessfullLoginTest() throws MyException {
+	@Test(groups = { "Selenium" },dataProvider= "readData", priority=0)
+	public void sucessfullLoginTest(Hashtable<String,String> data) throws MyException {
 		AppLogs.info("sucessfullLoginTest() starts..");
-		mailPage.doLogin("abcd", "aaae");
+		//mailPage.doLogin("abcd", "aaae");
+		System.out.println("============="+data.get("Username")+data.get("Password")+"=============");
+		mailPage.doLogin(data.get("Username"),data.get("Password"));
 		AppLogs.info("sucessfullLoginTest() ends..");
 	}
 
@@ -68,7 +73,7 @@ public class LoginTest extends TestBase {
 		mailPage.doLogin("qamate", "qamaet");
 	}
 
-	@Test(groups = { "Selenium" })
+	@Test(groups = { "Selenium" },dataProvider= "readData")
 	public void rightUserNameBlankPasswordLoginTest() throws MyException {
 		mailPage.doLogin("qamate", "");
 		// Assert.assertTrue(HomePage.getErrorMessage(driver).getText().contains("Password cannot be empty"));
@@ -92,8 +97,11 @@ public class LoginTest extends TestBase {
 		// Assert.assertTrue(HomePage.getErrorMessage(driver).getText().contains("Password cannot be empty"));
 	}
 
-	@Test(groups = { "Selenium" })
-	public void blankUserNameRightPasswordLoginTest() throws MyException {
+	
+	@Test(groups = { "Selenium" },dataProvider= "readData", priority=0)
+	public void blankUserNameRightPasswordLoginTest(Hashtable<String,String> data) throws MyException {
+		System.out.println("============="+data.get("Username")+data.get("Password")+"=============");
+		mailPage.doLogin(data.get("Username"),data.get("Password"));
 		mailPage.doLogin("", "qamate");
 		// Assert.assertTrue(HomePage.getErrorMessage(driver).getText().contains("Username cannot be empty"));
 	}
