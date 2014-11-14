@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="10" total="10" passed="0">
+<testng-results skipped="0" failed="1" total="9" passed="8">
   <reporter-output>
     <line>
       <![CDATA[isLinkBroken : http://www.rediff.com/  works fine]]>
@@ -104,49 +104,34 @@
       <![CDATA[isLinkBroken : http://shopping.rediff.com/categories  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/belts/cat-206?sc_cid=inhome_top|fixcat_Belts  works fine]]>
+      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/bike-accessories-and-apparels/cat-9928?sc_cid=inhome_top|fixcat_bike%20accessories  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-cargos/cat-8081?sc_cid=inhome_top|fixcat_cargos  works fine]]>
+      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/other-car-accessories/cat-9108/?sc_cid=inhome_top|fixcat_car%20accessories  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-footwear/cat-10972?sc_cid=inhome_top|fixcat_footwear  works fine]]>
+      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/car-amplifiers/cat-446?sc_cid=inhome_top|fixcat_car%20amplifiers  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-formal-shirts/cat-8076?sc_cid=inhome_top|fixcat_formalshirts  works fine]]>
+      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/car-cleaning-products/cat-440/?sc_cid=inhome_top|fixcat_car%20cleaning  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/mens20innerwear20&20sleepwear/cat-8084?sc_cid=inhome_top|fixcat_Innerwear  works fine]]>
+      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/car-perfume/cat-439?sc_cid=inhome_top|fixcat_car%20perfume  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/mens20jackets20&20raincoats/cat-8085?sc_cid=inhome_top|fixcat_jackets  works fine]]>
+      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/car-speakers/cat-447?sc_cid=inhome_top|fixcat_car%20speakers  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/mens20jeans/cat-8080?sc_cid=inhome_top|fixcat_jeans  works fine]]>
+      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/car-styling-products/cat-7580/?sc_cid=inhome_top|fixcat_car%20styling  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-shorts/cat-8082?sc_cid=inhome_top|fixcat_shorts  works fine]]>
+      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/car-utilities/cat-441?sc_cid=inhome_top|fixcat_car%20utility  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-eye-wear/cat-8548?sc_cid=inhome_top|fixcat_Sunglasses  works fine]]>
+      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/gps-navigation--amp--accessories/cat-452?sc_cid=inhome_top|fixcat_gps%20navigation%20&%20accessories  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-t-shirts/cat-8079?sc_cid=inhome_top|fixcat_Tshirts  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/ties/cat-217?sc_cid=inhome_top|fixcat_Ties%20&%20Cufflinks  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/mens20sports20wear20&20tracksuits/cat-8086?sc_cid=inhome_top|fixcat_Tracksuits  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/trousers-for-men/cat-8077/?sc_cid=inhome_top|fixcat_trousers  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-wallets/cat-221/?sc_cid=inhome_top|fixcat_wallets  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-watches/cat-9629?sc_cid=inhome_top|fixcat_menswatches  works fine]]>
+      <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/lamps-and-horns/cat-9909?sc_cid=inhome_top|fixcat_lamps%20&%20horns  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://clients.rediff.com/rediff_advertisewithus/contact.htm  works fine]]>
@@ -176,22 +161,10 @@
       <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/fadnavis-government-wins-trust-vote-in-maharashtra-assembly/20141112.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://news.rediff.com/commentary/2014/nov/14/liveupdates.htm  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/fadnavis-government-wins-trust-vote-in-maharashtra-assembly/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news/column/why-things-can-only-get-worse-for-the-shiv-sena-/20141111.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news/column/why-things-can-only-get-worse-for-the-shiv-sena-/20141111.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://news.rediff.com/commentary/2014/nov/14/liveupdates.htm  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
@@ -200,10 +173,10 @@
       <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/the-govinda-quiz-how-well-do-you-know-him/20141112.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies/review/review-kill-dil-is-a-disaster/20141114.htm  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/the-govinda-quiz-how-well-do-you-know-him/20141112.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies/review/review-kill-dil-is-a-disaster/20141114.htm  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
@@ -212,226 +185,58 @@
       <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/health-5-foods-that-calm-anxiety/20141112.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/travel-sorry-mumbai-but-tibets-night-life-never-ends/20141114.htm  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/health-5-foods-that-calm-anxiety/20141112.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/travel-sorry-mumbai-but-tibets-night-life-never-ends/20141114.htm  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/health-world-diabetes-day-diet-what-is-it-all-about/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/health-world-diabetes-day-diet-what-is-it-all-about/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-tech-samsungs-next-big-bet-smartphone-with-a-curved-screen/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-tech-samsungs-next-big-bet-smartphone-with-a-curved-screen/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/when-maharashtra-cm-pawar-swept-trash-off-the-streets/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/when-maharashtra-cm-pawar-swept-trash-off-the-streets/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/the-australian-tour-will-be-a-hard-one-for-team-india-sunil-gavaskar/20141112.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/stats-records-galore-for-rohit-sharma-virat-kohli-india-sri-lanka/20141114.htm  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/the-australian-tour-will-be-a-hard-one-for-team-india-sunil-gavaskar/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://news.rediff.com/commentary/2014/nov/12/liveupdates.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://news.rediff.com/commentary/2014/nov/12/liveupdates.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-how-to-speak-english-correctly/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-how-to-speak-english-correctly/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/perfin-tips-to-cut-down-atm-use-and-save-money/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/perfin-tips-to-cut-down-atm-use-and-save-money/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/hello-world-great-to-be-on-instagram-says-pm-modi-on-debut/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/hello-world-great-to-be-on-instagram-says-pm-modi-on-debut/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/bored-solve-the-action-jackson-puzzle-right-here/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/bored-solve-the-action-jackson-puzzle-right-here/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/busted-10-famous-sports-persons-nailed-for-doping/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/busted-10-famous-sports-persons-nailed-for-doping/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/money-how-to-size-up-your-debt-post-diwali-debt/20141111.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/money-how-to-size-up-your-debt-post-diwali-debt/20141111.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news/column/why-india-needs-to-get-tough-with-china/20141110.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news/column/why-india-needs-to-get-tough-with-china/20141110.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-inside-new-yorks-stunning-subway-station/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-inside-new-yorks-stunning-subway-station/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-infla-why-are-vegetable-prices-going-through-the-roof/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-infla-why-are-vegetable-prices-going-through-the-roof/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/kolkata-odi-preview-pix-ruthless-india-aim-to-continue-winning-streak-against-sri-lanka/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/kolkata-odi-preview-pix-ruthless-india-aim-to-continue-winning-streak-against-sri-lanka/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/pix-the-crazy-odd-world-we-live-in/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/pix-the-crazy-odd-world-we-live-in/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/after-make-in-india-govt-to-promote-served-from-india/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/after-make-in-india-govt-to-promote-served-from-india/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/pix-esha-deol-ms-sathyu-at-garm-hava-screening/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/pix-esha-deol-ms-sathyu-at-garm-hava-screening/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/boxer-sarita-faces-strong-penalty-for-refusing-medal/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/boxer-sarita-faces-strong-penalty-for-refusing-medal/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/i-was-unsure-of-going-topless/20141110.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/i-was-unsure-of-going-topless/20141110.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/lokesh-rahul-dad-gavaskar-opener-india-test-team-australia-samuel-jayaraj/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/lokesh-rahul-dad-gavaskar-opener-india-test-team-australia-samuel-jayaraj/20141112.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/stats-records-galore-for-rohit-sharma-virat-kohli-india-sri-lanka/20141114.htm  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
@@ -440,22 +245,226 @@
       <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/hilary-swank-rihanna-springsteen-a-day-out-in-hollywood/20141112.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/the-coolest-guns-in-the-movies/20140924.htm  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/hilary-swank-rihanna-springsteen-a-day-out-in-hollywood/20141112.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/the-coolest-guns-in-the-movies/20140924.htm  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
     </line>
     <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/world-tour-finals-photos-pix-murray-steamrolled-by-exceptional-federer/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/world-tour-finals-photos-pix-murray-steamrolled-by-exceptional-federer/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+    </line>
+    <line>
       <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/glamour-vote-for-the-hottest-cover-girls-this-november/20141110.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/specials-childrens-day-quiz-can-you-identify-these-prodigies/20141113.htm  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/glamour-vote-for-the-hottest-cover-girls-this-november/20141110.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/specials-childrens-day-quiz-can-you-identify-these-prodigies/20141113.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-auto-gearless-alto-triggers-long-queues-but-will-people-buy/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-auto-gearless-alto-triggers-long-queues-but-will-people-buy/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/i-want-to-become-an-actress-like-deepika-padukone-tv/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/i-want-to-become-an-actress-like-deepika-padukone-tv/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/three-india-born-ceos-on-fortune-business-person-of-the-year-list/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/three-india-born-ceos-on-fortune-business-person-of-the-year-list/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/australia-conducted-clean-bid-for-2022-world-cup-ffa/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/australia-conducted-clean-bid-for-2022-world-cup-ffa/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/how-the-markets-fared-on-nov-14/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/how-the-markets-fared-on-nov-14/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/srinivasan-stuart-binny-raj-kundra-named-in-ipl-scandal-report/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/srinivasan-stuart-binny-raj-kundra-named-in-ipl-scandal-report/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news/column/patel-over-nehru-is-like-gadkari-over-modi/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news/column/patel-over-nehru-is-like-gadkari-over-modi/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/australia-paceman-mitchell-johnson-is-icc-cricketer-of-the-year/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/australia-paceman-mitchell-johnson-is-icc-cricketer-of-the-year/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/deepika-is-a-good-looking-girl-but-no-acting-talent/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/deepika-is-a-good-looking-girl-but-no-acting-talent/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-at-32-kunal-shah-becomes-youngest-partner-at-goldman-sachs/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-at-32-kunal-shah-becomes-youngest-partner-at-goldman-sachs/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-what-to-avoid-in-a-job-interview-/20141112.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-what-to-avoid-in-a-job-interview-/20141112.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-6-indian-ventures-among-worlds-most-innovative-infra-projects/20141113.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-6-indian-ventures-among-worlds-most-innovative-infra-projects/20141113.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/when-the-worlds-tallest-man-met-the-shortest-man/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/when-the-worlds-tallest-man-met-the-shortest-man/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/going-back-in-time-with-master-raju/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/going-back-in-time-with-master-raju/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/formula-one-schumachers-website-re-launched-as-family-thanks-fans-for-support/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/formula-one-schumachers-website-re-launched-as-family-thanks-fans-for-support/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/food-healthy-eating-how-to-make-russian-salad/20141112.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/food-healthy-eating-how-to-make-russian-salad/20141112.htm  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
@@ -464,25 +473,28 @@
       <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/why-hashtag-beenrapedneverreported-is-a-rage/20141110.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/dont-miss-best-photos-of-the-week-pix/20141114.htm  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/why-hashtag-beenrapedneverreported-is-a-rage/20141110.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/dont-miss-best-photos-of-the-week-pix/20141114.htm  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+      <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/caroline-wozniackis-bikini-filled-bahamas-vacation-serena-williams/20141112.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/caroline-wozniackis-bikini-filled-bahamas-vacation-serena-williams/20141112.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/salman-s-sister-arpita-s-pre-wedding-ceremonies-begins/9915331  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+      <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/salman-s-sister-arpita-s-pre-wedding-ceremonies-begins/9915331  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://money.rediff.com/  works fine]]>
@@ -491,40 +503,25 @@
       <![CDATA[isLinkBroken : http://money.rediff.com/  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://labs.rediff.com/  works fine]]>
+      <![CDATA[isLinkBroken : http://track.rediff.com/click?url=___http://labs.rediff.com___&cmp=labs-hd&lnk=labs-hd&nsrv1=inhome  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/rediff-labs-only-3-per-cent-of-trips-taken-by-indians-were-holidays/20140911.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://track.rediff.com/click?url=___http://www.rediff.com/news/report/rediff-labs-child-mortality-rate-in-india-is-declining/20141114.htm___&cmp=labs-story&lnk=labs-story&nsrv1=inhome  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/rediff-labs-only-3-per-cent-of-trips-taken-by-indians-were-holidays/20140911.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://track.rediff.com/click?url=___http://www.rediff.com/news/report/rediff-labs-child-mortality-rate-in-india-is-declining/20141114.htm___&cmp=labs-story&lnk=labs-story&nsrv1=inhome  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://labs.rediff.com/  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/omg-elephant-goes-wild/9860054  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/omg-elephant-goes-wild/9860054  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
+      <![CDATA[isLinkBroken : http://track.rediff.com/click?url=___http://labs.rediff.com___&cmp=labs-hd&lnk=labs-hd&nsrv1=inhome  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://www.rediff.com/editors-choice  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-rejected-in-a-job-interview-heres-what-you-need-to-do-next/20141028.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/slide-show/slide-show-1-specials-english-quiz-do-you-make-these-mistakes/20130425.htm  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-rejected-in-a-job-interview-heres-what-you-need-to-do-next/20141028.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/slide-show/slide-show-1-specials-english-quiz-do-you-make-these-mistakes/20130425.htm  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://www.rediff.com/editors-choice  works fine]]>
@@ -536,10 +533,10 @@
       <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/5-things-you-did-not-know-about-shraddha-kapoor-/9909377  works fine]]>
+      <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/super-extreme-a-100-year-old-grandmother-goes-sky-diving/9914788  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/5-things-you-did-not-know-about-shraddha-kapoor-/9909377  works fine]]>
+      <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/super-extreme-a-100-year-old-grandmother-goes-sky-diving/9914788  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
@@ -548,10 +545,10 @@
       <![CDATA[isLinkBroken : http://www.rediff.com/editors-choice  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-5-intangible-skills-that-every-boss-looks-for-in-you/20140922.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/slide-show/slide-show-1-career-top-10-engg-branches-in-india-computer-science-leads-it-loses-sheen/20140529.htm  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-5-intangible-skills-that-every-boss-looks-for-in-you/20140922.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/slide-show/slide-show-1-career-top-10-engg-branches-in-india-computer-science-leads-it-loses-sheen/20140529.htm  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://www.rediff.com/editors-choice  works fine]]>
@@ -560,10 +557,10 @@
       <![CDATA[isLinkBroken : http://pages.rediff.com/  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://pages.rediff.com/video/92945/9894539/iphone-robbery-attempt-failed-video  works fine]]>
+      <![CDATA[isLinkBroken : http://pages.rediff.com/video/92945/9893099/upset-clown-fools-people-video  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://pages.rediff.com/video/92945/9894539/iphone-robbery-attempt-failed-video  works fine]]>
+      <![CDATA[isLinkBroken : http://pages.rediff.com/video/92945/9893099/upset-clown-fools-people-video  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://pages.rediff.com/kill-dil/2033001  works fine]]>
@@ -590,19 +587,19 @@
       <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/caught-on-cam-arjun-kapoor-rags-sonakshi-sinha/9905535  works fine]]>
+      <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/mamta-kulkarni-caught-in-drug-raid-in-kenya/9914220  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/caught-on-cam-arjun-kapoor-rags-sonakshi-sinha/9905535  works fine]]>
+      <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/mamta-kulkarni-caught-in-drug-raid-in-kenya/9914220  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://zarabol.rediff.com/Sena-vs-BJP/9754082  works fine]]>
+      <![CDATA[isLinkBroken : http://zarabol.rediff.com/Will-AAP-Win-Delhi-Elections/9747665  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://zarabol.rediff.com/Sena-vs-BJP/9754082  works fine]]>
+      <![CDATA[isLinkBroken : http://zarabol.rediff.com/Will-AAP-Win-Delhi-Elections/9747665  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://zarabol.rediff.com/  works fine]]>
@@ -611,73 +608,73 @@
       <![CDATA[isLinkBroken : http://realtime.rediff.com/topnews/india  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://realtime.rediff.com/news/india/South-Indian-Actress-Padmapriya-Gets-Married-to-Jasmine-Shah/540b0d5173a75577  works fine]]>
+      <![CDATA[isLinkBroken : http://realtime.rediff.com/news/india/Tata-Motors-Q2-profit-falls-by-71-on-weak-sales/f5c78d57b4da10a4  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://realtime.rediff.com/news/india/South-Indian-Actress-Padmapriya-Gets-Married-to-Jasmine-Shah/540b0d5173a75577  works fine]]>
+      <![CDATA[isLinkBroken : http://realtime.rediff.com/news/india/Tata-Motors-Q2-profit-falls-by-71-on-weak-sales/f5c78d57b4da10a4  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://realtime.rediff.com/topnews/india  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/travel-from-amritsar-with-love/20141109.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/from-alia-to-abhishek-recognise-these-cute-kids/20141114.htm  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/travel-from-amritsar-with-love/20141109.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-suresh-prabhu-inherits-quite-a-mess-as-railway-minister/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-suresh-prabhu-inherits-quite-a-mess-as-railway-minister/20141112.htm  works fine]]>
-    </line>
-    <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/from-alia-to-abhishek-recognise-these-cute-kids/20141114.htm  works fine]]>
     </line>
     <line>
       <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/ranveer-arjun-john-the-hottest-gunda-of-bollywood-vote/20141112.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/ranveer-arjun-john-the-hottest-gunda-of-bollywood-vote/20141112.htm  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/glamour-vote-for-the-hottest-cover-girls-this-november/20141110.htm  works fine]]>
     </line>
     <line>
-      <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/glamour-vote-for-the-hottest-cover-girls-this-november/20141110.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/saradha-scam-accused-kunal-ghosh-attempts-suicide-in-prison/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news/report/saradha-scam-accused-kunal-ghosh-attempts-suicide-in-prison/20141114.htm  works fine]]>
+    </line>
+    <line>
+      <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
     </line>
   </reporter-output>
-  <suite name="Rediff Mail Execution Suite" duration-ms="156306" started-at="2014-11-12T10:21:19Z" finished-at="2014-11-12T10:23:55Z">
+  <suite name="Rediff Mail Execution Suite" duration-ms="211844" started-at="2014-11-14T11:30:34Z" finished-at="2014-11-14T11:34:06Z">
     <groups>
       <group name="Selenium">
-        <method signature="HomePageTest.verifyBrokenLink()[pri:0, instance:com.rediff.testcases.HomePageTest@eb2686]" name="verifyBrokenLink" class="com.rediff.testcases.HomePageTest"/>
-        <method signature="LoginTest.blankUserNameBlankPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="blankUserNameBlankPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
-        <method signature="LoginTest.blankUserNameRightPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="blankUserNameRightPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
-        <method signature="LoginTest.blankUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="blankUserNameWrongPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
-        <method signature="LoginTest.rightUserNameBlankPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="rightUserNameBlankPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
-        <method signature="LoginTest.rightUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="rightUserNameWrongPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
-        <method signature="LoginTest.sucessfullLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="sucessfullLoginTest" class="com.rediff.testcases.LoginTest"/>
-        <method signature="LoginTest.wrongUserNameBlankPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="wrongUserNameBlankPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
-        <method signature="LoginTest.wrongUserNameRightPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="wrongUserNameRightPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
-        <method signature="LoginTest.wrongUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="wrongUserNameWrongPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
+        <method signature="HomePageTest.verifyBrokenLink()[pri:0, instance:com.rediff.testcases.HomePageTest@1f3724c]" name="verifyBrokenLink" class="com.rediff.testcases.HomePageTest"/>
+        <method signature="LoginTest.blankUserNameBlankPasswordLoginTest(java.util.Hashtable)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="blankUserNameBlankPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
+        <method signature="LoginTest.blankUserNameRightPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="blankUserNameRightPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
+        <method signature="LoginTest.blankUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="blankUserNameWrongPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
+        <method signature="LoginTest.rightUserNameBlankPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="rightUserNameBlankPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
+        <method signature="LoginTest.rightUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="rightUserNameWrongPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
+        <method signature="LoginTest.sucessfullLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="sucessfullLoginTest" class="com.rediff.testcases.LoginTest"/>
+        <method signature="LoginTest.wrongUserNameBlankPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="wrongUserNameBlankPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
+        <method signature="LoginTest.wrongUserNameRightPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="wrongUserNameRightPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
+        <method signature="LoginTest.wrongUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="wrongUserNameWrongPasswordLoginTest" class="com.rediff.testcases.LoginTest"/>
       </group> <!-- Selenium -->
     </groups>
-    <test name="Rediff WebSite Testing" duration-ms="156306" started-at="2014-11-12T10:21:19Z" finished-at="2014-11-12T10:23:55Z">
+    <test name="Rediff WebSite Testing" duration-ms="211844" started-at="2014-11-14T11:30:34Z" finished-at="2014-11-14T11:34:06Z">
       <class name="com.rediff.testcases.LoginTest">
-        <test-method status="PASS" signature="before()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="before" is-config="true" duration-ms="16" started-at="2014-11-12T15:51:19Z" finished-at="2014-11-12T15:51:19Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="before" is-config="true" duration-ms="19" started-at="2014-11-14T17:00:34Z" finished-at="2014-11-14T17:00:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="PASS" signature="classSetUp(java.lang.String)[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="classSetUp" is-config="true" duration-ms="31372" started-at="2014-11-12T15:51:19Z" finished-at="2014-11-12T15:51:50Z">
+        <test-method status="PASS" signature="classSetUp(java.lang.String)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="classSetUp" is-config="true" duration-ms="164446" started-at="2014-11-14T17:00:34Z" finished-at="2014-11-14T17:03:19Z">
           <params>
             <param index="0">
               <value>
@@ -688,75 +685,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classSetUp -->
-        <test-method status="FAIL" signature="blankUserNameBlankPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="blankUserNameBlankPasswordLoginTest" duration-ms="12" started-at="2014-11-12T15:51:50Z" finished-at="2014-11-12T15:51:50Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.rediff.testcases.LoginTest.blankUserNameBlankPasswordLoginTest(LoginTest.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- blankUserNameBlankPasswordLoginTest -->
-        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="TearDown" is-config="true" duration-ms="7657" started-at="2014-11-12T15:51:50Z" finished-at="2014-11-12T15:51:58Z">
+        <test-method status="PASS" signature="LoginTestSetUp(java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="LoginTestSetUp" is-config="true" duration-ms="3965" started-at="2014-11-14T17:03:19Z" finished-at="2014-11-14T17:03:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=blankUserNameBlankPasswordLoginTest status=FAILURE method=LoginTest.blankUserNameBlankPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void com.rediff.testcases.LoginTest.blankUserNameBlankPasswordLoginTest() throws com.framework.exception.MyException]]>
+                <![CDATA[public void com.rediff.testcases.LoginTest.blankUserNameRightPasswordLoginTest() throws com.framework.exception.MyException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TearDown -->
-        <test-method status="FAIL" signature="blankUserNameRightPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="blankUserNameRightPasswordLoginTest" duration-ms="2" started-at="2014-11-12T15:51:58Z" finished-at="2014-11-12T15:51:58Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.rediff.testcases.LoginTest.blankUserNameRightPasswordLoginTest(LoginTest.java:97)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        </test-method> <!-- LoginTestSetUp -->
+        <test-method status="PASS" signature="blankUserNameRightPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="blankUserNameRightPasswordLoginTest" duration-ms="749" started-at="2014-11-14T17:03:23Z" finished-at="2014-11-14T17:03:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- blankUserNameRightPasswordLoginTest -->
-        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="TearDown" is-config="true" duration-ms="59534" started-at="2014-11-12T15:51:58Z" finished-at="2014-11-12T15:52:57Z">
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="TearDown" is-config="true" duration-ms="4338" started-at="2014-11-14T17:03:24Z" finished-at="2014-11-14T17:03:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=blankUserNameRightPasswordLoginTest status=FAILURE method=LoginTest.blankUserNameRightPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e] output={null}]]]>
+                <![CDATA[[TestResult name=blankUserNameRightPasswordLoginTest status=SUCCESS method=LoginTest.blankUserNameRightPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -768,35 +716,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="FAIL" signature="blankUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="blankUserNameWrongPasswordLoginTest" duration-ms="5" started-at="2014-11-12T15:52:57Z" finished-at="2014-11-12T15:52:57Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.rediff.testcases.LoginTest.blankUserNameWrongPasswordLoginTest(LoginTest.java:103)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- blankUserNameWrongPasswordLoginTest -->
-        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="TearDown" is-config="true" duration-ms="3475" started-at="2014-11-12T15:52:57Z" finished-at="2014-11-12T15:53:01Z">
+        <test-method status="PASS" signature="LoginTestSetUp(java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="LoginTestSetUp" is-config="true" duration-ms="936" started-at="2014-11-14T17:03:28Z" finished-at="2014-11-14T17:03:29Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=blankUserNameWrongPasswordLoginTest status=FAILURE method=LoginTest.blankUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e] output={null}]]]>
+                <![CDATA[public void com.rediff.testcases.LoginTest.blankUserNameWrongPasswordLoginTest() throws com.framework.exception.MyException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTestSetUp -->
+        <test-method status="PASS" signature="blankUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="blankUserNameWrongPasswordLoginTest" duration-ms="707" started-at="2014-11-14T17:03:29Z" finished-at="2014-11-14T17:03:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankUserNameWrongPasswordLoginTest -->
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="TearDown" is-config="true" duration-ms="2803" started-at="2014-11-14T17:03:30Z" finished-at="2014-11-14T17:03:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=blankUserNameWrongPasswordLoginTest status=SUCCESS method=LoginTest.blankUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -808,35 +747,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="FAIL" signature="rightUserNameBlankPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="rightUserNameBlankPasswordLoginTest" duration-ms="2" started-at="2014-11-12T15:53:01Z" finished-at="2014-11-12T15:53:01Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.rediff.testcases.LoginTest.rightUserNameBlankPasswordLoginTest(LoginTest.java:73)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- rightUserNameBlankPasswordLoginTest -->
-        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="TearDown" is-config="true" duration-ms="5207" started-at="2014-11-12T15:53:01Z" finished-at="2014-11-12T15:53:06Z">
+        <test-method status="PASS" signature="LoginTestSetUp(java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="LoginTestSetUp" is-config="true" duration-ms="1285" started-at="2014-11-14T17:03:33Z" finished-at="2014-11-14T17:03:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=rightUserNameBlankPasswordLoginTest status=FAILURE method=LoginTest.rightUserNameBlankPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e] output={null}]]]>
+                <![CDATA[public void com.rediff.testcases.LoginTest.rightUserNameBlankPasswordLoginTest() throws com.framework.exception.MyException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTestSetUp -->
+        <test-method status="PASS" signature="rightUserNameBlankPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="rightUserNameBlankPasswordLoginTest" duration-ms="756" started-at="2014-11-14T17:03:34Z" finished-at="2014-11-14T17:03:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rightUserNameBlankPasswordLoginTest -->
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="TearDown" is-config="true" duration-ms="2295" started-at="2014-11-14T17:03:35Z" finished-at="2014-11-14T17:03:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=rightUserNameBlankPasswordLoginTest status=SUCCESS method=LoginTest.rightUserNameBlankPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -848,35 +778,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="FAIL" signature="rightUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="rightUserNameWrongPasswordLoginTest" duration-ms="3" started-at="2014-11-12T15:53:06Z" finished-at="2014-11-12T15:53:06Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.rediff.testcases.LoginTest.rightUserNameWrongPasswordLoginTest(LoginTest.java:68)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- rightUserNameWrongPasswordLoginTest -->
-        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="TearDown" is-config="true" duration-ms="36358" started-at="2014-11-12T15:53:06Z" finished-at="2014-11-12T15:53:42Z">
+        <test-method status="PASS" signature="LoginTestSetUp(java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="LoginTestSetUp" is-config="true" duration-ms="1294" started-at="2014-11-14T17:03:37Z" finished-at="2014-11-14T17:03:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=rightUserNameWrongPasswordLoginTest status=FAILURE method=LoginTest.rightUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e] output={null}]]]>
+                <![CDATA[public void com.rediff.testcases.LoginTest.rightUserNameWrongPasswordLoginTest() throws com.framework.exception.MyException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTestSetUp -->
+        <test-method status="PASS" signature="rightUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="rightUserNameWrongPasswordLoginTest" duration-ms="613" started-at="2014-11-14T17:03:38Z" finished-at="2014-11-14T17:03:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rightUserNameWrongPasswordLoginTest -->
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="TearDown" is-config="true" duration-ms="1722" started-at="2014-11-14T17:03:39Z" finished-at="2014-11-14T17:03:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=rightUserNameWrongPasswordLoginTest status=SUCCESS method=LoginTest.rightUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -888,35 +809,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="FAIL" signature="sucessfullLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="sucessfullLoginTest" duration-ms="1" started-at="2014-11-12T15:53:42Z" finished-at="2014-11-12T15:53:42Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.rediff.testcases.LoginTest.sucessfullLoginTest(LoginTest.java:62)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sucessfullLoginTest -->
-        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="TearDown" is-config="true" duration-ms="3165" started-at="2014-11-12T15:53:42Z" finished-at="2014-11-12T15:53:45Z">
+        <test-method status="PASS" signature="LoginTestSetUp(java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="LoginTestSetUp" is-config="true" duration-ms="908" started-at="2014-11-14T17:03:41Z" finished-at="2014-11-14T17:03:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=sucessfullLoginTest status=FAILURE method=LoginTest.sucessfullLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e] output={null}]]]>
+                <![CDATA[public void com.rediff.testcases.LoginTest.sucessfullLoginTest() throws com.framework.exception.MyException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTestSetUp -->
+        <test-method status="PASS" signature="sucessfullLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="sucessfullLoginTest" duration-ms="535" started-at="2014-11-14T17:03:41Z" finished-at="2014-11-14T17:03:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sucessfullLoginTest -->
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="TearDown" is-config="true" duration-ms="1712" started-at="2014-11-14T17:03:42Z" finished-at="2014-11-14T17:03:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=sucessfullLoginTest status=SUCCESS method=LoginTest.sucessfullLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -928,35 +840,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="FAIL" signature="wrongUserNameBlankPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="wrongUserNameBlankPasswordLoginTest" duration-ms="1" started-at="2014-11-12T15:53:45Z" finished-at="2014-11-12T15:53:45Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.rediff.testcases.LoginTest.wrongUserNameBlankPasswordLoginTest(LoginTest.java:91)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- wrongUserNameBlankPasswordLoginTest -->
-        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="TearDown" is-config="true" duration-ms="3232" started-at="2014-11-12T15:53:45Z" finished-at="2014-11-12T15:53:49Z">
+        <test-method status="PASS" signature="LoginTestSetUp(java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="LoginTestSetUp" is-config="true" duration-ms="987" started-at="2014-11-14T17:03:44Z" finished-at="2014-11-14T17:03:45Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=wrongUserNameBlankPasswordLoginTest status=FAILURE method=LoginTest.wrongUserNameBlankPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e] output={null}]]]>
+                <![CDATA[public void com.rediff.testcases.LoginTest.wrongUserNameBlankPasswordLoginTest() throws com.framework.exception.MyException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTestSetUp -->
+        <test-method status="PASS" signature="wrongUserNameBlankPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="wrongUserNameBlankPasswordLoginTest" duration-ms="596" started-at="2014-11-14T17:03:45Z" finished-at="2014-11-14T17:03:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wrongUserNameBlankPasswordLoginTest -->
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="TearDown" is-config="true" duration-ms="1618" started-at="2014-11-14T17:03:45Z" finished-at="2014-11-14T17:03:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=wrongUserNameBlankPasswordLoginTest status=SUCCESS method=LoginTest.wrongUserNameBlankPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -968,35 +871,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="FAIL" signature="wrongUserNameRightPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="wrongUserNameRightPasswordLoginTest" duration-ms="1" started-at="2014-11-12T15:53:49Z" finished-at="2014-11-12T15:53:49Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.rediff.testcases.LoginTest.wrongUserNameRightPasswordLoginTest(LoginTest.java:79)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- wrongUserNameRightPasswordLoginTest -->
-        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="TearDown" is-config="true" duration-ms="3244" started-at="2014-11-12T15:53:49Z" finished-at="2014-11-12T15:53:52Z">
+        <test-method status="PASS" signature="LoginTestSetUp(java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="LoginTestSetUp" is-config="true" duration-ms="1087" started-at="2014-11-14T17:03:47Z" finished-at="2014-11-14T17:03:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=wrongUserNameRightPasswordLoginTest status=FAILURE method=LoginTest.wrongUserNameRightPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e] output={null}]]]>
+                <![CDATA[public void com.rediff.testcases.LoginTest.wrongUserNameRightPasswordLoginTest() throws com.framework.exception.MyException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTestSetUp -->
+        <test-method status="PASS" signature="wrongUserNameRightPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="wrongUserNameRightPasswordLoginTest" duration-ms="546" started-at="2014-11-14T17:03:48Z" finished-at="2014-11-14T17:03:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wrongUserNameRightPasswordLoginTest -->
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="TearDown" is-config="true" duration-ms="1812" started-at="2014-11-14T17:03:49Z" finished-at="2014-11-14T17:03:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=wrongUserNameRightPasswordLoginTest status=SUCCESS method=LoginTest.wrongUserNameRightPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -1008,35 +902,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="FAIL" signature="wrongUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="wrongUserNameWrongPasswordLoginTest" duration-ms="2" started-at="2014-11-12T15:53:52Z" finished-at="2014-11-12T15:53:52Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.rediff.testcases.LoginTest.wrongUserNameWrongPasswordLoginTest(LoginTest.java:85)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- wrongUserNameWrongPasswordLoginTest -->
-        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="TearDown" is-config="true" duration-ms="2634" started-at="2014-11-12T15:53:52Z" finished-at="2014-11-12T15:53:54Z">
+        <test-method status="PASS" signature="LoginTestSetUp(java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="LoginTestSetUp" is-config="true" duration-ms="974" started-at="2014-11-14T17:03:50Z" finished-at="2014-11-14T17:03:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=wrongUserNameWrongPasswordLoginTest status=FAILURE method=LoginTest.wrongUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e] output={null}]]]>
+                <![CDATA[public void com.rediff.testcases.LoginTest.wrongUserNameWrongPasswordLoginTest() throws com.framework.exception.MyException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTestSetUp -->
+        <test-method status="PASS" signature="wrongUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="wrongUserNameWrongPasswordLoginTest" duration-ms="544" started-at="2014-11-14T17:03:51Z" finished-at="2014-11-14T17:03:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wrongUserNameWrongPasswordLoginTest -->
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="TearDown" is-config="true" duration-ms="2304" started-at="2014-11-14T17:03:52Z" finished-at="2014-11-14T17:03:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=wrongUserNameWrongPasswordLoginTest status=SUCCESS method=LoginTest.wrongUserNameWrongPasswordLoginTest()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -1048,13 +933,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="PASS" signature="stopDriver()[pri:0, instance:com.rediff.testcases.LoginTest@1abf87e]" name="stopDriver" is-config="true" duration-ms="348" started-at="2014-11-12T15:53:54Z" finished-at="2014-11-12T15:53:55Z">
+        <test-method status="PASS" signature="stopDriver()[pri:0, instance:com.rediff.testcases.LoginTest@1ad59b5]" name="stopDriver" is-config="true" duration-ms="12090" started-at="2014-11-14T17:03:54Z" finished-at="2014-11-14T17:04:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopDriver -->
       </class> <!-- com.rediff.testcases.LoginTest -->
       <class name="com.rediff.testcases.HomePageTest">
-        <test-method status="PASS" signature="classSetUp(java.lang.String)[pri:0, instance:com.rediff.testcases.HomePageTest@eb2686]" name="classSetUp" is-config="true" duration-ms="35505" started-at="2014-11-12T15:51:19Z" finished-at="2014-11-12T15:51:54Z">
+        <test-method status="PASS" signature="classSetUp(java.lang.String)[pri:0, instance:com.rediff.testcases.HomePageTest@1f3724c]" name="classSetUp" is-config="true" duration-ms="15053" started-at="2014-11-14T17:00:34Z" finished-at="2014-11-14T17:00:50Z">
           <params>
             <param index="0">
               <value>
@@ -1065,7 +950,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- classSetUp -->
-        <test-method status="PASS" signature="HomePageTestSetUp(java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.HomePageTest@eb2686]" name="HomePageTestSetUp" is-config="true" duration-ms="28119" started-at="2014-11-12T15:51:54Z" finished-at="2014-11-12T15:52:22Z">
+        <test-method status="PASS" signature="HomePageTestSetUp(java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.HomePageTest@1f3724c]" name="HomePageTestSetUp" is-config="true" duration-ms="664" started-at="2014-11-14T17:00:50Z" finished-at="2014-11-14T17:00:50Z">
           <params>
             <param index="0">
               <value>
@@ -1076,13 +961,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HomePageTestSetUp -->
-        <test-method status="FAIL" signature="verifyBrokenLink()[pri:0, instance:com.rediff.testcases.HomePageTest@eb2686]" name="verifyBrokenLink" duration-ms="82338" started-at="2014-11-12T15:52:22Z" finished-at="2014-11-12T15:53:45Z">
+        <test-method status="FAIL" signature="verifyBrokenLink()[pri:0, instance:com.rediff.testcases.HomePageTest@1f3724c]" name="verifyBrokenLink" duration-ms="132280" started-at="2014-11-14T17:00:50Z" finished-at="2014-11-14T17:03:02Z">
           <exception class="com.framework.exception.MyException">
             <message>
-              <![CDATA[Exception Error : java.lang.RuntimeException: java.lang.IllegalArgumentException: protocol = http host = null , http://ads.rediff.com/5c/inrediffHP.com/mainhome.htm/2050026759/Right/default/empty.gif/793853506f31526a4e4d6b414133616d]]>
+              <![CDATA[Exception Error : java.lang.RuntimeException: java.lang.IllegalArgumentException: protocol = http host = null , http://ads.rediff.com/5c/inrediffHP.com/mainhome.htm/1539307145/Right/default/empty.gif/334f4d4c5156526c352b594141466357]]>
             </message>
             <full-stacktrace>
-              <![CDATA[com.framework.exception.MyException: Exception Error : java.lang.RuntimeException: java.lang.IllegalArgumentException: protocol = http host = null , http://ads.rediff.com/5c/inrediffHP.com/mainhome.htm/2050026759/Right/default/empty.gif/793853506f31526a4e4d6b414133616d
+              <![CDATA[com.framework.exception.MyException: Exception Error : java.lang.RuntimeException: java.lang.IllegalArgumentException: protocol = http host = null , http://ads.rediff.com/5c/inrediffHP.com/mainhome.htm/1539307145/Right/default/empty.gif/334f4d4c5156526c352b594141466357
 	at com.framework.actions.WebAction.getResponseCode(WebAction.java:337)
 	at com.framework.actions.WebAction.isLinkBroken(WebAction.java:378)
 	at com.rediff.pages.HomePage.CheckHyperLinkOnPage(HomePage.java:57)
@@ -1207,49 +1092,34 @@
               <![CDATA[isLinkBroken : http://shopping.rediff.com/categories  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/belts/cat-206?sc_cid=inhome_top|fixcat_Belts  works fine]]>
+              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/bike-accessories-and-apparels/cat-9928?sc_cid=inhome_top|fixcat_bike%20accessories  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-cargos/cat-8081?sc_cid=inhome_top|fixcat_cargos  works fine]]>
+              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/other-car-accessories/cat-9108/?sc_cid=inhome_top|fixcat_car%20accessories  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-footwear/cat-10972?sc_cid=inhome_top|fixcat_footwear  works fine]]>
+              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/car-amplifiers/cat-446?sc_cid=inhome_top|fixcat_car%20amplifiers  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-formal-shirts/cat-8076?sc_cid=inhome_top|fixcat_formalshirts  works fine]]>
+              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/car-cleaning-products/cat-440/?sc_cid=inhome_top|fixcat_car%20cleaning  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/mens20innerwear20&20sleepwear/cat-8084?sc_cid=inhome_top|fixcat_Innerwear  works fine]]>
+              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/car-perfume/cat-439?sc_cid=inhome_top|fixcat_car%20perfume  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/mens20jackets20&20raincoats/cat-8085?sc_cid=inhome_top|fixcat_jackets  works fine]]>
+              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/car-speakers/cat-447?sc_cid=inhome_top|fixcat_car%20speakers  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/mens20jeans/cat-8080?sc_cid=inhome_top|fixcat_jeans  works fine]]>
+              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/car-styling-products/cat-7580/?sc_cid=inhome_top|fixcat_car%20styling  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-shorts/cat-8082?sc_cid=inhome_top|fixcat_shorts  works fine]]>
+              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/car-utilities/cat-441?sc_cid=inhome_top|fixcat_car%20utility  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-eye-wear/cat-8548?sc_cid=inhome_top|fixcat_Sunglasses  works fine]]>
+              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/gps-navigation--amp--accessories/cat-452?sc_cid=inhome_top|fixcat_gps%20navigation%20&%20accessories  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-t-shirts/cat-8079?sc_cid=inhome_top|fixcat_Tshirts  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/ties/cat-217?sc_cid=inhome_top|fixcat_Ties%20&%20Cufflinks  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/mens20sports20wear20&20tracksuits/cat-8086?sc_cid=inhome_top|fixcat_Tracksuits  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/trousers-for-men/cat-8077/?sc_cid=inhome_top|fixcat_trousers  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-wallets/cat-221/?sc_cid=inhome_top|fixcat_wallets  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/men-s-watches/cat-9629?sc_cid=inhome_top|fixcat_menswatches  works fine]]>
+              <![CDATA[isLinkBroken : http://shopping.rediff.com/categories/lamps-and-horns/cat-9909?sc_cid=inhome_top|fixcat_lamps%20&%20horns  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://clients.rediff.com/rediff_advertisewithus/contact.htm  works fine]]>
@@ -1279,22 +1149,10 @@
               <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/fadnavis-government-wins-trust-vote-in-maharashtra-assembly/20141112.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://news.rediff.com/commentary/2014/nov/14/liveupdates.htm  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/fadnavis-government-wins-trust-vote-in-maharashtra-assembly/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news/column/why-things-can-only-get-worse-for-the-shiv-sena-/20141111.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news/column/why-things-can-only-get-worse-for-the-shiv-sena-/20141111.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://news.rediff.com/commentary/2014/nov/14/liveupdates.htm  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
@@ -1303,10 +1161,10 @@
               <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/the-govinda-quiz-how-well-do-you-know-him/20141112.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies/review/review-kill-dil-is-a-disaster/20141114.htm  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/the-govinda-quiz-how-well-do-you-know-him/20141112.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies/review/review-kill-dil-is-a-disaster/20141114.htm  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
@@ -1315,226 +1173,58 @@
               <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/health-5-foods-that-calm-anxiety/20141112.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/travel-sorry-mumbai-but-tibets-night-life-never-ends/20141114.htm  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/health-5-foods-that-calm-anxiety/20141112.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/travel-sorry-mumbai-but-tibets-night-life-never-ends/20141114.htm  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/health-world-diabetes-day-diet-what-is-it-all-about/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/health-world-diabetes-day-diet-what-is-it-all-about/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-tech-samsungs-next-big-bet-smartphone-with-a-curved-screen/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-tech-samsungs-next-big-bet-smartphone-with-a-curved-screen/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/when-maharashtra-cm-pawar-swept-trash-off-the-streets/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/when-maharashtra-cm-pawar-swept-trash-off-the-streets/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/the-australian-tour-will-be-a-hard-one-for-team-india-sunil-gavaskar/20141112.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/stats-records-galore-for-rohit-sharma-virat-kohli-india-sri-lanka/20141114.htm  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/the-australian-tour-will-be-a-hard-one-for-team-india-sunil-gavaskar/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://news.rediff.com/commentary/2014/nov/12/liveupdates.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://news.rediff.com/commentary/2014/nov/12/liveupdates.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-how-to-speak-english-correctly/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-how-to-speak-english-correctly/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/perfin-tips-to-cut-down-atm-use-and-save-money/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/perfin-tips-to-cut-down-atm-use-and-save-money/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/hello-world-great-to-be-on-instagram-says-pm-modi-on-debut/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/hello-world-great-to-be-on-instagram-says-pm-modi-on-debut/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/bored-solve-the-action-jackson-puzzle-right-here/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/bored-solve-the-action-jackson-puzzle-right-here/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/busted-10-famous-sports-persons-nailed-for-doping/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/busted-10-famous-sports-persons-nailed-for-doping/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/money-how-to-size-up-your-debt-post-diwali-debt/20141111.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/money-how-to-size-up-your-debt-post-diwali-debt/20141111.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news/column/why-india-needs-to-get-tough-with-china/20141110.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news/column/why-india-needs-to-get-tough-with-china/20141110.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-inside-new-yorks-stunning-subway-station/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-inside-new-yorks-stunning-subway-station/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-infla-why-are-vegetable-prices-going-through-the-roof/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-infla-why-are-vegetable-prices-going-through-the-roof/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/kolkata-odi-preview-pix-ruthless-india-aim-to-continue-winning-streak-against-sri-lanka/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/kolkata-odi-preview-pix-ruthless-india-aim-to-continue-winning-streak-against-sri-lanka/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/pix-the-crazy-odd-world-we-live-in/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/pix-the-crazy-odd-world-we-live-in/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/after-make-in-india-govt-to-promote-served-from-india/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/after-make-in-india-govt-to-promote-served-from-india/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/pix-esha-deol-ms-sathyu-at-garm-hava-screening/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/pix-esha-deol-ms-sathyu-at-garm-hava-screening/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/boxer-sarita-faces-strong-penalty-for-refusing-medal/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/boxer-sarita-faces-strong-penalty-for-refusing-medal/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/i-was-unsure-of-going-topless/20141110.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/i-was-unsure-of-going-topless/20141110.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/lokesh-rahul-dad-gavaskar-opener-india-test-team-australia-samuel-jayaraj/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/lokesh-rahul-dad-gavaskar-opener-india-test-team-australia-samuel-jayaraj/20141112.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/stats-records-galore-for-rohit-sharma-virat-kohli-india-sri-lanka/20141114.htm  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
@@ -1543,22 +1233,226 @@
               <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/hilary-swank-rihanna-springsteen-a-day-out-in-hollywood/20141112.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/the-coolest-guns-in-the-movies/20140924.htm  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/hilary-swank-rihanna-springsteen-a-day-out-in-hollywood/20141112.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/the-coolest-guns-in-the-movies/20140924.htm  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
             </line>
             <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/world-tour-finals-photos-pix-murray-steamrolled-by-exceptional-federer/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/world-tour-finals-photos-pix-murray-steamrolled-by-exceptional-federer/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+            </line>
+            <line>
               <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/glamour-vote-for-the-hottest-cover-girls-this-november/20141110.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/specials-childrens-day-quiz-can-you-identify-these-prodigies/20141113.htm  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/glamour-vote-for-the-hottest-cover-girls-this-november/20141110.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/specials-childrens-day-quiz-can-you-identify-these-prodigies/20141113.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-auto-gearless-alto-triggers-long-queues-but-will-people-buy/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-auto-gearless-alto-triggers-long-queues-but-will-people-buy/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/i-want-to-become-an-actress-like-deepika-padukone-tv/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/i-want-to-become-an-actress-like-deepika-padukone-tv/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/three-india-born-ceos-on-fortune-business-person-of-the-year-list/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/three-india-born-ceos-on-fortune-business-person-of-the-year-list/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/australia-conducted-clean-bid-for-2022-world-cup-ffa/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/australia-conducted-clean-bid-for-2022-world-cup-ffa/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/how-the-markets-fared-on-nov-14/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/how-the-markets-fared-on-nov-14/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/srinivasan-stuart-binny-raj-kundra-named-in-ipl-scandal-report/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/srinivasan-stuart-binny-raj-kundra-named-in-ipl-scandal-report/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news/column/patel-over-nehru-is-like-gadkari-over-modi/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news/column/patel-over-nehru-is-like-gadkari-over-modi/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/australia-paceman-mitchell-johnson-is-icc-cricketer-of-the-year/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/cricket/report/australia-paceman-mitchell-johnson-is-icc-cricketer-of-the-year/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/cricket  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/deepika-is-a-good-looking-girl-but-no-acting-talent/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/deepika-is-a-good-looking-girl-but-no-acting-talent/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-at-32-kunal-shah-becomes-youngest-partner-at-goldman-sachs/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-at-32-kunal-shah-becomes-youngest-partner-at-goldman-sachs/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-what-to-avoid-in-a-job-interview-/20141112.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-what-to-avoid-in-a-job-interview-/20141112.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-6-indian-ventures-among-worlds-most-innovative-infra-projects/20141113.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-6-indian-ventures-among-worlds-most-innovative-infra-projects/20141113.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/when-the-worlds-tallest-man-met-the-shortest-man/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/when-the-worlds-tallest-man-met-the-shortest-man/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/going-back-in-time-with-master-raju/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/going-back-in-time-with-master-raju/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/formula-one-schumachers-website-re-launched-as-family-thanks-fans-for-support/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/formula-one-schumachers-website-re-launched-as-family-thanks-fans-for-support/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/food-healthy-eating-how-to-make-russian-salad/20141112.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/food-healthy-eating-how-to-make-russian-salad/20141112.htm  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
@@ -1567,25 +1461,28 @@
               <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/why-hashtag-beenrapedneverreported-is-a-rage/20141110.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/dont-miss-best-photos-of-the-week-pix/20141114.htm  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/why-hashtag-beenrapedneverreported-is-a-rage/20141110.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/dont-miss-best-photos-of-the-week-pix/20141114.htm  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+              <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/caroline-wozniackis-bikini-filled-bahamas-vacation-serena-williams/20141112.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/sports/report/caroline-wozniackis-bikini-filled-bahamas-vacation-serena-williams/20141112.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/salman-s-sister-arpita-s-pre-wedding-ceremonies-begins/9915331  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/sports  works fine]]>
+              <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/salman-s-sister-arpita-s-pre-wedding-ceremonies-begins/9915331  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://money.rediff.com/  works fine]]>
@@ -1594,40 +1491,25 @@
               <![CDATA[isLinkBroken : http://money.rediff.com/  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://labs.rediff.com/  works fine]]>
+              <![CDATA[isLinkBroken : http://track.rediff.com/click?url=___http://labs.rediff.com___&cmp=labs-hd&lnk=labs-hd&nsrv1=inhome  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/rediff-labs-only-3-per-cent-of-trips-taken-by-indians-were-holidays/20140911.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://track.rediff.com/click?url=___http://www.rediff.com/news/report/rediff-labs-child-mortality-rate-in-india-is-declining/20141114.htm___&cmp=labs-story&lnk=labs-story&nsrv1=inhome  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/rediff-labs-only-3-per-cent-of-trips-taken-by-indians-were-holidays/20140911.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://track.rediff.com/click?url=___http://www.rediff.com/news/report/rediff-labs-child-mortality-rate-in-india-is-declining/20141114.htm___&cmp=labs-story&lnk=labs-story&nsrv1=inhome  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://labs.rediff.com/  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/omg-elephant-goes-wild/9860054  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/omg-elephant-goes-wild/9860054  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
+              <![CDATA[isLinkBroken : http://track.rediff.com/click?url=___http://labs.rediff.com___&cmp=labs-hd&lnk=labs-hd&nsrv1=inhome  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://www.rediff.com/editors-choice  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-rejected-in-a-job-interview-heres-what-you-need-to-do-next/20141028.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/slide-show/slide-show-1-specials-english-quiz-do-you-make-these-mistakes/20130425.htm  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-rejected-in-a-job-interview-heres-what-you-need-to-do-next/20141028.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/slide-show/slide-show-1-specials-english-quiz-do-you-make-these-mistakes/20130425.htm  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://www.rediff.com/editors-choice  works fine]]>
@@ -1639,10 +1521,10 @@
               <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/5-things-you-did-not-know-about-shraddha-kapoor-/9909377  works fine]]>
+              <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/super-extreme-a-100-year-old-grandmother-goes-sky-diving/9914788  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/5-things-you-did-not-know-about-shraddha-kapoor-/9909377  works fine]]>
+              <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/super-extreme-a-100-year-old-grandmother-goes-sky-diving/9914788  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
@@ -1651,10 +1533,10 @@
               <![CDATA[isLinkBroken : http://www.rediff.com/editors-choice  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-5-intangible-skills-that-every-boss-looks-for-in-you/20140922.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/slide-show/slide-show-1-career-top-10-engg-branches-in-india-computer-science-leads-it-loses-sheen/20140529.htm  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/career-5-intangible-skills-that-every-boss-looks-for-in-you/20140922.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/slide-show/slide-show-1-career-top-10-engg-branches-in-india-computer-science-leads-it-loses-sheen/20140529.htm  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://www.rediff.com/editors-choice  works fine]]>
@@ -1663,10 +1545,10 @@
               <![CDATA[isLinkBroken : http://pages.rediff.com/  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://pages.rediff.com/video/92945/9894539/iphone-robbery-attempt-failed-video  works fine]]>
+              <![CDATA[isLinkBroken : http://pages.rediff.com/video/92945/9893099/upset-clown-fools-people-video  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://pages.rediff.com/video/92945/9894539/iphone-robbery-attempt-failed-video  works fine]]>
+              <![CDATA[isLinkBroken : http://pages.rediff.com/video/92945/9893099/upset-clown-fools-people-video  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://pages.rediff.com/kill-dil/2033001  works fine]]>
@@ -1693,19 +1575,19 @@
               <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/caught-on-cam-arjun-kapoor-rags-sonakshi-sinha/9905535  works fine]]>
+              <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/mamta-kulkarni-caught-in-drug-raid-in-kenya/9914220  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/caught-on-cam-arjun-kapoor-rags-sonakshi-sinha/9905535  works fine]]>
+              <![CDATA[isLinkBroken : http://ishare.rediff.com/video/entertainment/mamta-kulkarni-caught-in-drug-raid-in-kenya/9914220  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://ishare.rediff.com/  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://zarabol.rediff.com/Sena-vs-BJP/9754082  works fine]]>
+              <![CDATA[isLinkBroken : http://zarabol.rediff.com/Will-AAP-Win-Delhi-Elections/9747665  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://zarabol.rediff.com/Sena-vs-BJP/9754082  works fine]]>
+              <![CDATA[isLinkBroken : http://zarabol.rediff.com/Will-AAP-Win-Delhi-Elections/9747665  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://zarabol.rediff.com/  works fine]]>
@@ -1714,57 +1596,57 @@
               <![CDATA[isLinkBroken : http://realtime.rediff.com/topnews/india  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://realtime.rediff.com/news/india/South-Indian-Actress-Padmapriya-Gets-Married-to-Jasmine-Shah/540b0d5173a75577  works fine]]>
+              <![CDATA[isLinkBroken : http://realtime.rediff.com/news/india/Tata-Motors-Q2-profit-falls-by-71-on-weak-sales/f5c78d57b4da10a4  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://realtime.rediff.com/news/india/South-Indian-Actress-Padmapriya-Gets-Married-to-Jasmine-Shah/540b0d5173a75577  works fine]]>
+              <![CDATA[isLinkBroken : http://realtime.rediff.com/news/india/Tata-Motors-Q2-profit-falls-by-71-on-weak-sales/f5c78d57b4da10a4  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://realtime.rediff.com/topnews/india  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/travel-from-amritsar-with-love/20141109.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/from-alia-to-abhishek-recognise-these-cute-kids/20141114.htm  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/travel-from-amritsar-with-love/20141109.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-suresh-prabhu-inherits-quite-a-mess-as-railway-minister/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business/report/pix-special-suresh-prabhu-inherits-quite-a-mess-as-railway-minister/20141112.htm  works fine]]>
-            </line>
-            <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/business  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/from-alia-to-abhishek-recognise-these-cute-kids/20141114.htm  works fine]]>
             </line>
             <line>
               <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/ranveer-arjun-john-the-hottest-gunda-of-bollywood-vote/20141112.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies/report/ranveer-arjun-john-the-hottest-gunda-of-bollywood-vote/20141112.htm  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/glamour-vote-for-the-hottest-cover-girls-this-november/20141110.htm  works fine]]>
             </line>
             <line>
-              <![CDATA[isLinkBroken : http://www.rediff.com/movies  works fine]]>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead/report/glamour-vote-for-the-hottest-cover-girls-this-november/20141110.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/getahead  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/saradha-scam-accused-kunal-ghosh-attempts-suicide-in-prison/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news/report/saradha-scam-accused-kunal-ghosh-attempts-suicide-in-prison/20141114.htm  works fine]]>
+            </line>
+            <line>
+              <![CDATA[isLinkBroken : http://www.rediff.com/news  works fine]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyBrokenLink -->
-        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.HomePageTest@eb2686]" name="TearDown" is-config="true" duration-ms="5550" started-at="2014-11-12T15:53:45Z" finished-at="2014-11-12T15:53:50Z">
+        <test-method status="PASS" signature="TearDown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.rediff.testcases.HomePageTest@1f3724c]" name="TearDown" is-config="true" duration-ms="6427" started-at="2014-11-14T17:03:03Z" finished-at="2014-11-14T17:03:09Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyBrokenLink status=FAILURE method=HomePageTest.verifyBrokenLink()[pri:0, instance:com.rediff.testcases.HomePageTest@eb2686] output=isLinkBroken : http://www.rediff.com/  works fine]]]>
+                <![CDATA[[TestResult name=verifyBrokenLink status=FAILURE method=HomePageTest.verifyBrokenLink()[pri:0, instance:com.rediff.testcases.HomePageTest@1f3724c] output=isLinkBroken : http://www.rediff.com/  works fine]]]>
               </value>
             </param>
             <param index="1">
@@ -1776,7 +1658,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method status="PASS" signature="stopDriver()[pri:0, instance:com.rediff.testcases.HomePageTest@eb2686]" name="stopDriver" is-config="true" duration-ms="398" started-at="2014-11-12T15:53:50Z" finished-at="2014-11-12T15:53:50Z">
+        <test-method status="PASS" signature="stopDriver()[pri:0, instance:com.rediff.testcases.HomePageTest@1f3724c]" name="stopDriver" is-config="true" duration-ms="443" started-at="2014-11-14T17:03:09Z" finished-at="2014-11-14T17:03:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopDriver -->

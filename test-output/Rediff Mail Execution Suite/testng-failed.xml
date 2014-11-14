@@ -11,19 +11,11 @@
     <classes>
       <class name="com.rediff.testcases.LoginTest">
         <methods>
-          <include name="wrongUserNameWrongPasswordLoginTest"/>
-          <include name="blankUserNameRightPasswordLoginTest"/>
+          <include name="LoginTestSetUp"/>
           <include name="TearDown"/>
-          <include name="classSetUp"/>
           <include name="before"/>
-          <include name="wrongUserNameBlankPasswordLoginTest"/>
-          <include name="rightUserNameWrongPasswordLoginTest"/>
-          <include name="sucessfullLoginTest"/>
-          <include name="blankUserNameWrongPasswordLoginTest"/>
+          <include name="classSetUp"/>
           <include name="stopDriver"/>
-          <include name="blankUserNameBlankPasswordLoginTest"/>
-          <include name="wrongUserNameRightPasswordLoginTest"/>
-          <include name="rightUserNameBlankPasswordLoginTest"/>
         </methods>
       </class> <!-- com.rediff.testcases.LoginTest -->
       <class name="com.rediff.testcases.HomePageTest">

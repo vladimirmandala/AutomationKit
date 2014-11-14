@@ -2,6 +2,7 @@ package com.rediff.testcases;
 
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
+import java.util.Hashtable;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
@@ -48,7 +49,7 @@ public class LoginTest extends TestBase {
 		AppLogs.info("LoginTestSetUp starts..");
 		homePage = PageFactory.initElements(driver, HomePage.class);
 		mailPage = homePage.openRediffMail();
-		readData(testName);
+		//readData(testName);
 		AppLogs.info("LoginTestSetUp ends..");
 		}catch(Exception e){
 			AppLogs.error("LoginTestSetup()"+e);
@@ -104,9 +105,12 @@ public class LoginTest extends TestBase {
 		// Assert.assertTrue(HomePage.getErrorMessage(driver).getText().contains("Username cannot be empty"));
 	}
 
-	@Test(groups = { "Selenium" })
-	public void blankUserNameBlankPasswordLoginTest() throws MyException {
+	@Test(groups = { "Selenium" },dataProvider="readData")
+	public void blankUserNameBlankPasswordLoginTest(Hashtable<String,String> data) throws MyException {
 		mailPage.doLogin("", "");
+		System.out.println(data.get("Username") + data.get("Password"));
+		mailPage.doLogin(data.get("Username"), data.get("Password"));
+		
 		// Assert.assertTrue(HomePage.getErrorMessage(driver).getText().contains("Username cannot be empty"));
 	}
 }
