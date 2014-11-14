@@ -1,5 +1,6 @@
 package com.framework.testtemplate;
 
+import static com.framework.util.BrowserType.FIREFOX;
 import io.appium.java_client.AppiumDriver;
 
 import java.io.FileInputStream;
@@ -35,6 +36,7 @@ import org.testng.annotations.Optional;
 import com.framework.exception.MyException;
 import com.framework.report.CaptureBrowserScreenShot;
 import com.framework.report.DetailedLogs;
+import com.framework.util.BrowserType;
 import com.framework.util.CommonFunctionLib;
 import com.framework.util.Reader;
 
@@ -164,6 +166,7 @@ public class TestBase {
 	public Object[][] readData(Method testName) {
 		AppLogs.info("readData starts..");
 		return CommonFunctionLib.readData(testName.getName(), xls);
+
 	}
 
 	/**

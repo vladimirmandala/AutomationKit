@@ -35,9 +35,10 @@ public class HomePageTest extends TestBase{
 		AppLogs.info("HomePageTestSetUp class ends..");
 		try{
 			homePage = PageFactory.initElements(driver, HomePage.class);
+			readData(testName);
 			AppLogs.info("HomePageTestSetUp class ends..");
 		}catch(Exception e){
-			AppLogs.error("HomePageTestSetUp()"+e);
+			AppLogs.error("LoginTestSetup()"+e);
 		}
 		AppLogs.info("-------------" + testName.getName()+" ---------- Test Case starts..");
 	}

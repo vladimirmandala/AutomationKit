@@ -30,6 +30,7 @@
         <methods>
           <include name="classSetUp"/>
           <include name="verifyBrokenLink"/>
+          <include name="HomePageTestSetUp"/>
           <include name="TearDown"/>
           <include name="stopDriver"/>
         </methods>

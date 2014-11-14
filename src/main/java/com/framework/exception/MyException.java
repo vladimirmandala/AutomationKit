@@ -3,12 +3,8 @@ package com.framework.exception;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
-import javax.naming.directory.NoSuchAttributeException;
-
-import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.remote.UnreachableBrowserException;
 
 import com.framework.report.DetailedLogs;
 
@@ -103,60 +99,18 @@ public class MyException extends Exception {
 		AppLogs.error(this.message);
 	}
 	
-	/**
-	 * Purpose : If selenium tries to find an element but element is not visible within page
-	 * @param message
-	 * @param exeception
-	 */
-	public MyException(String message , ElementNotVisibleException exeception) {
-		super(message);
-		this.message = message + exeception.getMessage();
-		AppLogs.error(this.message);
-	}
-	
-	/**
-	 * Purpose : If user tries to handle an alert box but alert is not present.
-	 * @param message
-	 * @param exeception
-	 */
 	public MyException(String message , NoAlertPresentException exeception) {
 		super(message);
 		this.message = message + exeception.getMessage();
 		AppLogs.error(this.message);
 	}
 	
-	/**
-	 * Purpose : While trying to get attribute value but attribute is not available in DOM.
-	 * @param message
-	 * @param exeception
-	 */
-	public MyException(String message , NoSuchAttributeException exeception) {
+	public MyException(String message , UnreachableBrowserException exeception) {
 		super(message);
 		this.message = message + exeception.getMessage();
 		AppLogs.error(this.message);
 	}
 	
-	/**
-	 * Purpose : This exception is due to accessing an element which is not available in the page.
-	 * @param message
-	 * @param exeception
-	 */
-	public MyException(String message , NoSuchElementException exeception) {
-		super(message);
-		this.message = message + exeception.getMessage();
-		AppLogs.error(this.message);
-	}
-	
-	/**
-	 * Purpose : Exception comes when code is unable to initialize WebDriver.
-	 * @param message
-	 * @param exeception
-	 */
-	public MyException(String message , WebDriverException exeception) {
-		super(message);
-		this.message = message + exeception.getMessage();
-		AppLogs.error(this.message);
-	}
 	
 	/**
 	 * Purpose : This is an overridden method which is used to fetch the custom exception message
