@@ -11,6 +11,7 @@ Integrate with Sikuli to fileupload/filedownload
 Download .exe file Phantom JS
 write a java file to create testNg.xml file at runtime
 Send Email
+Fix Report
 Generate seperate log for Selenium, SoapUI, Appium, JMeter
 Integrate HTMLUnit driver or headless testing
 Every time readData happens Excel reader should check for data into Web, WebServices, Mobile & Load

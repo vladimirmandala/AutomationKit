@@ -7,16 +7,27 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<standalone.binary.root.folder>${project.basedir}/selenium_standalone_binaries</standalone.binary.root.folder>
-		<browser>firefox</browser>
-		<threads>1</threads>
 		<appium-version>1.6.2</appium-version>
 		<selenium-version>2.42.1</selenium-version>
-		<testng-version>6.8.8</testng-version>
+		<testng-version>6.8</testng-version>
 		<gson-version>2.2.4</gson-version>
 		<httpcomponents-version>4.3.5</httpcomponents-version>
 		<guava-version>17.0</guava-version>
 		<cglib-version>3.1</cglib-version>
 		<httpcore-version>4.3.2</httpcore-version>
+		<log4j-version>2.0.2</log4j-version>
+		<commons-lang-version>2.4</commons-lang-version>
+		<slf4j-version>1.7.7</slf4j-version>
+		<slf4japi-version>1.7.7</slf4japi-version>
+		<findbugs-version>3.0.0</findbugs-version>
+		<poi-version>3.10.1</poi-version>
+		<log4j-version>2.0.2</log4j-version>
+		<poi-ooxml-version>3.10.1</poi-ooxml-version>
+		<poi-examples-version>3.10.1</poi-examples-version>
+		<dom4j-version>1.6.1</dom4j-version>
+		<xmlbeans-version>2.6.0</xmlbeans-version>
+		<xalan-version>2.7.2</xalan-version>
+		<phantomjsdriver-version>1.1.10</phantomjsdriver-version>
 		<maven-compiler-version>3.1</maven-compiler-version>
 		<maven-timestamp-version>1.0</maven-timestamp-version>
 		<maven-resources-version>2.6</maven-resources-version>
@@ -42,31 +53,26 @@
 			<artifactId>selenium-api</artifactId>
 			<version>${selenium-version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-firefox-driver</artifactId>
 			<version>${selenium-version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-chrome-driver</artifactId>
 			<version>${selenium-version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-support</artifactId>
 			<version>${selenium-version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-ie-driver</artifactId>
 			<version>${selenium-version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-remote-driver</artifactId>
@@ -103,54 +109,64 @@
 			<version>${httpcore-version}</version>
 		</dependency>
 		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
-			<version>2.4</version>
+			<version>${commons-lang-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4japi-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.code.findbugs</groupId>
 			<artifactId>jsr305</artifactId>
-			<version>3.0.0</version>
+			<version>${findbugs-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-server</artifactId>
-			<version>2.42.2</version>
+			<version>${selenium-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>3.10.1</version>
+			<version>${poi-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-examples</artifactId>
-			<version>3.10.1</version>
+			<version>${poi-examples-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
-			<version>3.10.1</version>
+			<version>${poi-ooxml-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>dom4j</groupId>
 			<artifactId>dom4j</artifactId>
-			<version>1.6.1</version>
+			<version>${dom4j-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.xmlbeans</groupId>
 			<artifactId>xmlbeans</artifactId>
-			<version>2.6.0</version>
+			<version>${xmlbeans-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>xalan</groupId>
 			<artifactId>xalan</artifactId>
-			<version>2.7.2</version>
+			<version>${xalan-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.detro.ghostdriver</groupId>

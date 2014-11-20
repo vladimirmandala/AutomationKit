@@ -1,51 +1,31 @@
 package com.rediff.testcases;
 
-import java.lang.reflect.Method;
-import java.net.MalformedURLException;
-
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.framework.exception.MyException;
-import com.framework.testtemplate.TestBase;
 import com.rediff.pages.HomePage;
+import com.rediff.pages.MailPage;
+import com.testtemplate.TestBase;
 
 public class HomePageTest extends TestBase{
-	HomePageTest() throws MyException {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 
-
+	MailPage mailPage = null;
 	HomePage homePage = null;
-	
-	
-	@BeforeClass(alwaysRun = true)
-	@Parameters(value = {"hubAddress"})
-	public void classSetUp(@Optional("localhost") String hubAddress) throws MalformedURLException, MyException {
-		startWebDriver(hubAddress);
-	}
-	
-	@BeforeMethod(alwaysRun = true)
-	public void HomePageTestSetUp(Method testName){
-		AppLogs.info("HomePageTestSetUp class ends..");
+		
+	@BeforeMethod
+	public void LoginTestSetUp(){
 		try{
-			homePage = PageFactory.initElements(driver, HomePage.class);
-			//readData(testName);
-			AppLogs.info("HomePageTestSetUp class ends..");
+		AppLogs.info("LoginTestSetUp starts..");
+		homePage = PageFactory.initElements(driver, HomePage.class);
+		AppLogs.info("LoginTestSetUp ends..");
 		}catch(Exception e){
-			AppLogs.error("HomePageTestSetUp()"+e);
+			AppLogs.error("LoginTestSetup()"+e);
 		}
-		AppLogs.info("-------------" + testName.getName()+" ---------- Test Case starts..");
 	}
 	
-	
-	@Test(groups = { "Selenium" })
-	public void verifyBrokenLink() throws MyException{
-		homePage.CheckHyperLinkOnPage();
+	@Test()
+	public void TestBrokenLink(){
+		
 	}
 }

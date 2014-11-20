@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 11 16:19:32 IST 2014</td>
+<td>Started on:</td><td>Wed Sep 24 13:22:48 IST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>4 seconds (4275 ms)</td>
+<tr><td>Total time:</td><td>72 seconds (72631 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,115 +67,58 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.rediff.testcases.HomePageTest.classSetUp()'><b>classSetUp</b><br>Test class: com.rediff.testcases.HomePageTest<br>Parameters: localhost</td>
-<td><div><pre>com.framework.exception.MyException: Error in connecting with Remote WebDriverorg.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: &apos;2.42.1&apos;, revision: &apos;68b415adb11acca4286be45124325cc36cfc4a51&apos;, time: &apos;2014-05-29 09:21:55&apos;
-System info: host: &apos;SDGL691&apos;, ip: &apos;10.20.20.29&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_67&apos;
-Driver info: driver.version: RemoteWebDriver
-	at com.framework.testtemplate.TestBase.startWebDriver(TestBase.java:91)
-	at com.rediff.testcases.HomePageTest.classSetUp(HomePageTest.java:24)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace20358405", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace20358405'><pre>com.framework.exception.MyException: Error in connecting with Remote WebDriverorg.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: &apos;2.42.1&apos;, revision: &apos;68b415adb11acca4286be45124325cc36cfc4a51&apos;, time: &apos;2014-05-29 09:21:55&apos;
-System info: host: &apos;SDGL691&apos;, ip: &apos;10.20.20.29&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_67&apos;
-Driver info: driver.version: RemoteWebDriver
-	at com.framework.testtemplate.TestBase.startWebDriver(TestBase.java:91)
-	at com.rediff.testcases.HomePageTest.classSetUp(HomePageTest.java:24)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div></td>
-<td>0</td>
-<td>com.rediff.testcases.HomePageTest@17ee6c9</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.rediff.testcases.HomePageTest.HomePageTestSetUp()'><b>HomePageTestSetUp</b><br>Test class: com.rediff.testcases.HomePageTest</td>
+<td title='com.rediff.testcases.LoginTest.blankUserNameBlankPasswordLoginTest()'><b>blankUserNameBlankPasswordLoginTest</b><br>Test class: com.rediff.testcases.LoginTest</td>
 <td></td>
 <td>0</td>
-<td>com.rediff.testcases.HomePageTest@17ee6c9</td></tr>
+<td>com.rediff.testcases.LoginTest@1e5ec57</td></tr>
 <tr>
-<td title='com.rediff.testcases.HomePageTest.TearDown()'><b>TearDown</b><br>Test class: com.rediff.testcases.HomePageTest</td>
+<td title='com.rediff.testcases.LoginTest.blankUserNameRightPasswordLoginTest()'><b>blankUserNameRightPasswordLoginTest</b><br>Test class: com.rediff.testcases.LoginTest</td>
 <td></td>
 <td>0</td>
-<td>com.rediff.testcases.HomePageTest@17ee6c9</td></tr>
+<td>com.rediff.testcases.LoginTest@1e5ec57</td></tr>
 <tr>
-<td title='com.rediff.testcases.HomePageTest.stopDriver()'><b>stopDriver</b><br>Test class: com.rediff.testcases.HomePageTest</td>
+<td title='com.rediff.testcases.LoginTest.blankUserNameWrongPasswordLoginTest()'><b>blankUserNameWrongPasswordLoginTest</b><br>Test class: com.rediff.testcases.LoginTest</td>
 <td></td>
 <td>0</td>
-<td>com.rediff.testcases.HomePageTest@17ee6c9</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td>com.rediff.testcases.LoginTest@1e5ec57</td></tr>
 <tr>
-<td title='com.rediff.testcases.HomePageTest.verifyBrokenLink()'><b>verifyBrokenLink</b><br>Test class: com.rediff.testcases.HomePageTest</td>
+<td title='com.rediff.testcases.LoginTest.rightUserNameBlankPasswordLoginTest()'><b>rightUserNameBlankPasswordLoginTest</b><br>Test class: com.rediff.testcases.LoginTest</td>
 <td></td>
 <td>0</td>
-<td>com.rediff.testcases.HomePageTest@17ee6c9</td></tr>
+<td>com.rediff.testcases.LoginTest@1e5ec57</td></tr>
+<tr>
+<td title='com.rediff.testcases.LoginTest.rightUserNameWrongPasswordLoginTest()'><b>rightUserNameWrongPasswordLoginTest</b><br>Test class: com.rediff.testcases.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>com.rediff.testcases.LoginTest@1e5ec57</td></tr>
+<tr>
+<td title='com.rediff.testcases.LoginTest.sucessfullLoginTest()'><b>sucessfullLoginTest</b><br>Test class: com.rediff.testcases.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>com.rediff.testcases.LoginTest@1e5ec57</td></tr>
+<tr>
+<td title='com.rediff.testcases.LoginTest.wrongUserNameBlankPasswordLoginTest()'><b>wrongUserNameBlankPasswordLoginTest</b><br>Test class: com.rediff.testcases.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>com.rediff.testcases.LoginTest@1e5ec57</td></tr>
+<tr>
+<td title='com.rediff.testcases.LoginTest.wrongUserNameRightPasswordLoginTest()'><b>wrongUserNameRightPasswordLoginTest</b><br>Test class: com.rediff.testcases.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>com.rediff.testcases.LoginTest@1e5ec57</td></tr>
+<tr>
+<td title='com.rediff.testcases.LoginTest.wrongUserNameWrongPasswordLoginTest()'><b>wrongUserNameWrongPasswordLoginTest</b><br>Test class: com.rediff.testcases.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>com.rediff.testcases.LoginTest@1e5ec57</td></tr>
 </table><p>
 </body>
 </html>
