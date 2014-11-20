@@ -1,5 +1,6 @@
 package com.test.apidemo.app.screens;
 
+/*
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
@@ -24,3 +25,4 @@ public class HomeScreen extends AbstractScreen {
 		return new AppMenuScreen(driver);
 	}
 }
+*/

@@ -1,5 +1,5 @@
 package com.mobile.testcases;
-
+/*
 import io.appium.java_client.android.AndroidDriver;
 
 import java.io.IOException;
@@ -61,3 +61,4 @@ public class TestAppiumGoogleSearchMobileWeb {
 		driver.quit();
 	}
 }
+*/
