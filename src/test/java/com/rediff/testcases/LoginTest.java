@@ -4,7 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.exception.MyException;
+import com.framework.exception.MyException;
 import com.rediff.pages.HomePage;
 import com.rediff.pages.MailPage;
 import com.testtemplate.TestBase;

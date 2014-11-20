@@ -12,8 +12,6 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import com.exception.MyException;
-
 /**
  * Reader.java contains method to read data from excel file
  * 

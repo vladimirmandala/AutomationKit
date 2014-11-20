@@ -7,9 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-
-import com.actions.WebAction;
-import com.exception.MyException;
+import com.framework.actions.WebAction;
+import com.framework.exception.MyException;
 
 public class MailPage extends WebAction{
 	

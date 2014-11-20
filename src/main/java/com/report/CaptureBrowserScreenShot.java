@@ -11,7 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 
-import com.exception.MyException;
+import com.framework.exception.MyException;
 
 
 public class CaptureBrowserScreenShot{

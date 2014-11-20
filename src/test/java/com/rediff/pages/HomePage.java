@@ -1,15 +1,13 @@
 package com.rediff.pages;
 
-import java.util.Set;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import com.actions.WebAction;
-import com.exception.MyException;
+import com.framework.actions.WebAction;
+import com.framework.exception.MyException;
 
 public class HomePage extends WebAction{
 	public WebDriver driver;
