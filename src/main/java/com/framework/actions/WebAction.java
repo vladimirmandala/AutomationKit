@@ -27,7 +27,7 @@ import com.framework.report.DetailedLogs;
  * @author : Abhay Bharti
  * @version 1.0 21/09/14
  */
-public abstract class WebAction implements Action {
+public abstract class WebAction implements IAction {
 	protected WebDriver driver = null;
 	protected DetailedLogs AppLogs = null;
 	final int waitvalue = 10;
