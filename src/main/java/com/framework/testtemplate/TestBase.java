@@ -166,7 +166,6 @@ public class TestBase {
 	public Object[][] readData(Method testName) {
 		AppLogs.info("readData starts..");
 		return CommonFunctionLib.readData(testName.getName(), xls);
-
 	}
 
 	/**
