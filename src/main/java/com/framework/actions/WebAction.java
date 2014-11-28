@@ -22,7 +22,8 @@ import com.framework.exception.MyException;
 import com.framework.report.DetailedLogs;
 
 /**
- * WebAction.java is for interacting with browser objects. Page objects re-use these utilities to perform functions relevant to test steps. 
+ * WebAction.java is for interacting with browser objects. Page objects re-use these utilities to perform functions relevant 
+ * to test steps. 
  * 
  * @author : Abhay Bharti
  * @version 1.0 21/09/14
@@ -54,6 +55,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public void ReadFromWebElement(WebElement object, String attribute) {
 		AppLogs.info("ReadFromWebElement starts.. "+ "1st Arg : "+object.getText() + "2nd Arg : "+ attribute);
+		isObjectOk(object);
 		object.getAttribute(attribute);
 		AppLogs.info("ReadFromWebElement ends..");
 	}
@@ -65,6 +67,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public void EnterValueText(WebElement object,String input) {
 		AppLogs.info("EnterValueText starts.."+ "1st Arg : "+object.getTagName() + "2nd Arg : "+ input);
+		isObjectOk(object);
 		object.clear();
 		object.sendKeys(input);
 		AppLogs.info("EnterValueText ends..");
@@ -78,6 +81,7 @@ public abstract class WebAction implements IAction {
 	public void EnterValueText(WebElement object,Keys theKey, String input) throws MyException{
 		AppLogs.info("EnterValueTextWithShit starts.." + "1st Arg : "+object.getTagName() + "2nd Arg : "+ input);
 		 try{
+			 isObjectOk(object);
 			 object.sendKeys(Keys.chord(Keys.SHIFT,input));
 		 }catch(IllegalArgumentException e){
 			 throw new MyException("WebAction -> EnterValueText(WebElement object,Keys theKey, String input)" + e);
@@ -93,6 +97,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public void ReadCSSFromWebElement(WebElement object, String ProprertyName) {
 		AppLogs.info("ReadCSSFromWebElement starts.."+ "1st Arg : "+object.getTagName() + "2nd Arg : "+ ProprertyName);
+		isObjectOk(object);
 		object.getCssValue(ProprertyName);
 		// getCssValue("font-family"));
 		// getCssValue("background-color"));
@@ -106,6 +111,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public void WeGetLocation(WebElement object) {
 		AppLogs.info("WEGetLocation starts.."+ "1st Arg : "+object.getTagName());
+		isObjectOk(object);
 		object.getLocation();
 		AppLogs.info("WEGetLocation ends..");
 	}
@@ -116,6 +122,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public void WeGetSize(WebElement object) {
 		AppLogs.info("ReadFromWebElement starts.."+ "1st Arg : "+object.getTagName());
+		isObjectOk(object);
 		object.getSize();
 		AppLogs.info("WeElement ends..");
 	}
@@ -127,6 +134,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public void WeGetText(WebElement object) {
 		AppLogs.info("WeGetText starts.."+ "1st Arg : "+object.getTagName());
+		isObjectOk(object);
 		object.getText();
 		AppLogs.info("WeGetText ends..");
 	}
@@ -138,6 +146,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public void WeGetTagName(WebElement object) {
 		AppLogs.info("WeGetTagName starts.."+ "1st Arg : "+object.getTagName() );
+		isObjectOk(object);
 		object.getTagName();
 		AppLogs.info("WeGetTagName ends..");
 	}
@@ -169,6 +178,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public void WeIsSelected(WebElement object) {
 		AppLogs.info("WeIsSelected starts.."+ "1st Arg : "+object.getTagName());
+		isObjectOk(object);
 		object.isSelected();
 		AppLogs.info("WeIsSelected ends..");
 	}
@@ -222,6 +232,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public void ClickOnWebElement(WebElement object) {
 		AppLogs.info("ClickOnWebElement starts.."+ "1st Arg : "+object.getTagName());
+		isObjectOk(object);
 		builder.click(object);
 		builder.build().perform();
 		AppLogs.info("ClickOnWebElement ends..");
@@ -234,6 +245,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public void ClickAndHold(WebElement object) {
 		AppLogs.info("ClickAndHold starts.."+ "1st Arg : "+object.getTagName());
+		isObjectOk(object);
 		builder.moveByOffset(200, 20).clickAndHold().moveByOffset(120, 0).perform();
 		AppLogs.info("ClickAndHold ends..");
 	}
@@ -256,6 +268,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public void moveToElement(WebElement object) {
 		AppLogs.info("moveToElement starts.." +"1st Arg : "+object.getTagName());
+		isObjectOk(object);
 		builder.moveToElement(object).clickAndHold().moveByOffset(120, 0).perform();
 		AppLogs.info("moveToElement ends..");
 	}
@@ -266,6 +279,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public void dragMe(WebElement object) {
 		AppLogs.info("dragMe starts.."+"1st Arg : "+object.getTagName());
+		isObjectOk(object);
 		builder.dragAndDropBy(object, 300, 200).perform();
 		AppLogs.info("dragMe ends..");
 	}
@@ -277,6 +291,8 @@ public abstract class WebAction implements IAction {
 	 */
 	public void DragandDropToWE(WebElement source, WebElement target) {
 		AppLogs.info("DragandDropToWE starts..");
+		isObjectOk(source);
+		isObjectOk(target);
 		builder.dragAndDrop(source, target).perform();
 		AppLogs.info("DragandDropToWE ends..");
 	}
@@ -288,6 +304,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public void DoubleClickOnWe(WebElement object) {
 		AppLogs.info("DoubleClickOnWe starts.."+"1st Arg : "+object.getTagName());
+		isObjectOk(object);
 		builder.moveToElement(object).doubleClick().perform();
 		AppLogs.info("DoubleClickOnWe ends..");
 	}
@@ -300,6 +317,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public void RightClickOnWe(WebElement object, String item4) {
 		AppLogs.info("RightClickOnWe starts.."+"1st Arg : "+object.getTagName());
+		isObjectOk(object);
 		builder.contextClick(object).click(driver.findElement(By.name("Item 4"))).perform();
 		AppLogs.info("RightClickOnWe ends..");
 	}
@@ -448,7 +466,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public boolean AcceptAlert() throws MyException {
 		try {
-			Alert alert = driver.switchTo().alert();
+			Alert alert = driver.switchTo().alert(); //add code to check if Alert exist
 			alert.accept();
 			return true;
 		}catch(NoAlertPresentException e){
@@ -465,7 +483,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public boolean DeclineAlert() throws MyException {
 		try {
-			Alert alert = driver.switchTo().alert();
+			Alert alert = driver.switchTo().alert(); //add code to check if alert exist
 			alert.dismiss();
 			return true;
 		} catch(NoAlertPresentException e){
@@ -484,7 +502,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public boolean SetTextOnAlert(String keysToSend) throws MyException {
 		try {
-			Alert alert = driver.switchTo().alert();
+			Alert alert = driver.switchTo().alert(); //add code to check if alert exist
 			alert.sendKeys(keysToSend);
 			return true;
 		} catch(NoAlertPresentException e){
@@ -503,7 +521,7 @@ public abstract class WebAction implements IAction {
 	 */
 	public String GetTextOfAlert() throws MyException {
 		try {
-			Alert alert = driver.switchTo().alert();
+			Alert alert = driver.switchTo().alert(); //add code to check if alert exist
 			return alert.getText();
 		} catch(NoAlertPresentException e){
 			throw new MyException("WebAction -> DeclineAlert() , "+e);
@@ -639,4 +657,18 @@ Assert that the broken images collection is empty
 	public boolean isElementPresent(By by) {
 		return driver.findElements(by).size() > 0;
 	}
+	
+	
+	private void isObjectOk(WebElement object){
+		//check for success of FindElement
+		//check if object is displayed
+		//Highlight Object
+	}
+	
+	/**
+	 * 
+	 */
+	public void cleanSession() {
+        driver.manage().deleteAllCookies();
+    }
 }
