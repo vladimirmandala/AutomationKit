@@ -1,25 +1,44 @@
 package com.framework.actions;
 
+import static java.lang.String.format;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
-import com.framework.exception.MyException;
+import com.framework.exception.SeleniumException;
 import com.framework.report.DetailedLogs;
+import com.framework.synchronization.TimeoutType;
+import com.framework.synchronization.TimeoutsConfig;
+import com.google.common.base.Preconditions;
+import com.google.common.base.Predicate;
+import com.google.common.base.Throwables;
+import com.google.common.collect.Lists;
 
 /**
  * WebAction.java is for interacting with browser objects. Page objects re-use these utilities to perform functions relevant 
@@ -30,6 +49,7 @@ import com.framework.report.DetailedLogs;
  */
 public abstract class WebAction implements IAction {
 	protected WebDriver driver = null;
+	protected WebDriver webDriver = null;
 	protected DetailedLogs AppLogs = null;
 	final int waitvalue = 10;
 	Actions builder = null;
@@ -78,13 +98,13 @@ public abstract class WebAction implements IAction {
 	 * @param object
 	 * @param input
 	 */
-	public void EnterValueText(WebElement object,Keys theKey, String input) throws MyException{
+	public void EnterValueText(WebElement object,Keys theKey, String input) throws SeleniumException{
 		AppLogs.info("EnterValueTextWithShit starts.." + "1st Arg : "+object.getTagName() + "2nd Arg : "+ input);
 		 try{
 			 isObjectOk(object);
 			 object.sendKeys(Keys.chord(Keys.SHIFT,input));
 		 }catch(IllegalArgumentException e){
-			 throw new MyException("WebAction -> EnterValueText(WebElement object,Keys theKey, String input)" + e);
+			 throw new SeleniumException("WebAction -> EnterValueText(WebElement object,Keys theKey, String input)" + e);
 		 }
 			 AppLogs.info("EnterValueTextWithShit ends..");
 	}
@@ -328,7 +348,7 @@ public abstract class WebAction implements IAction {
 	 * @param urlString
 	 * @return
 	 */
-	public boolean getResponseCode(String urlString) throws MyException{
+	public boolean getResponseCode(String urlString) throws SeleniumException{
 		AppLogs.info("getResponseCode starts.. for URL : "+urlString);
 	    boolean isValid = false;
 	    int code = 0;
@@ -348,11 +368,11 @@ public abstract class WebAction implements IAction {
             	isValid = true;
             }
          } catch (MalformedURLException e) {
-            throw new MyException("MalformedURLException Error : "+e +" , "+ urlString);
+            throw new SeleniumException("MalformedURLException Error : "+e +" , "+ urlString);
          } catch (IOException e) {
-        	  throw new MyException("IOException Error : "+e+" , "+ urlString);
+        	  throw new SeleniumException("IOException Error : "+e+" , "+ urlString);
          } catch (Exception e) {
-        	  throw new MyException("Exception Error : "+e+" , "+ urlString);
+        	  throw new SeleniumException("Exception Error : "+e+" , "+ urlString);
          }
         AppLogs.info("getResponseCode ends..");
         return isValid;
@@ -363,9 +383,9 @@ public abstract class WebAction implements IAction {
 	 * title or what's written on the page - you can just send an http request to the link and see what the response is  
 	 * @param link
 	 * @return
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
-	public boolean isFileDownloadable(String link) throws MyException{
+	public boolean isFileDownloadable(String link) throws SeleniumException{
 		AppLogs.info("isFileDownloadable starts.. for URL : "+link);
 		boolean isValid = false;
 		AppLogs.debug("Link: " + link);
@@ -374,7 +394,7 @@ public abstract class WebAction implements IAction {
 				isValid = true;
 			}
 		} catch (Exception e) {
-			throw new MyException("isFileDownloadable ends.."+e);
+			throw new SeleniumException("isFileDownloadable ends.."+e);
 		}
 		AppLogs.info("isFileDownloadable ends..");
 		return isValid;
@@ -384,9 +404,9 @@ public abstract class WebAction implements IAction {
 
 	/**
 	 * Purpose : Verifies if link on a given page is broken
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
-	public String isLinkBroken() throws MyException{
+	public String isLinkBroken() throws SeleniumException{
 	   AppLogs.info("isLinkBroken starts.. for URL : "+driver.getCurrentUrl());
 	   String link = null;
        List <WebElement>linksList = driver.findElements(By.tagName("a")); 
@@ -406,9 +426,9 @@ public abstract class WebAction implements IAction {
   
 	/**
 	 * Purpose : Parameterize form of isLinkBroken method, verifies if link on a given page is broken
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
-	public boolean isLinkBroken(String urlString) throws MyException{
+	public boolean isLinkBroken(String urlString) throws SeleniumException{
 	   AppLogs.info("isLinkBroken starts .. for URL : "+ urlString);
 	    boolean isValid = false;
 	      if(urlString!=null){
@@ -461,36 +481,51 @@ public abstract class WebAction implements IAction {
 	}
 	
 	/**
-	 * 
+	 * Wait for a javascript confirmation dialog to be present, then accept it.
 	 * @return
 	 */
-	public boolean AcceptAlert() throws MyException {
+	public boolean acceptAlert() throws SeleniumException {
 		try {
 			Alert alert = driver.switchTo().alert(); //add code to check if Alert exist
 			alert.accept();
+			   waitOnExpectedCondition(ExpectedConditions.alertIsPresent(),"Waiting for javascript alert to be present before accepting alert.", 20);
+		        webDriver.switchTo().alert().accept();
 			return true;
 		}catch(NoAlertPresentException e){
-			throw new MyException("WebAction -> AcceptAlert() , "+e);
+			throw new SeleniumException("WebAction -> AcceptAlert() , "+e);
 		}
 		catch (Exception e) {
-			throw new MyException("WebAction -> AcceptAlert() , "+e);
+			throw new SeleniumException("WebAction -> AcceptAlert() , "+e);
 		}
 	}
+	
+	public <T> T waitOnExpectedCondition(ExpectedCondition<T> expectedCondition, String message, int timeout) {
+        int waitSeconds = 20;//getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout); //Default of web element presence timeout
+        WebDriverWait wait = new WebDriverWait(webDriver, waitSeconds,timeout);
+        wait.withMessage(message)
+            .ignoring(StaleElementReferenceException.class);
+        //AppLogs.info("Waiting on expected condition, using timeout of {} seconds", waitSeconds);
+        return wait.until(expectedCondition);
+    }
 
 	/**
-	 * 
+	 *  Click without polling for the element to be clickable or waiting until it's ready.
+     * Uses the implicit wait timeout built-in to Selenium.
 	 * @return
 	 */
-	public boolean DeclineAlert() throws MyException {
+	public boolean DeclineAlert() throws SeleniumException {
 		try {
 			Alert alert = driver.switchTo().alert(); //add code to check if alert exist
 			alert.dismiss();
+			waitOnExpectedCondition(ExpectedConditions.alertIsPresent(),
+	                "Waiting for javascript alert to be present before dismissing alert.", 20);
+	        webDriver.switchTo().alert().dismiss();
 			return true;
 		} catch(NoAlertPresentException e){
-			throw new MyException("WebAction -> DeclineAlert() , "+e);
+			throw new SeleniumException("WebAction -> DeclineAlert() , "+e);
 		}
 		catch (Exception e) {
-			throw new MyException("WebAction -> DeclineAlert() , "+e);
+			throw new SeleniumException("WebAction -> DeclineAlert() , "+e);
 		}
 	}
 	
@@ -498,18 +533,18 @@ public abstract class WebAction implements IAction {
 	 * 
 	 * @param input
 	 * @return
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
-	public boolean SetTextOnAlert(String keysToSend) throws MyException {
+	public boolean SetTextOnAlert(String keysToSend) throws SeleniumException {
 		try {
 			Alert alert = driver.switchTo().alert(); //add code to check if alert exist
 			alert.sendKeys(keysToSend);
 			return true;
 		} catch(NoAlertPresentException e){
-			throw new MyException("WebAction -> DeclineAlert() , "+e);
+			throw new SeleniumException("WebAction -> DeclineAlert() , "+e);
 		}
 		catch (Exception e) {
-			throw new MyException("WebAction -> DeclineAlert() , "+e);
+			throw new SeleniumException("WebAction -> DeclineAlert() , "+e);
 		}
 	}
 	
@@ -517,34 +552,879 @@ public abstract class WebAction implements IAction {
 	 * 
 	 * @param input
 	 * @return
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
-	public String GetTextOfAlert() throws MyException {
+	public String GetTextOfAlert() throws SeleniumException {
 		try {
 			Alert alert = driver.switchTo().alert(); //add code to check if alert exist
 			return alert.getText();
 		} catch(NoAlertPresentException e){
-			throw new MyException("WebAction -> DeclineAlert() , "+e);
+			throw new SeleniumException("WebAction -> DeclineAlert() , "+e);
 		}
 		catch (Exception e) {
-			throw new MyException("WebAction -> DeclineAlert() , "+e);
+			throw new SeleniumException("WebAction -> DeclineAlert() , "+e);
 		}
 	}
 	
 	/**
+	 *Clear text from an input element.
+    *
+    * @param locator - locator defining the input element
+    * @return - the input element
+    */
+	public WebElement clearText(@Nonnull WebElement el) {
+        String tag = el.getTagName();
+        try {
+            el.clear();
+        } catch (Exception e) {
+            throw new RuntimeException(format("Error clearing text from element <%s>: %s", tag, e.getMessage()), e);
+        }
+        AppLogs.info("Cleared text from element <{}>"+tag);
+        return el;
+    }
+	
+	/**
+	 * Click the given web element, with proper waiting until the element is clickable.
+	 * @param el
+	 * @param timeout
+	 * @return
+	 */
+	
+	public WebElement click(WebElement el, int timeout) {
+        waitUntilClickable(el, timeout);
+        String tag = el.getTagName();
+        el.click();
+        AppLogs.info("Clicked element <{}>", tag);
+        return el;
+    }
+	
+	/**
+     * Click a web element, then verify another element is present on the DOM (not necessarily visible).
+     *
+     * @return - the WebElement we verified was present
+     */
+	public WebElement clickAndVerifyPresent(WebElement el, By locatorToVerifyPresent, int timeout) {
+        click(el, timeout);
+        AppLogs.info("After click, waiting for '{}' to be present.", locatorToVerifyPresent);
+        int waitSeconds = timeout; 
+        		//getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
+        final String errorMessage =
+                format("Failure in clickAndVerifyPresent: element '%s' never became present after %d seconds!",
+                        locatorToVerifyPresent, waitSeconds);
+        WebDriverWait wait = new WebDriverWait(webDriver, waitSeconds);
+        wait.withMessage(errorMessage)
+            .ignoring(StaleElementReferenceException.class);
+        return wait.until(ExpectedConditions.presenceOfElementLocated(locatorToVerifyPresent));
+    }
+	
+	/**
+     * Click a web element, then verify another element is present on the DOM (not necessarily visible).
+     *
+     * @return - the WebElement we verified was present
+     */
+	public WebElement clickAndVerifyVisible(WebElement el, By locatorToVerifyVisible, int timeout) {
+        click(el, timeout);
+        AppLogs.info("After click, waiting for '{}' to be visible.", locatorToVerifyVisible);
+        return verifyElementVisible(locatorToVerifyVisible, timeout);
+    }
+	
+
+    /**
+     * Click a web element, then verify another element is NOT present on the DOM (so also not visible).
+     */
+	   public void clickAndVerifyNotPresent(WebElement el, By locatorToVerifyNotPresent, int timeout) {
+	        click(el, timeout);
+	        AppLogs.info("After click, waiting for '{}' to NOT be present.", locatorToVerifyNotPresent);
+	        int waitSeconds = timeout;
+	        //getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
+	        final String errorMessage = format("Failure in clickAndVerifyNotPresent: element '%s' never became removed from the DOM after %d seconds!",
+	                locatorToVerifyNotPresent, waitSeconds);
+	        WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
+	        wait.withMessage(errorMessage)
+	            .ignoring(StaleElementReferenceException.class);
+	        wait.until(ExpectedConditions.not(
+	                ExpectedConditions.presenceOfAllElementsLocatedBy(locatorToVerifyNotPresent)));
+	    }
+	   
+	   /**
+	     * Click a web element, then verify another element is NOT present on the DOM (so also not visible).
+	     */
+	   public void clickAndVerifyNotVisible(WebElement el, By locatorToVerifyNotVisible, int timeout) {
+	        click(el, timeout);
+	        AppLogs.info("After click, waiting for '{}' to NOT be visible.", locatorToVerifyNotVisible);
+	        verifyElementInvisible(locatorToVerifyNotVisible, timeout);
+	    }
+	   
+	   /**
+	     * Click a web element defined by CSS cssToClick, then click a popup that is required to be displayed after clicking.
+	     *
+	     * @param locatorToClick - locator for the element to be clicked
+	     * @param popoverLocator - locator for the popover element that must be present after clicking
+	     */
+	   public void clickAndSelectFromList(WebElement clickable, By popoverLocator) {
+	        invokeMenuItemAndSelect(clickable, popoverLocator);
+	    }
+	   
+	    public Object executeJavascript(String script) {
+	        AppLogs.trace("Executing javascript: '{}'", script);
+	        try {
+	            return ((JavascriptExecutor) webDriver).executeScript(script);
+	        } catch (Exception e) {
+	            throw new RuntimeException(format("Exception executing Javascript '%s':", script), e);
+	        }
+	    }
+	    
+	    public void waitForJavascriptSymbolToBeDefined(final String symbol, int timeout) {
+	        int waitSeconds = getTimeout(timeoutsConfig.getPageLoadTimeoutSeconds(), timeout);
+	        WebDriverWait wait = new WebDriverWait(webDriver, waitSeconds, DEFAULT_POLL_MILLIS); //Check every 100ms
+	        wait.ignoring(StaleElementReferenceException.class);
+	        try {
+	            wait.until(new ExpectedCondition<Object>() {
+	                @Nullable
+	                @Override
+	                public Object apply(@Nullable WebDriver input) {
+	                    Object jsResult = executeJavascript(format("return (typeof %s != 'undefined') && (%s != null)", symbol, symbol));
+	                    AppLogs.error("javascript result: " + jsResult);
+	                    return jsResult;
+	                }
+	            });
+	        } catch (TimeoutException e) {
+	            throw new RuntimeException(
+	                    format("Timeout waiting for javascript symbol '%s' to be defined with %d seconds timeout used", symbol, waitSeconds), e);
+	        }
+	        AppLogs.info("Success verifying javascript symbol '{}' is defined!", symbol);
+	    }
+
+	    
+	    public void waitForJavascriptSymbolToHaveValue(final String symbol, final String value, int timeout) {
+	        int waitSeconds = timeout;
+	        		//getTimeout(timeoutsConfig.getPageLoadTimeoutSeconds(), timeout);
+	        WebDriverWait wait = new WebDriverWait(webDriver, waitSeconds, DEFAULT_POLL_MILLIS); //Check every 100ms
+	        wait.ignoring(StaleElementReferenceException.class);
+	        try {
+	            wait.until(new ExpectedCondition<Object>() {
+	                @Nullable
+	                @Override
+	                public Object apply(@Nullable WebDriver input) {
+	                    Object jsResult = executeJavascript(format("return (%s) === (%s)", symbol, value));
+	                    AppLogs.error("javascript result: " + jsResult);
+	                    return jsResult;
+	                }
+	            });
+	        } catch (TimeoutException e) {
+	            throw new RuntimeException(
+	                    format("Timeout waiting for javascript symbol '%s' to have value '%s' with %d seconds timeout used", symbol, value, waitSeconds), e);
+	        }
+	        AppLogs.info("Success verifying javascript symbol '{}' has value '{}'!", symbol, value);
+	    }
+
+	    
+	    public String getWebPageReadyState() throws Exception {
+	        return (String) executeJavascript("return document.readyState;");
+	    }
+
+	    
+	    public void waitForWebPageReadyStateToBeComplete() {
+	        final TimeoutType waitSeconds = TimeoutsConfig.getPageLoadTimeoutSeconds();
+	        waitOnPredicate(new Predicate() {
+	            @Override
+	            public boolean apply(@Nullable Object o) {
+	                try {
+	                    String readyState = getWebPageReadyState();
+	                    return Objects.equals(readyState, "complete");
+	                } catch (Exception e) {
+	                    return false;
+	                }
+	            }
+	        },
+	        String.format("Error - web page never reached document.readyState='complete' after %d seconds", waitSeconds),
+	        TimeoutType.PAGE_LOAD_TIMEOUT);
+	        AppLogs.info("Success - Waited for document.readyState to be 'complete' on page: " + webDriver().getCurrentUrl());
+	    }
+
+
+	    /**
+	     * According to Selenium Javadoc, this is the correct way to check for existence of an element.
+	     */
+	    
+	    public boolean exists(By locator) {
+	        List<WebElement> elements = findElements(locator, null);
+	        return elements.size() > 0;
+	    }
+
+	    
+	    public boolean exists(By locator, WebElement parentEl) {
+	        List<WebElement> elements = findElements(locator, parentEl);
+	        return elements.size() > 0;
+	    }
+
+	    
+	    public WebElement findElementContainingText(By locator, String text) {
+	        List<WebElement> matches = findElements(locator, null);
+	        for (WebElement el : matches) {
+	            try {
+	                if (el.getText().contains(text)) {
+	                    AppLogs.info("SUCCESS: Found web element containing text '{}' with locator '{}'", text, locator);
+	                    return el;
+	                }
+	            } catch (Exception e) { //Don't fail just because one web element was stale. Continue searching for the text.
+	                AppLogs.debug("Exception while searching for web elements containing text '{}' with locator '{}'", text, locator);
+	                AppLogs.debug(Throwables.getStackTraceAsString(e));
+	            }
+	        }
+	        return null;
+	    }
+
+	    
+	    public WebElement findVisibleElementContainingText(By locator, String text) {
+	        List<WebElement> matches = findElements(locator, null);
+	        for (WebElement el : matches) {
+	            try {
+	                if (el.getText().contains(text) && el.isDisplayed()) {
+	                    AppLogs.info("SUCCESS: Found visible web element containing text '{}' with locator '{}'", text, locator);
+	                    return el;
+	                }
+	            } catch (Exception e) { //Don't fail just because one web element was stale. Continue searching for the text.
+	                AppLogs.debug("Exception while searching for web elements containing text '{}' with locator '{}'", text, locator);
+	                AppLogs.debug(Throwables.getStackTraceAsString(e));
+	            }
+	        }
+	        return null;
+	    }
+
+	    
+	    public WebElement findVisibleElementContainingTextWithWait(final By locator, final String text, int timeout) {
+	        int waitSeconds = getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
+	        final String message = String.format("Timeout waiting %d seconds to find element containing text '%s' with locator '%s'",
+	                waitSeconds, text, locator.toString());
+	        WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
+	        wait.ignoring(StaleElementReferenceException.class)
+	                .withMessage(message);
+
+	        return wait.until(new ExpectedCondition<WebElement>() {
+	            @Override
+	            public WebElement apply(@Nullable WebDriver input) {
+	                WebElement el = findVisibleElementContainingText(locator, text);
+	                if (el == null) {
+	                    GeneralUtils.waitOneSecond();
+	                }
+	                return el;
+	            }
+	        });
+	    }
+
+	    
+	    public WebElement findElementWithRefresh(final By locator, int timeout) {
+	        return findElementContainingTextWithRefresh(locator, "", timeout);
+	    }
+
+	    
+	    public WebElement findElementContainingTextWithRefresh(final By locator, final String text, int timeout) {
+	        int waitSeconds = getTimeout(timeoutsConfig.getPollingWithRefreshTimeoutSeconds(), timeout);
+	        WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
+	        wait.ignoring(StaleElementReferenceException.class);
+
+	        AppLogs.info("Waiting for element containing text '{}' defined by locator '{}', timeout of {} seconds", new Object[]{text, locator, waitSeconds});
+	        try {
+	            WebElement found = wait.until(new ExpectedCondition<WebElement>() {
+	                @Override
+	                public WebElement apply(@Nullable WebDriver input) {
+	                    long start = new Date().getTime();
+	                    while ((new Date().getTime() - start) / 1000 < timeoutsConfig.getPauseBetweenRefreshSeconds()) {
+	                        WebElement el = findElementContainingText(locator, text);
+	                        if (el != null) {
+	                            return el;
+	                        }
+	                        GeneralUtils.waitMillis(timeoutsConfig.getPauseBetweenTriesMillis());
+	                    }
+	                    getBrowser().refreshPage();
+	                    return null;
+	                }
+	            });
+	            AppLogs.info("Success finding element containing text '{}' defined by locator '{}'!", text, locator);
+	            return found;
+	        } catch (TimeoutException e) {
+	            AppLogs.error("Timeout waiting to find text '{}' in an element matching locator '{}'", text, locator);
+	            throw new TimeoutException(
+	                    format("Timeout waiting to find text '%s' in an element matching locator '%s'", text, locator));
+	        }
+	    }
+
+	    
+	    public WebElement findVisibleElementWithRefresh(final By locator, int timeout) {
+	        return findVisibleElementContainingTextWithRefresh(locator, "", timeout);
+	    }
+
+	    
+	    public WebElement findVisibleElementContainingTextWithRefresh(final By locator, final String text, int timeout) {
+	        int waitSeconds = getTimeout(timeoutsConfig.getPollingWithRefreshTimeoutSeconds(), timeout);
+	        WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
+	        wait.ignoring(StaleElementReferenceException.class);
+
+	        AppLogs.info("Waiting for element containing text '{}' defined by locator '{}', timeout of {} seconds", new Object[]{text, locator, waitSeconds});
+	        try {
+	            WebElement found = wait.until(new ExpectedCondition<WebElement>() {
+	                @Override
+	                public WebElement apply(@Nullable WebDriver input) {
+	                    long start = new Date().getTime();
+	                    while ((new Date().getTime() - start) / 1000 < timeoutsConfig.getPauseBetweenRefreshSeconds()) {
+	                        WebElement el = findVisibleElementContainingText(locator, text);
+	                        if (el != null) {
+	                            return el;
+	                        }
+	                        GeneralUtils.waitMillis(timeoutsConfig.getPauseBetweenTriesMillis());
+	                    }
+	                    getBrowser().refreshPage();
+	                    return null;
+	                }
+	            });
+	            AppLogs.info("Success finding element containing text '{}' defined by locator '{}'!", text, locator);
+	            return found;
+	        } catch (TimeoutException e) {
+	            AppLogs.error("Timeout waiting to find text '{}' in an element matching locator '{}'", text, locator);
+	            throw new TimeoutException(
+	                    format("Timeout waiting to find text '%s' in an element matching locator '%s'", text, locator));
+	        }
+	    }
+
+	    
+	    public WebElement findElementContainingTextWithWait(final By locator, final String text, int timeout) {
+	        final int waitSeconds = getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
+	        final String msg = format("Failure in findElementContainingTextWithWait: never found text '%s' in element " +
+	                                  "with locator '%s' with timeout of %d seconds", text, locator, waitSeconds);
+	        WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
+	        wait.ignoring(StaleElementReferenceException.class)
+	            .withMessage(msg);
+
+	        return wait.until(new ExpectedCondition<WebElement>() {
+	            @Override
+	            public WebElement apply(@Nullable WebDriver input) {
+	                WebElement el = findElementContainingText(locator, text);
+	                if (el == null) {
+	                    GeneralUtils.waitOneSecond();
+	                }
+	                return el;
+	            }
+	        });
+	    }
+
+	    
+	    public WebElement findElementContainingChild(final By parentLocator, final By childLocator) {
+	        List<WebElement> parents = webDriver.findElements(parentLocator);
+	        for (WebElement el: parents) {
+	            try {
+	                List<WebElement> subChildren = el.findElements(childLocator);
+	                if (subChildren.size() > 0) {
+	                    return el;
+	                }
+	            } catch (WebDriverException e) {
+	                AppLogs.debug("Exception occurred finding sub-children in findElementContainingChild:", e);
+	            }
+	        }
+	        return null;
+	    }
+
+	    
+	    public List<WebElement> findElementsContainingChild(final By parentLocator, final By childLocator) {
+	        List<WebElement> parents = webDriver.findElements(parentLocator);
+	        List<WebElement> parentsWithChild = Lists.newArrayList();
+	        for (WebElement el: parents) {
+	            try {
+	                List<WebElement> subChildren = el.findElements(childLocator);
+	                if (subChildren.size() > 0) {
+	                    parentsWithChild.add(el);
+	                }
+	            } catch (WebDriverException e) {
+	                AppLogs.debug("Exception occurred finding sub-children in findElementsContainingChild:", e);
+	            }
+	        }
+	        return parentsWithChild;
+	    }
+
+	    
+	    public WebElement findElementContainingChildWithWait(final By parentLocator, final By childLocator, int timeout) {
+	        final int waitSeconds = getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
+	        final String msg = format("Failure in findElementContainingChildWithWait: never found element " +
+	                "with locator '%s' having child with locator '%s' with timeout of %d seconds", parentLocator, childLocator, waitSeconds);
+	        WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
+	        wait.ignoring(StaleElementReferenceException.class)
+	                .withMessage(msg);
+
+	        return wait.until(new ExpectedCondition<WebElement>() {
+	            @Override
+	            public WebElement apply(@Nullable WebDriver input) {
+	                return findElementContainingChild(parentLocator, childLocator);
+	            }
+	        });
+	    }
+
+	    
+	    public List<WebElement> findElementsContainingChildWithWait(final By parentLocator, final By childLocator, int timeout) {
+	        final int waitSeconds = getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
+	        final String msg = format("Failure in findElementContainingChildWithWait: never found element " +
+	                "with locator '%s' having child with locator '%s' with timeout of %d seconds", parentLocator, childLocator, waitSeconds);
+	        WebDriverWait wait = new WebDriverWait(webDriver, waitSeconds);
+	        wait.ignoring(StaleElementReferenceException.class)
+	                .withMessage(msg);
+
+	        return wait.until(new ExpectedCondition<List<WebElement>>() {
+	            @Override
+	            public List<WebElement> apply(@Nullable WebDriver input) {
+	               List<WebElement> parents = findElementsContainingChild(parentLocator, childLocator);
+	               if (parents.size() > 0) {
+	                   return parents;
+	               }
+	               return null;
+	            }
+	        });
+	    }
+
+	    
+	    @Nullable
+	    public WebElement getChildElement(By locator, WebElement parentEl) {
+	        List<WebElement> elements = findElements(locator, parentEl);
+	        if (elements.size() > 0) {
+	            return elements.get(0);
+	        }
+	        return null;
+	    }
+
+	    
+	    @Nullable
+	    public WebElement getElement(By locator) {
+	        List<WebElement> elements = findElements(locator, null);
+	        if (elements.size() > 0) {
+	            return elements.get(0);
+	        }
+	        return null;
+	    }
+
+	    
+	    @Nonnull
+	    public List<WebElement> getChildElements(By locator, WebElement parentEl) {
+	        return findElements(locator, parentEl);
+	    }
+
+	    
+	    @Nonnull
+	    public List<WebElement> getElements(By locator) {
+	        return findElements(locator, null);
+	    }
+
+	    
+	    @Nonnull
+	    public WebElement getElementWithWait(By locator) {
+	        return getChildElementWithWait(locator, null);
+	    }
+
+
+	    
+	    @Nonnull
+	    public WebElement getChildElementWithWait(By locator, WebElement parentEl) {
+	        try {
+	            WebElement el = findElement(locator, parentEl);
+	            AppLogs.trace("Successfully found web element by locator '{}'", locator);
+	            return el;
+	        } catch (NoSuchElementException e) {
+	            long implicitWait = browser.getImplicitWaitTimeoutMillis();
+	            throw new RuntimeException(
+	                    format("Timeout using implicit wait of %d ms waiting to find web element with locator '%s' ", implicitWait, locator));
+	        }
+	    }
+
+	    
+	    @Nonnull
+	    public WebElement getParentElement(WebElement el) {
+	        return el.findElement(By.xpath(".."));
+	    }
+
+	    
+	    @Nonnull
+	    public WebElement inputText(By locator, String text) {
+	        AppLogs.info("Inputting text '{}' into element with locator '{}'", text, locator);
+	        WebElement el = getElementWithWait(locator);
+	        try {
+	            el.sendKeys(text);
+	        } catch (Exception e) {
+	            throw new RuntimeException(format("Error inputting text '%s' into element with locator '%s': %s", text, locator, e.getMessage()), e);
+	        }
+	        return el;
+	    }
+
+	    
+	    @Nonnull
+	    public WebElement inputText(@Nonnull WebElement el, String text) {
+	        AppLogs.info("Inputting text '{}' into web element <{}>", text, el.getTagName());
+	        try {
+	            el.sendKeys(text);
+	        } catch (Exception e) {
+	            throw new RuntimeException(format("Error inputting text '%s' into element <%s>: %s", text, el.getTagName(), e.getMessage()), e);
+	        }
+	        return el;
+	    }
+
+	    
+	    public WebElement inputTextAndSelectFromList(WebElement inputField, String value, By popoverLocator) throws SeleniumActionsException {
+	        return inputTextAndSelectFromList(inputField, value, popoverLocator, 0);         // default is no retries
+	    }
+
+	    
+	    public WebElement inputTextAndSelectFromList(WebElement inputField, String value, By popoverLocator,
+	                                                 int withRetryCount) throws SeleniumException {
+	        return enterTextAndSelectFromList(inputField, value, popoverLocator, withRetryCount, false);
+	    }
+
+	    
+	    public WebElement inputTextSlowly(By locator, String text) {
+	        WebElement el = getElementWithWait(locator);
+	        AppLogs.info("Inputting text '{}' into web element with locator '{}'", text, locator);
+	        return inputTextSlowly(el, text);
+	    }
+
+	    
+	    public WebElement inputTextSlowly(@Nonnull WebElement el, String text) {
+	        AppLogs.info("Inputting text {} slowly into web element {}", text, el.getTagName());
+	        for (Character c : text.toCharArray()) {
+	            el.sendKeys(String.valueOf(c));
+	            try {
+	                Thread.sleep(timeoutsConfig.getPauseBetweenKeysMillis());
+	            } catch (InterruptedException e) {
+	                // don't care
+	            }
+	        }
+	        return el;
+	    }
+
+	    
+	    public WebElement inputTextSlowlyAndSelectFromList(WebElement inputField, String value, By popoverLocator) throws SeleniumException {
+	        return inputTextSlowlyAndSelectFromList(inputField, value, popoverLocator, 0);      // default is no retries
+	    }
+
+	    
+	    public WebElement inputTextSlowlyAndSelectFromList(WebElement inputField, String value, By popoverLocator,
+	                                                       int withRetryCount) throws SeleniumException {
+	        return enterTextAndSelectFromList(inputField, value, popoverLocator, withRetryCount, true);
+	    }
+
+	    
+	    public void enterTextForAutoCompleteAndSelectFirstMatch(By inputLocator, String text, By popoverLocator,
+	                                                            String requiredPopupText) {
+	        enterTextForAutoCompleteAndSelectFirstMatch(inputLocator, 0, text, popoverLocator, requiredPopupText);
+	    }
+
+	    
+	    public void enterTextForAutoCompleteAndSelectFirstMatch(By inputLocator, int minChars, String text, By popoverLocator,
+	                                                            String requiredPopupText) {
+	        if (minChars > text.length()) {
+	            throw new RuntimeException(format("Minimum characters to enter (%d) is greater than the length of the input text '%s'!", minChars, text));
+	        }
+	        scrollIntoView(inputLocator);
+	        if (minChars > 0) {
+	            inputText(inputLocator, text.substring(0, minChars));
+	        }
+	        for (int i = minChars; i < text.length(); i++) {
+	            String oneChar = String.valueOf(text.charAt(i));
+	            inputText(inputLocator, oneChar);
+
+	            // If the last char is being entered, wait 5 full seconds for the expected popup. Otherwise, wait 1 second.
+	            int timeout = (i == text.length() - 1) ? int.FIVE_SECONDS : int.ONE_SECOND;
+	            try {
+	                WebElement matchingPopup = findElementContainingTextWithWait(popoverLocator, requiredPopupText, timeout);
+	                if (matchingPopup != null) {
+	                    try {
+	                        getActionsBuilder().moveToElement(matchingPopup)
+	                                .pause(500) // Sometimes javascript needs a moment to register that it's being hovered.
+	                                .click()
+	                                .perform();
+	                        AppLogs.info("Success - clicked popup for autocomplete text \"{}\"", text);
+	                        return;
+	                    } catch (Exception e) {
+	                        AppLogs.debug("Exception clicking popup from autocomplete.", e);
+	                    }
+	                }
+	            } catch (Exception e) {
+	                continue;
+	            }
+	        }
+	        throw new RuntimeException(format("No popup defined by Locator  '%s' found with required text '%s'", popoverLocator, requiredPopupText));
+	    }
+
+	    
+	    public void inputTinyMceText(String text) {
+	        waitForTinyMceToBeReady();
+	        ((JavascriptExecutor) webDriver).executeScript(format("tinyMCE.activeEditor.setContent(\"%s\")", text));
+	    }
+
+	    
+	    public void waitForTinyMceToBeReady() {
+	        waitForJavascriptSymbolToBeDefined("tinyMCE", int.DEFAULT);
+	        waitForJavascriptSymbolToBeDefined("tinyMCE.activeEditor", int.DEFAULT);
+	        waitForJavascriptSymbolToHaveValue("tinyMCE.activeEditor.initialized", "true", int.DEFAULT);
+	    }
+
+	    @Override
+	    public boolean isClickable(By locator) {
+	        WebElement el = getElement(locator);
+	        if (el == null) {
+	            return false;
+	        }
+	        return isClickable(el);
+	    }
+
+	    /**
+	     * Conditions according to selenium Javadoc for an element to be clickable
+	     */
+	    @Override
+	    public boolean isClickable(WebElement el) {
+	        if (el == null) {
+	            return false;
+	        }
+	        try {
+	            if (!el.isDisplayed()) { //If not visible, element isn't clickable
+	                return false;
+	            }
+	            if (el.getSize().getHeight() <= 0 || el.getSize().getWidth() <= 0) { // If width or height is 0, element is not clickable
+	                return false;
+	            }
+	        } catch (Exception e) {
+	            return false;
+	        }
+	        return true;
+	    }
+
+	    
+	    public boolean isVisible(By locator) {
+	        WebElement el = getElement(locator);
+	        return isVisible(el);
+	    }
+
+	    
+	    public boolean isVisible(WebElement el) {
+	        if (el == null) {
+	            return false;
+	        }
+	        try {
+	            return el.isDisplayed() && el.getSize().getHeight() > 0 && el.getSize().getWidth() > 0;
+	        } catch (StaleElementReferenceException e) {
+	            // If the element becomes stale during the check, after we got it, then return false.
+	            return false;
+	        }
+	    }
+
+	    
+	    public void scrollIntoView(By locator) {
+	        WebElement el = verifyElementPresented(locator, int.DEFAULT);
+	        scrollIntoView(el);
+	    }
+
+	    
+	    public void scrollIntoView(WebElement el) {
+	        int scrollHeight = webDriver.manage().window().getSize().getHeight();
+	        int y = Math.max(0, el.getLocation().getY() - scrollHeight / 2); //Subtract half the window height so its in the middle of the viewable area.
+	        executeJavascript(format("window.scrollTo(%d, %d)", 0, y));
+	    }
+
+	    
+	    public void scrollIntoView(By scrollContainerLocator, By locator) {
+	        WebElement parent = verifyElementPresented(scrollContainerLocator, int.DEFAULT);
+	        WebElement el = verifyElementPresented(locator, int.DEFAULT);
+	        int currentScrollTop = ((Long) executeJavascript(format("return $('%s').scrollTop()", scrollContainerLocator))).intValue();
+	        int y = el.getLocation().getY();
+	        int parentY = parent.getLocation().getY();
+	        int scrollTo = Math.max(0, y - parentY + currentScrollTop);
+	        executeJavascript(format("$('%s').scrollTop(%d)", scrollContainerLocator, scrollTo));
+	    }
+
+	    
+	    public void scrollIntoView(By scrollContainerLocator, WebElement el) {
+	        WebElement parent = verifyElementPresented(scrollContainerLocator, int.DEFAULT);
+	        int currentScrollTop = ((Long) executeJavascript(format("return $('%s').scrollTop()", scrollContainerLocator))).intValue();
+	        int y = el.getLocation().getY();
+	        int parentY = parent.getLocation().getY();
+	        int scrollTo = Math.max(0, y - parentY + currentScrollTop);
+	        executeJavascript(format("$('%s').scrollTop(%d)", scrollContainerLocator, scrollTo));
+	    }
+	    
+	    public void verifyElementContainsText(final By locator, final String text, int timeout) {
+	        int waitSeconds = getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
+	        final String errorMessage = format("Failure in verifyElementContainsText: an element with Locator '%s' was never found containing text '%s'!",
+	                locator, text);
+	        WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
+	        wait.withMessage(errorMessage)
+	            .ignoring(StaleElementReferenceException.class);
+	        wait.until(ExpectedConditions.textToBePresentInElementLocated(locator, text));
+	        AppLogs.info("SUCCESS: Verified element with Locator '{}' contains text '{}'", locator, text);
+	    }
+
+	    
+	    public WebElement verifyElementPresented(By locator, int timeout) {
+	        int waitSeconds = getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
+	        final String errorMessage =
+	                format("Failure in verifyElementPresented: element '%s' never became presented after %d seconds!",
+	                        locator.toString(), waitSeconds);
+	        WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
+	        wait.withMessage(errorMessage).ignoring(StaleElementReferenceException.class);
+	        WebElement el = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+	        AppLogs.trace("SUCCESS: Verified element with Locator '{}' is present", locator.toString());
+	        return el;
+	    }
+
+	    
+	    public void verifyElementNotPresented(By locator, int timeout) {
+	        int waitSeconds = getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
+	        final String errorMessage = format("Failure in verifyElementNotPresented: element '%s' never became not presented after %d seconds!",
+	                locator, waitSeconds);
+	        WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
+	        wait.withMessage(errorMessage)
+	            .ignoring(StaleElementReferenceException.class);
+	        wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+	        AppLogs.trace("SUCCESS: Verified element with locator '{}' is NOT present", locator);
+	    }
+
+	    
+	    public void verifyElementWithTextNotPresented(By locator, String text, int timeout) {
+	        try {
+	            findElementContainingTextWithWait(locator, text, timeout);
+	            throw new RuntimeException(
+	                    format("Error in verifyElementWithTextNotPresented: found element with locator '%s' containing text '%s'!", locator, text));
+	        } catch (Exception e) {
+	            return;
+	        }
+	    }
+
+	    
+	    public void verifyElementSelected(By locator, int timeout) {
+	        int waitSeconds = getTimeout(timeoutsConfig.getClickTimeoutSeconds(), timeout);
+	        final String errorMessage = format("Failure in verifyElementSelected: Element '%s' never became selected after %d seconds!",
+	                locator, waitSeconds);
+	        WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
+	        wait.withMessage(errorMessage)
+	            .ignoring(StaleElementReferenceException.class);
+	        wait.until(ExpectedConditions.elementToBeSelected(locator));
+	    }
+
+	    
+	    public void verifyElementSelected(WebElement el, int timeout) {
+	        int waitSeconds = getTimeout(timeoutsConfig.getClickTimeoutSeconds(), timeout);
+	        final String errorMessage = format("Failure in verifyElementSelected: Element '%s' never became selected after %d seconds!",
+	                el.getTagName(), waitSeconds);
+	        WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
+	        wait.withMessage(errorMessage);
+	        wait.until(ExpectedConditions.elementToBeSelected(el));
+	        AppLogs.info("SUCCESS: Verified element <{}> is selected", el.getTagName());
+	    }
+
+	    
+	    public void verifyElementNotSelected(By locator, int timeout) {
+	        int waitSeconds = getTimeout(timeoutsConfig.getClickTimeoutSeconds(), timeout);
+	        final String errorMessage = format("Failure in verifyElementNotSelected: Element '%s' never became deselected after %d seconds!",
+	                locator, waitSeconds);
+	        WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
+	        wait.withMessage(errorMessage)
+	            .ignoring(StaleElementReferenceException.class);
+	        wait.until(ExpectedConditions.elementSelectionStateToBe(locator, false));
+	        AppLogs.info("SUCCESS: Verified element with locator '{}' is NOT selected", locator);
+	    }
+
+	    
+	    public void verifyElementNotSelected(WebElement el, int timeout) {
+	        int waitSeconds = getTimeout(timeoutsConfig.getClickTimeoutSeconds(), timeout);
+	        WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
+	        wait.until(ExpectedConditions.elementSelectionStateToBe(el, false));
+	        AppLogs.info("SUCCESS: Verified element <{}> is NOT selected", el.getTagName());
+	    }
+
+	    
+	    public WebElement verifyElementVisible(final By locator, int timeout) {
+	        final String errorMessage = format("Error in verifyElementVisible: element with locator '%s' never became visible", locator);
+	        return waitOnExpectedCondition(ExpectedConditions.visibilityOfElementLocated(locator), errorMessage, timeout);
+	    }
+
+	    
+	    public void verifyElementInvisible(By locator, int timeout) {
+	        waitOnExpectedCondition(ExpectedConditions.invisibilityOfElementLocated(locator),
+	                format("Failure in verifyElementInvisible waiting for element with locator '%s' to be invisible", locator), timeout);
+	    }
+
+	    
+	    public void verifyElementWithTextIsInvisible(By locator, String text, int timeout) {
+	        try {
+	            WebElement visibleEl = findVisibleElementContainingTextWithWait(locator, text, timeout);
+	            throw new RuntimeException(
+	                    format("Error in verifyElementWithTextIsInvisible: found element by locator '%s' containing text '%s'", locator, text));
+	        } catch (Exception e) {
+	            return; // OK - we didn't find a visible element containing the given text
+	        }
+	    }
+
+	    
+	    public void verifyElementRemoved(WebElement element, int timeout) {
+	        int waitSeconds = getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
+	        AppLogs.info("Waiting for element to become stale (removed from the DOM) using timeout of {} seconds", waitSeconds);
+	        waitOnExpectedConditionForSeconds(ExpectedConditions.stalenessOf(element),
+	                "Timeout waiting for web element to become stale (removed from the DOM).",
+	                waitSeconds);
+	        AppLogs.info("Verified web element became stale (removed from the DOM).");
+	    }
+
+	    
+	    public WebElement verifyPageRefreshed(WebElement elementFromBeforeRefresh, By locatorAfterRefresh, int timeout) {
+	        int waitSeconds = getTimeout(timeoutsConfig.getPageRefreshTimeoutSeconds(), timeout);
+	        AppLogs.info("Waiting for locator '{}' to be present after page refreshes, using timeout of {} seconds", locatorAfterRefresh, waitSeconds);
+	        waitOnExpectedConditionForSeconds(ExpectedConditions.stalenessOf(elementFromBeforeRefresh),
+	                "Timeout waiting for web element to become stale (waiting for page to reload).",
+	                waitSeconds);
+	        AppLogs.info("Verified web element became stale (page is reloading).");
+	        WebElement el = verifyElementPresented(locatorAfterRefresh, int.DEFAULT);
+	        AppLogs.info("Successfully verified page refreshed by finding web element with locator '{}'.", locatorAfterRefresh);
+
+	        return el;
+	    }
+
+	    public WebElement waitUntilClickable(By locator, int timeout) {
+	        int waitSeconds = getTimeout(timeoutsConfig.getClickTimeoutSeconds(), timeout);
+	        final String errorMessage = format("Element '%s' never became clickable after '%d' seconds", locator, waitSeconds);
+	        WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
+	        wait.withMessage(errorMessage)
+	            .ignoring(StaleElementReferenceException.class);
+	        AppLogs.info("Waiting for locator element '{}' to be clickable, using timeout of {} seconds", locator, waitSeconds);
+	        return wait.until(ExpectedConditions.elementToBeClickable(locator));
+	    }
+
+	    
+	    public WebElement waitUntilClickable(final WebElement el, int timeout) {
+	        int waitSeconds = getTimeout(timeoutsConfig.getClickTimeoutSeconds(), timeout);
+	        final String message = format("Element never became clickable after '%d' seconds", waitSeconds);
+	        WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
+	        wait.withMessage(message)
+	            .ignoring(StaleElementReferenceException.class);
+	        wait.until(new ExpectedCondition<WebElement>() {
+	            @Override
+	            public WebElement apply(WebDriver webDriver) {
+	                if (isClickable(el)) {
+	                    return el;
+	                }
+	                return null;
+	            }
+	        });
+	        return el;
+	    }
+	   
+	   
+	/**
 	 * 
 	 * @param input
 	 * @return
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
-	public void BrowserRefresh() throws MyException {
+	public void BrowserRefresh() throws SeleniumException {
 		try {
 			driver.navigate().refresh();
 		} catch(NoAlertPresentException e){
-			throw new MyException("WebAction -> DeclineAlert() , "+e);
+			throw new SeleniumException("WebAction -> DeclineAlert() , "+e);
 		}
 		catch (Exception e) {
-			throw new MyException("WebAction -> DeclineAlert() , "+e);
+			throw new SeleniumException("WebAction -> DeclineAlert() , "+e);
 		}
 	}
 	
@@ -552,16 +1432,16 @@ public abstract class WebAction implements IAction {
 	 * 
 	 * @param input
 	 * @return
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
-	public void BrowserForward() throws MyException {
+	public void BrowserForward() throws SeleniumException {
 		try {
 			driver.navigate().forward();
 		} catch(NoAlertPresentException e){
-			throw new MyException("WebAction -> DeclineAlert() , "+e);
+			throw new SeleniumException("WebAction -> DeclineAlert() , "+e);
 		}
 		catch (Exception e) {
-			throw new MyException("WebAction -> DeclineAlert() , "+e);
+			throw new SeleniumException("WebAction -> DeclineAlert() , "+e);
 		}
 	}
 	
@@ -569,16 +1449,16 @@ public abstract class WebAction implements IAction {
 	 * 
 	 * @param input
 	 * @return
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
-	public void BrowserBack() throws MyException {
+	public void BrowserBack() throws SeleniumException {
 		try {
 			driver.navigate().back();
 		} catch(NoAlertPresentException e){
-			throw new MyException("WebAction -> DeclineAlert() , "+e);
+			throw new SeleniumException("WebAction -> DeclineAlert() , "+e);
 		}
 		catch (Exception e) {
-			throw new MyException("WebAction -> DeclineAlert() , "+e);
+			throw new SeleniumException("WebAction -> DeclineAlert() , "+e);
 		}
 	}
 	
@@ -586,9 +1466,9 @@ public abstract class WebAction implements IAction {
 	 * 
 	 * @param input
 	 * @return
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
-	public boolean OpenURL(String URL) throws MyException {
+	public boolean OpenURL(String URL) throws SeleniumException {
 		boolean isValid = false;
 		try {
 			driver.navigate().to(URL);
@@ -600,10 +1480,10 @@ public abstract class WebAction implements IAction {
 				isValid = false;
 			}
 		} catch(NoAlertPresentException e){
-			throw new MyException("WebAction -> DeclineAlert() , "+e);
+			throw new SeleniumException("WebAction -> DeclineAlert() , "+e);
 		}
 		catch (Exception e) {
-			throw new MyException("WebAction -> DeclineAlert() , "+e);
+			throw new SeleniumException("WebAction -> DeclineAlert() , "+e);
 		}
 		return isValid;
 	}
@@ -671,4 +1551,71 @@ Assert that the broken images collection is empty
 	public void cleanSession() {
         driver.manage().deleteAllCookies();
     }
+	
+	protected void invokeMenuItemAndSelect(WebElement clickable, By popoverLocator) {
+        Preconditions.checkNotNull(clickable, "Input WebElement cannot be null");
+        waitUntilClickable(clickable, int.DEFAULT);
+        click(clickable, int.DEFAULT);
+        verifyElementPresented(popoverLocator, int.DEFAULT);
+        waitUntilClickable(popoverLocator, int.DEFAULT);
+        click(popoverLocator, int.DEFAULT);
+    }
+	////////////////////////////////////////////////////////////
+	protected List<WebElement> findElements(By locator, WebElement parentEl) {
+        if (parentEl == null) {
+            return webDriver.findElements(locator);
+        } else {
+            return parentEl.findElements(locator);
+        }
+    }
+
+    protected WebElement findElement(By locator, WebElement parentEl) {
+        if (parentEl == null) {
+            return webDriver.findElement(locator);
+        } else {
+            return parentEl.findElement(locator);
+        }
+    }
+
+    protected WebElement enterTextAndSelectFromList(WebElement inputField, String value, By popoverLocator,
+                                                    int withRetryCount, boolean slowly) throws SeleniumException {
+        boolean done = false;
+        int initialCount = withRetryCount;
+
+        do {
+            try {
+                enterTextAndSelectFromList(inputField, value, popoverLocator, slowly);
+                done = true;
+            } catch (Exception ex) {
+                AppLogs.error("Caught an exception " + ex.getMessage());
+            }
+            withRetryCount--;
+        } while (!done && withRetryCount > 0);
+
+        // Need to subtract 1, so that we have 0 retries if we succeeded on the first try.
+        int numberOfUsedRetries = initialCount - withRetryCount - 1;
+        if (numberOfUsedRetries > 0) {
+            AppLogs.warn(done ?
+                    format("Entered text successfully and selected locator '%s' from list after %d retries", popoverLocator, numberOfUsedRetries) :
+                    format("Failed to enter text and select locator '%s' from list.", popoverLocator));
+        }
+        if (!done) {
+            throw new SeleniumException(format("Failed to inputTextAndSelectFromList after %d retries", numberOfUsedRetries));
+        }
+        return inputField;
+    }
+
+    protected void enterTextAndSelectFromList(WebElement inputField, String value, By popoverLocator, boolean slowly) {
+        clearText(inputField);
+        if (slowly) {
+            inputTextSlowly(inputField, value);
+        } else {
+            inputText(inputField, value);
+        }
+        verifyElementPresented(popoverLocator, int.DEFAULT);
+        click(popoverLocator, int.DEFAULT);
+    }
+
+    
+	
 }

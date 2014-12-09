@@ -25,6 +25,13 @@ public class FirefoxBrowser {
 
 	}
 	
+	// Code to print Browser version/name
+		WebDriver driver = new FirefoxDriver();
+		Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
+		String browserName = caps.getBrowserName();
+		String browserVersion = caps.getVersion();
+		System.out.println(browserName+" "+browserVersion); 
+	
     public DesiredCapabilities getDesiredCapabilities() {
         DesiredCapabilities desiredCapabilities = DesiredCapabilities.firefox();
         desiredCapabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);

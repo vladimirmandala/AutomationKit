@@ -8,6 +8,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Set;
 
+import javax.annotation.Nonnull;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -113,6 +115,18 @@ public class MobileAction implements IAction{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public WebElement inputTextSlowly(@Nonnull WebElement el, String text) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void verifyElementRemoved(WebElement element, int timeout) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
