@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.framework.actions.WebAction;
-import com.framework.exception.MyException;
+import com.framework.exception.SeleniumException;
 
 public class HomePage extends WebAction{
 	public WebDriver driver;
@@ -19,16 +19,16 @@ public class HomePage extends WebAction{
 	 * Purpose : Initialize HomePage object, verifies SDG Login page is opened
 	 * 
 	 * @param driver
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
-	public HomePage(WebDriver driver) throws MyException {
+	public HomePage(WebDriver driver) throws SeleniumException {
 		super(driver);
 		AppLogs.info("HomePage() starts..");
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		// Check that we're on the right page.
 		if (!driver.getTitle().contains("Rediff")) {
-			throw new MyException("This is not the Home page");
+			throw new SeleniumException("This is not the Home page");
 		}
 		AppLogs.info("HomePage() ends..");
 	} 

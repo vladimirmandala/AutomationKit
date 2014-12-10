@@ -11,7 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 
-import com.framework.exception.MyException;
+import com.framework.exception.SeleniumException;
 
 
 public class CaptureBrowserScreenShot{
@@ -27,9 +27,9 @@ public class CaptureBrowserScreenShot{
  * Purpose : This method generates unique file name
  * 
  * @return GetDateTime
- * @throws MyException
+ * @throws SeleniumException
  */
-private String getDateTime() throws MyException {
+private String getDateTime() throws SeleniumException {
 	AppLogs.info("TestBase -> getDateTime() - starts..");
 	try {
 		SimpleDateFormat sdfDate = new SimpleDateFormat("dd-MM-yyyy");
@@ -42,7 +42,7 @@ private String getDateTime() throws MyException {
 		return (strDate + "_" + strTime);
 	}
 	catch (Exception e) {
-		throw new MyException("TestBase -> getDateTime() - ", e);
+		throw new SeleniumException("TestBase -> getDateTime() - ", e);
 	}
 }
 
@@ -52,7 +52,7 @@ private String getDateTime() throws MyException {
  * @throws IOException 
  * @throws Exception 
  */
-private File takeScreenShots(WebDriver driver) throws MyException, IOException {
+private File takeScreenShots(WebDriver driver) throws SeleniumException, IOException {
 	AppLogs.info("TestBase -> takeScreenShots() - starts..");
     try {
         File temp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -61,9 +61,9 @@ private File takeScreenShots(WebDriver driver) throws MyException, IOException {
         AppLogs.info("TestBase -> takeScreenShots() - ends..");
         return stored;
     }catch (WebDriverException somePlatformsDontSupportScreenshots) {
-    	throw new MyException("TestBase -> takeScreenShots() - ", somePlatformsDontSupportScreenshots);
+    	throw new SeleniumException("TestBase -> takeScreenShots() - ", somePlatformsDontSupportScreenshots);
     }catch(IOException e){
-    	throw new MyException("TestBase -> takeScreenShots() - ", e);
+    	throw new SeleniumException("TestBase -> takeScreenShots() - ", e);
     }
 }
 
@@ -71,21 +71,21 @@ private File takeScreenShots(WebDriver driver) throws MyException, IOException {
  * Purpose : This method embeds screenshot into Cucumber Jenkins report
  * 
  * @param scenario
- * @throws MyException
+ * @throws SeleniumException
  * @throws IOException 
  */
- public void embedScreenShotIntoReport(WebDriver driver) throws MyException, IOException{
+ public void embedScreenShotIntoReport(WebDriver driver) throws SeleniumException, IOException{
 	AppLogs.info("TestBase -> embedScreenShotIntoReport() - starts..");
 	     try {  
 	    	 takeScreenShots(driver);
          } catch (WebDriverException wde) {  
-        	 throw new MyException("TestBase -> embedScreenShotIntoReport() - ", wde);
+        	 throw new SeleniumException("TestBase -> embedScreenShotIntoReport() - ", wde);
          } catch (ClassCastException cce) {  
-        	 throw new MyException("TestBase -> embedScreenShotIntoReport() - ", cce);
+        	 throw new SeleniumException("TestBase -> embedScreenShotIntoReport() - ", cce);
          } catch(IOException Io){
-        	 throw new MyException("TestBase -> embedScreenShotIntoReport() - ", Io);
+        	 throw new SeleniumException("TestBase -> embedScreenShotIntoReport() - ", Io);
          } catch(Exception e){
-        	 throw new MyException("TestBase -> embedScreenShotIntoReport() - ", e);
+        	 throw new SeleniumException("TestBase -> embedScreenShotIntoReport() - ", e);
          }
      AppLogs.info("TestBase -> embedScreenShotIntoReport() - ends..");
   }  

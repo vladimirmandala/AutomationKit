@@ -53,6 +53,9 @@ public class DetailedLogs {
 		AppLogs.debug("Debug : " + logstr);
 	}
 
+	public void debug(String logstr, String Text, By locator) {
+		AppLogs.debug("Debug : " + logstr+" Text : "+Text+ " ,Locator : "+locator);
+	}
 	/**
 	 * Purpose : function to write info message in execution log file
 	 * 
@@ -62,8 +65,18 @@ public class DetailedLogs {
 		AppLogs.info("Info : " + logstr);
 	}
 
+	public void info(String logstr, Object o) {
+		AppLogs.info("Info : " + logstr);
+	}
+	public void info(String logstr,String logTag) {
+		AppLogs.info("Info : " + logstr+ " Tag : "+logTag);
+	}
 	public void info(String logstr, By locator) {
 		AppLogs.info("Info : " + logstr+ "Locator : "+locator);
+	}
+	
+	public void info(String logstr, String text, By locator) {
+		AppLogs.info("Info : " + logstr+" Text : "+text +"Locator : "+locator);
 	}
 	/**
 	 * Purpose : function to write warning message in execution log file
@@ -94,6 +107,9 @@ public class DetailedLogs {
 		AppLogs.error("Error : " + logstr);
 	}
 
+	public void error(String logstr, String Text, By locator) {
+		AppLogs.error("Error : " + logstr);
+	}
 	/***
 	 * 
 	 * @param location

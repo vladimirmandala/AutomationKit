@@ -33,7 +33,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
 
-import com.framework.exception.MyException;
+import com.framework.exception.SeleniumException;
 import com.framework.report.CaptureBrowserScreenShot;
 import com.framework.report.DetailedLogs;
 import com.framework.util.BrowserType;
@@ -60,18 +60,18 @@ public class TestBase {
 	
 	public DetailedLogs AppLogs = new DetailedLogs();
 	
-	protected TestBase() throws MyException{
+	protected TestBase() throws SeleniumException{
 		FileInputStream fs;
 		try {
 			fs = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\TestExecution.properties");
 		} catch (FileNotFoundException e) {
-			throw new MyException("Error in connecting with Remote WebDriver"+e);
+			throw new SeleniumException("Error in connecting with Remote WebDriver"+e);
 		}
 		
 		try {
 			TestExecution.load(fs);
 		} catch (IOException e) {
-			throw new MyException("Error in connecting with Remote WebDriver"+e);
+			throw new SeleniumException("Error in connecting with Remote WebDriver"+e);
 		}
 	}
 	
@@ -86,10 +86,10 @@ public class TestBase {
 	 * 
 	 * @param hubAddress
 	 * @throws MalformedURLException
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
 	public void startWebDriver(@Optional("localhost") String hubAddress)
-			throws MalformedURLException, MyException {
+			throws MalformedURLException, SeleniumException {
 		initPropertiesFile();
 		
 		String BrowserList [] = TestExecution.getProperty("Browser").split(":");
@@ -113,15 +113,15 @@ public class TestBase {
 				}
 			}catch(MalformedURLException e){
 				System.out.println("Error in Connecting with HUB URL  "+"http://" + hubAddress + ":" + "4444/wd/hub");
-				throw new MyException("Error in connecting with Remote WebDriver"+e);
+				throw new SeleniumException("Error in connecting with Remote WebDriver"+e);
 			}catch(Exception e){
-				throw new MyException("Error in connecting with Remote WebDriver"+e);
+				throw new SeleniumException("Error in connecting with Remote WebDriver"+e);
 			}
 	    }
 	}
 
 	public void startAppiumDriver(@Optional("Yes") String Mobile, @Optional("Android") String Device)
-			throws MalformedURLException, MyException {
+			throws MalformedURLException, SeleniumException {
 		initPropertiesFile();
 		try{
 			if (Mobiledriver == null) {
@@ -130,10 +130,10 @@ public class TestBase {
 				}
 			}
 		}catch(UnreachableBrowserException e){
-			throw new MyException("Appium is not started "+e);
+			throw new SeleniumException("Appium is not started "+e);
 		}
 		catch(Exception e){
-			throw new MyException("Error in start Appium"+e);
+			throw new SeleniumException("Error in start Appium"+e);
 		}
 	}
 	/**
@@ -194,11 +194,11 @@ public class TestBase {
 	 * takes browser screen shot in case of test fail
 	 * 
 	 * @param result
-	 * @throws MyException
+	 * @throws SeleniumException
 	 * @throws IOException
 	 */
 	@AfterMethod(alwaysRun = true)
-	public void TearDown(ITestResult result, Method testName) throws MyException, IOException {
+	public void TearDown(ITestResult result, Method testName) throws SeleniumException, IOException {
 		AppLogs.info("-------------" + testName.getName()+ " ---------- TearDown starts..");
 		if (!result.isSuccess()) {
 			captureBrowserScreenShot.embedScreenShotIntoReport(driver);
@@ -298,9 +298,9 @@ public class TestBase {
 	/**
 	 * Purpose : Loads .propertis file
 	 * 
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
-	private void initPropertiesFile() throws MyException {
+	private void initPropertiesFile() throws SeleniumException {
 		properties = new Properties();
 		try {
 			FileReader MobileDevicereader = new FileReader(
@@ -312,7 +312,7 @@ public class TestBase {
 							+ "//src//test//resources//Selenium.properties");
 			properties.load(Seleniumreader);
 		} catch (IOException e) {
-			throw new MyException("Failed to load Properties file" + e);
+			throw new SeleniumException("Failed to load Properties file" + e);
 		}
 	}
 	

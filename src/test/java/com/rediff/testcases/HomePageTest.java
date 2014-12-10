@@ -6,9 +6,15 @@ import org.testng.annotations.Test;
 
 import com.rediff.pages.HomePage;
 import com.rediff.pages.MailPage;
-import com.testtemplate.TestBase;
+import com.framework.exception.SeleniumException;
+import com.framework.testtemplate.TestBase;
 
 public class HomePageTest extends TestBase{
+
+	protected HomePageTest() throws SeleniumException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	MailPage mailPage = null;
 	HomePage homePage = null;

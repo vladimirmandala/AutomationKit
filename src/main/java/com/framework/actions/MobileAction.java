@@ -25,7 +25,7 @@ import org.openqa.selenium.support.PageFactory;
  * @author : Abhay Bharti
  * @version 1.0 22/09/14
  */
-public class MobileAction implements IAction{
+public class MobileAction implements Action{
 /*    startActivity()
     resetApp()
     getAppString()
@@ -117,16 +117,5 @@ public class MobileAction implements IAction{
 		}
 	}
 
-	@Override
-	public WebElement inputTextSlowly(@Nonnull WebElement el, String text) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void verifyElementRemoved(WebElement element, int timeout) {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 }

@@ -28,6 +28,10 @@
 Doubt
 1. Can we force Maven to download jars at specified location
 
+To Read
+- http://roadtoautomation.blogspot.in/2014/04/road-to-automate-html5-video-with.html
+http://roadtoautomation.blogspot.in/2013/04/road-to-parameterization-in-jmeter-test.html
+
 
 
 

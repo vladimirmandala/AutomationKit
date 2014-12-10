@@ -8,7 +8,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.framework.actions.WebAction;
-import com.framework.exception.MyException;
+import com.framework.exception.SeleniumException;
 
 public class MailPage extends WebAction{
 	
@@ -27,7 +27,7 @@ public WebDriver driver;
 	 * Purpose : Initialize MailPage object
 	 * 
 	 * @param driver
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
 	
 	public MailPage(WebDriver driver) {
@@ -41,14 +41,14 @@ public WebDriver driver;
 	/**
 	 * Purpose : Click on Log In button
 	 * 
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
-	public void clickLogin() throws MyException {
+	public void clickLogin() throws SeleniumException {
 		AppLogs.info("clickLogin() starts..");
 		try {
 			ClickOnWebElement(Btn_MailPage_Go);
 		} catch (NoSuchElementException e) {
-			throw new MyException("LoginPage -> clickLogin() - ", e);
+			throw new SeleniumException("LoginPage -> clickLogin() - ", e);
 		}
 		AppLogs.info("clickLogin() ends..");
 	}
@@ -57,13 +57,13 @@ public WebDriver driver;
 	 * Purpose : Set userName in Username edit field
 	 * 
 	 * @param userName
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
-	public void setUserName(String userName) throws MyException {
+	public void setUserName(String userName) throws SeleniumException {
 		try {
 			EnterValueText(Txt_MailPage_User, userName);
 		} catch (NoSuchElementException e) {
-			throw new MyException("LoginPage -> setUserName() - ", e);
+			throw new SeleniumException("LoginPage -> setUserName() - ", e);
 		}
 	}
 
@@ -71,13 +71,13 @@ public WebDriver driver;
 	 * Purpose : set password in Password Edit field
 	 * 
 	 * @param password
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
-	public void setPassword(String password) throws MyException {
+	public void setPassword(String password) throws SeleniumException {
 		try {
 			EnterValueText(Txt_MailPage_Password, password);
 		} catch (NoSuchElementException e) {
-			throw new MyException("LoginPage -> setPassword() - ", e);
+			throw new SeleniumException("LoginPage -> setPassword() - ", e);
 		}
 	}
 	
@@ -87,9 +87,9 @@ public WebDriver driver;
 	 * 
 	 * @param userName
 	 * @param Password
-	 * @throws MyException
+	 * @throws SeleniumException
 	 */
-	public void doLogin(String userName, String Password) throws MyException {
+	public void doLogin(String userName, String Password) throws SeleniumException {
 		String userName1 = "abc";
 		String userName2 = "11abc";
 
