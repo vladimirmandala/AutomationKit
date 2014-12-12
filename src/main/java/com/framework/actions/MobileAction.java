@@ -25,7 +25,7 @@ import org.openqa.selenium.support.PageFactory;
  * @author : Abhay Bharti
  * @version 1.0 22/09/14
  */
-public class MobileAction implements Action{
+public class MobileAction{
 /*    startActivity()
     resetApp()
     getAppString()

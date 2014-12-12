@@ -9,6 +9,7 @@ import java.util.Properties;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
 
 /**
@@ -75,8 +76,19 @@ public class DetailedLogs {
 		AppLogs.info("Info : " + logstr+ "Locator : "+locator);
 	}
 	
+	public void info(String logstr, By locator, String tagName) {
+		AppLogs.info("Info : " + logstr+ "Locator : "+locator+ " , tagName : "+tagName);
+	}
+	public void info(String logstr, By locator, int waitSeconds) {
+		AppLogs.info("Info : " + logstr+ "Locator : "+locator);
+	}
+	
 	public void info(String logstr, String text, By locator) {
 		AppLogs.info("Info : " + logstr+" Text : "+text +"Locator : "+locator);
+	}
+	
+	public void info(String logstr, String text, String tagName) {
+		AppLogs.info("Info : " + logstr+" Text : "+text +"Locator : "+tagName);
 	}
 	/**
 	 * Purpose : function to write warning message in execution log file
