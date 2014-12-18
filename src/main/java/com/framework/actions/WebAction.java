@@ -1121,6 +1121,7 @@ public abstract class WebAction implements Action {
         return el;
     }
 
+    /*
     @Override
     public <T, V> V waitOnFunction(Function<T, V> function, T input, String message, int timeout) {
         int waitSeconds = timeout; 
@@ -1151,7 +1152,7 @@ public abstract class WebAction implements Action {
         waitOnPredicate(predicate, new Object(), message, timeout);
     }
 
-    @Override
+ /*   @Override
     public <T> void waitOnPredicateWithRefresh(final Predicate<T> predicate, final T input, String message, int timeout) {
         int waitSeconds = timeout;
         		//getTimeout(timeoutsConfig.getMediumTimeoutSeconds(), timeout);
@@ -1171,7 +1172,7 @@ public abstract class WebAction implements Action {
             }
         });
     }
-
+ 
     @Override
     public void waitOnPredicateWithRefresh(final Predicate predicate, String message, int timeout) {
         waitOnPredicateWithRefresh(predicate, new Object(), message, timeout);
@@ -1230,7 +1231,7 @@ public abstract class WebAction implements Action {
         }
         AppLogs.info("Success verifying javascript symbol '{}' has value '{}'!", symbol, value);
     }
-
+**/
 	/**
 	 * Purpose : Download a file
 	 */
