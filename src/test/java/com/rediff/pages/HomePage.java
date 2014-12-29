@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.framework.actions.WebAction;
 import com.framework.exception.SeleniumException;
 
-public class HomePage extends WebAction{
+public abstract class HomePage extends WebAction{
 	public WebDriver driver;
 	
 	@FindBy(how = How.XPATH, using = "//*[@id='homewrapper']/div[5]/a[1]/div/u")
@@ -37,9 +37,6 @@ public class HomePage extends WebAction{
 		 ClickOnWebElement(Lnk_Homepage_Rediffmail);
 		 SwitchToBrowser("http://www.rediff.com/");
 		 return PageFactory.initElements(driver, MailPage.class);
-		 
-		 
-		 
 	 }
 	
 }

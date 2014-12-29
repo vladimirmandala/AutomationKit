@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.framework.actions.WebAction;
 import com.framework.exception.SeleniumException;
 
-public class MailPage extends WebAction{
+public abstract class MailPage extends WebAction{
 	
 public WebDriver driver;
 	
@@ -61,7 +61,7 @@ public WebDriver driver;
 	 */
 	public void setUserName(String userName) throws SeleniumException {
 		try {
-			EnterValueText(Txt_MailPage_User, userName);
+			inputText(Txt_MailPage_User, userName);
 		} catch (NoSuchElementException e) {
 			throw new SeleniumException("LoginPage -> setUserName() - ", e);
 		}
@@ -75,7 +75,7 @@ public WebDriver driver;
 	 */
 	public void setPassword(String password) throws SeleniumException {
 		try {
-			EnterValueText(Txt_MailPage_Password, password);
+			inputText(Txt_MailPage_Password, password);
 		} catch (NoSuchElementException e) {
 			throw new SeleniumException("LoginPage -> setPassword() - ", e);
 		}

@@ -31,21 +31,10 @@ Doubt
 To Read
 - http://roadtoautomation.blogspot.in/2014/04/road-to-automate-html5-video-with.html
 http://roadtoautomation.blogspot.in/2013/04/road-to-parameterization-in-jmeter-test.html
-
-
-
-
-
-
-
-
-
-
-
-Employee-Personal
-
-
-
-
-
-
+http://janalyser.com/jmeter-testplan-recording-best-practices/
+http://www.slideshare.net/catchnkn/apache-jmeter-best-practices-and-performance-tuning-tips
+http://www.slideshare.net/burgerboydaddy/load-test-drupal-site-using-jmeter-and-amazon-aws
+https://www.urbaninsight.com/2011/07/18/simple-load-test-with-jmeter
+http://flukeout.github.io/
+http://www.slideshare.net/tourdedave/how-to-use-selenium-successfully
+https://github.com/appium/java-workshop/tree/master/src/test/java/io/appium/test/workshop

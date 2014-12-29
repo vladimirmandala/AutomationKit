@@ -65,43 +65,6 @@ public abstract class WebAction implements Action {
 
 
 	
-	/**
-	 * Purpose: This method get all the attributes of a WebElement
-	 * @param object
-	 * @param attribute
-	 */
-	public void ReadFromWebElement(WebElement object, String attribute) {
-		AppLogs.info("ReadFromWebElement starts.. "+ "1st Arg : "+object.getText() + "2nd Arg : "+ attribute);
-		object.getAttribute(attribute);
-		AppLogs.info("ReadFromWebElement ends..");
-	}
-
-	/**
-	 * Purpose : This method enters text in Input box
-	 * @param object
-	 * @param input
-	 */
-	public void EnterValueText(WebElement object,String input) {
-		AppLogs.info("EnterValueText starts.."+ "1st Arg : "+object.getTagName() + "2nd Arg : "+ input);
-		object.clear();
-		object.sendKeys(input);
-		AppLogs.info("EnterValueText ends..");
-	}
-
-	/**
-	 * Purpose : Parameterized version, This method Type special key like Shift,Backspace, Enter, Tab, Shift along with text
-	 * @param object
-	 * @param input
-	 */
-	public void EnterValueText(WebElement object,Keys theKey, String input) throws SeleniumException{
-		AppLogs.info("EnterValueTextWithShit starts.." + "1st Arg : "+object.getTagName() + "2nd Arg : "+ input);
-		 try{
-			 object.sendKeys(Keys.chord(Keys.SHIFT,input));
-		 }catch(IllegalArgumentException e){
-			 throw new SeleniumException("WebAction -> EnterValueText(WebElement object,Keys theKey, String input)" + e);
-		 }
-			 AppLogs.info("EnterValueTextWithShit ends..");
-	}
 	
 	/**
 	 * Purpose : This is used to fetch the CSS properties' values of the given element. CSS properties
@@ -609,21 +572,21 @@ public abstract class WebAction implements Action {
 	}
 	
 	
-	@Override
+	
     public void acceptAlert(int timeout) {
         waitOnExpectedCondition(ExpectedConditions.alertIsPresent(),
                 "Waiting for javascript alert to be present before accepting alert.", timeout);
         webDriver.switchTo().alert().accept();
     }
 
-    @Override
+    
     public void dismissAlert(int timeout) {
         waitOnExpectedCondition(ExpectedConditions.alertIsPresent(),
                 "Waiting for javascript alert to be present before dismissing alert.", timeout);
         webDriver.switchTo().alert().dismiss();
     }
     
-    @Override
+    
     public <T> T waitOnExpectedCondition(ExpectedCondition<T> expectedCondition, String message, int timeout) {
         int waitSeconds = timeout; 
         		//getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout); //Default of web element presence timeout
@@ -642,7 +605,7 @@ public abstract class WebAction implements Action {
         return wait.until(expectedCondition);
     }
 
-    @Override
+    
     public WebElement clearText(By locator) {
         WebElement el = verifyElementPresented(locator, timeout);
         try {
@@ -655,7 +618,7 @@ public abstract class WebAction implements Action {
         return el;
     }
 
-    @Override
+    
     public WebElement clearText(@Nonnull WebElement el) {
         String tag = el.getTagName();
         try {
@@ -667,7 +630,7 @@ public abstract class WebAction implements Action {
         return el;
     }
 
-    @Override
+    
     public WebElement clickNoWait(By locator) throws SeleniumException {
         WebElement el = getElement(locator);
         if (!isClickable(el)) {
@@ -678,7 +641,7 @@ public abstract class WebAction implements Action {
         return el;
     }
 
-    @Override
+    
     public WebElement click(By locator, int timeout) {
         WebElement el = waitUntilClickable(locator, timeout);
         try {
@@ -692,7 +655,7 @@ public abstract class WebAction implements Action {
         return el;
     }
 
-    @Override
+    
     public WebElement click(WebElement el, int timeout) {
         waitUntilClickable(el, timeout);
         String tag = el.getTagName();
@@ -701,7 +664,7 @@ public abstract class WebAction implements Action {
         return el;
     }
     
-    @Override
+    
     public WebElement waitUntilClickable(By locator, int timeout) {
         int waitSeconds = timeout; 
         		//getTimeout(timeoutsConfig.getClickTimeoutSeconds(), timeout);
@@ -712,7 +675,7 @@ public abstract class WebAction implements Action {
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
-    @Override
+    
     public WebElement waitUntilClickable(final WebElement el, int timeout) {
         int waitSeconds = timeout; 
         		//getTimeout(timeoutsConfig.getClickTimeoutSeconds(), timeout);
@@ -720,7 +683,7 @@ public abstract class WebAction implements Action {
         WebDriverWait wait = new WebDriverWait(webDriver, waitSeconds);
         wait.withMessage(message).ignoring(StaleElementReferenceException.class);
         wait.until(new ExpectedCondition<WebElement>() {
-            @Override
+            
             public WebElement apply(WebDriver webDriver) {
                 if (isClickable(el)) {
                     return el;
@@ -731,7 +694,7 @@ public abstract class WebAction implements Action {
         return el;
     }
     
-    @Override
+    
     public boolean isClickable(By locator) {
         WebElement el = getElement(locator);
         if (el == null) {
@@ -740,7 +703,7 @@ public abstract class WebAction implements Action {
         return isClickable(el);
     }
     
-    @Override
+    
     public boolean isClickable(WebElement el) {
         if (el == null) {
             return false;
@@ -758,7 +721,7 @@ public abstract class WebAction implements Action {
         return true;
     }
     
-    @Override
+    
     @Nullable
     public WebElement getElement(By locator) {
         List<WebElement> elements = findElements(locator, null);
@@ -768,7 +731,7 @@ public abstract class WebAction implements Action {
         return null;
     }
     
-    @Override
+    
     public WebElement verifyElementPresented(By locator, int timeout) {
         int waitSeconds = timeout;
         		//getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
@@ -856,20 +819,20 @@ public abstract class WebAction implements Action {
         click(popoverLocator, timeout);
     }
 
-    @Override
+    
     public WebElement inputTextSlowly(By locator, String text) {
         WebElement el = getElementWithWait(locator);
         AppLogs.info("Inputting text '{}' into web element with locator '{}'", text, locator);
         return inputTextSlowly(el, text);
     }
 
-    @Override
+    
     @Nonnull
     public WebElement getElementWithWait(By locator) {
         return getChildElementWithWait(locator, null);
     }
 
-    @Override
+    
     public WebElement inputTextSlowly(@Nonnull WebElement el, String text) {
         AppLogs.info("Inputting text {} slowly into web element {}", text, el.getTagName());
         for (Character c : text.toCharArray()) {
@@ -883,7 +846,7 @@ public abstract class WebAction implements Action {
         return el;
     }
     
-    @Override
+    
     @Nonnull
     public WebElement getChildElementWithWait(By locator, WebElement parentEl) {
         try {
@@ -898,13 +861,13 @@ public abstract class WebAction implements Action {
         }
     }
 
-    @Override
+    
     @Nonnull
     public WebElement getParentElement(WebElement el) {
         return el.findElement(By.xpath(".."));
     }
 
-    @Override
+    
     @Nonnull
     public WebElement inputText(By locator, String text) {
     	AppLogs.info("Inputting text '{}' into element with locator '{}'", text, locator);
@@ -917,7 +880,7 @@ public abstract class WebAction implements Action {
         return el;
     }
 
-    @Override
+    
     @Nonnull
     public WebElement inputText(@Nonnull WebElement el, String text) {
         AppLogs.info("Inputting text '{}' into web element <{}>", text, el.getTagName());
@@ -928,22 +891,44 @@ public abstract class WebAction implements Action {
         }
         return el;
     }
-    
-    
-    /**
+
+	/**
+	 * Purpose : Parameterized version, This method Type special key like Shift,Backspace, Enter, Tab, Shift along with text
+	 * @param object
+	 * @param input
+	 */
+	public void inputText(@Nonnull WebElement el,Keys theKey, String input) throws SeleniumException{
+		AppLogs.info("EnterValueTextWithShit starts.." + "1st Arg : "+el.getTagName() + "2nd Arg : "+ input);
+		 try{
+			 el.sendKeys(Keys.chord(Keys.SHIFT,input));
+		 }catch(IllegalArgumentException e){
+			 throw new SeleniumException("WebAction -> EnterValueText(WebElement object,Keys theKey, String input)" + e);
+		 }
+			 AppLogs.info("EnterValueTextWithShit ends..");
+	}
+
+	/**
+	 * Purpose: This method get all the attributes of a WebElement
+	 * @param object
+	 * @param attribute
+	 */
+	public void ReadFromWebElement(WebElement object, String attribute) {
+		AppLogs.info("ReadFromWebElement starts.. "+ "1st Arg : "+object.getText() + "2nd Arg : "+ attribute);
+		object.getAttribute(attribute);
+		AppLogs.info("ReadFromWebElement ends..");
+	}
+
+
+	/**
      * Conditions according to selenium Javadoc for an element to be clickable
      */
-	
-	
     
-
-    @Override
     public boolean isVisible(By locator) {
         WebElement el = getElement(locator);
         return isVisible(el);
     }
 
-    @Override
+    
     public boolean isVisible(WebElement el) {
         if (el == null) {
             return false;
@@ -956,20 +941,20 @@ public abstract class WebAction implements Action {
         }
     }
 
-    @Override
+    
     public void scrollIntoView(By locator) {
         WebElement el = verifyElementPresented(locator,timeout);
         scrollIntoView(el);
     }
 
-    @Override
+    
     public void scrollIntoView(WebElement el) {
         int scrollHeight = ((WebDriver) webDriver).manage().window().getSize().getHeight();
         int y = Math.max(0, el.getLocation().getY() - scrollHeight / 2); //Subtract half the window height so its in the middle of the viewable area.
         executeJavascript(format("window.scrollTo(%d, %d)", 0, y));
     }
 
-    @Override
+    
     public void scrollIntoView(By scrollContainerLocator, By locator) {
         WebElement parent = verifyElementPresented(scrollContainerLocator, timeout);
         WebElement el = verifyElementPresented(locator, timeout);
@@ -980,7 +965,7 @@ public abstract class WebAction implements Action {
         executeJavascript(format("$('%s').scrollTop(%d)", scrollContainerLocator, scrollTo));
     }
 
-    @Override
+    
     public void scrollIntoView(By scrollContainerLocator, WebElement el) {
         WebElement parent = verifyElementPresented(scrollContainerLocator, timeout);
         int currentScrollTop = ((Long) executeJavascript(format("return $('%s').scrollTop()", scrollContainerLocator))).intValue();
@@ -990,7 +975,7 @@ public abstract class WebAction implements Action {
         executeJavascript(format("$('%s').scrollTop(%d)", scrollContainerLocator, scrollTo));
     }
 
-    @Override
+    
     public void verifyElementContainsText(final By locator, final String text, int timeout) {
         int waitSeconds = timeout; 
         		//getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
@@ -1001,9 +986,6 @@ public abstract class WebAction implements Action {
         AppLogs.info("SUCCESS: Verified element with Locator '{}' contains text '{}'", locator, text);
     }
 
-   
-
-    @Override
     public void verifyElementNotPresented(By locator, long timeout) {
         long waitSeconds = timeout; 
         		//getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
@@ -1016,7 +998,7 @@ public abstract class WebAction implements Action {
         AppLogs.info("SUCCESS: Verified element with locator '{}' is NOT present", locator);
     }
 
-    @Override
+    
     public void verifyElementWithTextNotPresented(By locator, String text, int timeout) {
         try {
             findElementContainingTextWithWait(locator, text, timeout);
@@ -1027,7 +1009,7 @@ public abstract class WebAction implements Action {
         }
     }
 
-    @Override
+    
     public void verifyElementSelected(By locator, int timeout) {
         int waitSeconds = timeout; 
         		//getTimeout(timeoutsConfig.getClickTimeoutSeconds(), timeout);
@@ -1039,7 +1021,7 @@ public abstract class WebAction implements Action {
         wait.until(ExpectedConditions.elementToBeSelected(locator));
     }
 
-    @Override
+    
     public void verifyElementSelected(WebElement el, int timeout) {
         int waitSeconds = timeout; 
         		//getTimeout(timeoutsConfig.getClickTimeoutSeconds(), timeout);
@@ -1051,7 +1033,7 @@ public abstract class WebAction implements Action {
         AppLogs.info("SUCCESS: Verified element <{}> is selected", el.getTagName());
     }
 
-    @Override
+    
     public void verifyElementNotSelected(By locator, int timeout) {
         int waitSeconds = timeout; 
         		//getTimeout(timeoutsConfig.getClickTimeoutSeconds(), timeout);
@@ -1063,7 +1045,7 @@ public abstract class WebAction implements Action {
         AppLogs.info("SUCCESS: Verified element with locator '{}' is NOT selected", locator);
     }
 
-    @Override
+    
     public void verifyElementNotSelected(WebElement el, int timeout) {
         int waitSeconds = timeout; 
         		//getTimeout(timeoutsConfig.getClickTimeoutSeconds(), timeout);
@@ -1072,19 +1054,19 @@ public abstract class WebAction implements Action {
         AppLogs.info("SUCCESS: Verified element <{}> is NOT selected", el.getTagName());
     }
 
-    @Override
+    
     public WebElement verifyElementVisible(final By locator, int timeout) {
         final String errorMessage = format("Error in verifyElementVisible: element with locator '%s' never became visible", locator);
         return waitOnExpectedCondition(ExpectedConditions.visibilityOfElementLocated(locator), errorMessage, timeout);
     }
 
-    @Override
+    
     public void verifyElementInvisible(By locator, int timeout) {
         waitOnExpectedCondition(ExpectedConditions.invisibilityOfElementLocated(locator),
                 format("Failure in verifyElementInvisible waiting for element with locator '%s' to be invisible", locator), timeout);
     }
 
-    @Override
+    
     public void verifyElementWithTextIsInvisible(By locator, String text, int timeout) {
         try {
             WebElement visibleEl = findVisibleElementContainingTextWithWait(locator, text, timeout);
@@ -1095,7 +1077,7 @@ public abstract class WebAction implements Action {
         }
     }
 
-    @Override
+    
     public void verifyElementRemoved(WebElement element, int timeout) {
         int waitSeconds = timeout; 
         		//getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
@@ -1106,7 +1088,7 @@ public abstract class WebAction implements Action {
         AppLogs.info("Verified web element became stale (removed from the DOM).");
     }
 
-    @Override
+    
     public WebElement verifyPageRefreshed(WebElement elementFromBeforeRefresh, By locatorAfterRefresh, int timeout) {
         int waitSeconds = timeout; 
         		//getTimeout(timeoutsConfig.getPageRefreshTimeoutSeconds(), timeout);
@@ -1121,8 +1103,19 @@ public abstract class WebAction implements Action {
         return el;
     }
 
+    public boolean exists(By locator) {
+        List<WebElement> elements = findElements(locator, null);
+        return elements.size() > 0;
+    }
+
+    
+    public boolean exists(By locator, WebElement parentEl) {
+        List<WebElement> elements = findElements(locator, parentEl);
+        return elements.size() > 0;
+    }
+    
     /*
-    @Override
+    
     public <T, V> V waitOnFunction(Function<T, V> function, T input, String message, int timeout) {
         int waitSeconds = timeout; 
         		//getTimeout(timeoutsConfig.getMediumTimeoutSeconds(), timeout);
@@ -1135,7 +1128,7 @@ public abstract class WebAction implements Action {
         return fluentWait.until(function);
     }
 
-    @Override
+    
     public <T> void waitOnPredicate(Predicate<T> predicate, T input, String message, TimeoutType timeout) {
         int waitSeconds = getTimeout(timeoutsConfig.getMediumTimeoutSeconds(), timeout);
         FluentWait<T> fluentWait = new FluentWait<T>(input)
@@ -1147,12 +1140,12 @@ public abstract class WebAction implements Action {
         fluentWait.until(predicate);
     }
 
-    @Override
+    
     public void waitOnPredicate(Predicate predicate, String message, TimeoutType timeout) {
         waitOnPredicate(predicate, new Object(), message, timeout);
     }
 
- /*   @Override
+ /*   
     public <T> void waitOnPredicateWithRefresh(final Predicate<T> predicate, final T input, String message, int timeout) {
         int waitSeconds = timeout;
         		//getTimeout(timeoutsConfig.getMediumTimeoutSeconds(), timeout);
@@ -1162,7 +1155,7 @@ public abstract class WebAction implements Action {
 
         AppLogs.info("Waiting on expected condition, using timeout of {} seconds", waitSeconds);
         wait.until(new Predicate<WebDriver>() {
-            @Override
+            
             public boolean apply(@Nullable WebDriver webDriver) {
                 if (predicate.apply(input)) {
                     return true;
@@ -1173,12 +1166,12 @@ public abstract class WebAction implements Action {
         });
     }
  
-    @Override
+    
     public void waitOnPredicateWithRefresh(final Predicate predicate, String message, int timeout) {
         waitOnPredicateWithRefresh(predicate, new Object(), message, timeout);
     }
     
-    @Override
+    
     public Object executeJavascript(String script) {
         AppLogs.info("Executing javascript: '{}'", script);
         try {
@@ -1187,7 +1180,7 @@ public abstract class WebAction implements Action {
             throw new RuntimeException(format("Exception executing Javascript '%s':", script), e);
         }
     }
-    @Override
+    
     public void waitForJavascriptSymbolToBeDefined(final String symbol, int timeout) {
         int waitSeconds = timeout; 
         		//getTimeout(timeoutsConfig.getPageLoadTimeoutSeconds(), timeout);
@@ -1196,7 +1189,7 @@ public abstract class WebAction implements Action {
         try {
             wait.until(new ExpectedCondition<Object>() {
                 @Nullable
-                @Override
+                
                 public Object apply(@Nullable WebDriver input) {
                     Object jsResult = executeJavascript(format("return (typeof %s != 'undefined') && (%s != null)", symbol, symbol));
                     AppLogs.debug("javascript result: " + jsResult);
@@ -1210,7 +1203,7 @@ public abstract class WebAction implements Action {
         AppLogs.info("Success verifying javascript symbol '{}' is defined!", symbol);
     }
 
-    @Override
+    
     public void waitForJavascriptSymbolToHaveValue(final String symbol, final String value, int timeout) {
         int waitSeconds = timeout;
         WebDriverWait wait = new WebDriverWait(webDriver, waitSeconds, DEFAULT_POLL_MILLIS); //Check every 100ms
@@ -1218,7 +1211,7 @@ public abstract class WebAction implements Action {
         try {
             wait.until(new ExpectedCondition<Object>() {
                 @Nullable
-                @Override
+                
                 public Object apply(@Nullable WebDriver input) {
                     Object jsResult = executeJavascript(format("return (%s) === (%s)", symbol, value));
                     AppLogs.debug("javascript result: " + jsResult);
@@ -1283,10 +1276,6 @@ Assert that the broken images collection is empty
 	}
 	
 	/*
-	 
-	
-
-    @Override
     public WebElement clickAndVerifyPresent(By locatorToClick, By locatorToVerifyPresent, TimeoutType timeout) {
         click(locatorToClick, timeout);
         logger.info("After click, waiting for '{}' to be present.", locatorToVerifyPresent);
@@ -1300,7 +1289,7 @@ Assert that the broken images collection is empty
         return wait.until(ExpectedConditions.presenceOfElementLocated(locatorToVerifyPresent));
     }
 
-    @Override
+    
     public WebElement clickAndVerifyPresent(WebElement el, By locatorToVerifyPresent, TimeoutType timeout) {
         click(el, timeout);
         logger.info("After click, waiting for '{}' to be present.", locatorToVerifyPresent);
@@ -1314,21 +1303,21 @@ Assert that the broken images collection is empty
         return wait.until(ExpectedConditions.presenceOfElementLocated(locatorToVerifyPresent));
     }
 
-    @Override
+    
     public WebElement clickAndVerifyVisible(By locatorToClick, By locatorToVerifyVisible, TimeoutType timeout) {
         click(locatorToClick, timeout);
         logger.info("After click, waiting for '{}' to be visible.", locatorToVerifyVisible);
         return verifyElementVisible(locatorToVerifyVisible, timeout);
     }
 
-    @Override
+    
     public WebElement clickAndVerifyVisible(WebElement el, By locatorToVerifyVisible, TimeoutType timeout) {
         click(el, timeout);
         logger.info("After click, waiting for '{}' to be visible.", locatorToVerifyVisible);
         return verifyElementVisible(locatorToVerifyVisible, timeout);
     }
 
-    @Override
+    
     public void clickAndVerifyNotPresent(By locatorToClick, By locatorToVerifyNotPresent, TimeoutType timeout) {
         click(locatorToClick, timeout);
         logger.info("After click, waiting for '{}' to NOT be present.", locatorToVerifyNotPresent);
@@ -1342,7 +1331,7 @@ Assert that the broken images collection is empty
                 ExpectedConditions.presenceOfAllElementsLocatedBy(locatorToVerifyNotPresent)));
     }
 
-    @Override
+    
     public void clickAndVerifyNotPresent(WebElement el, By locatorToVerifyNotPresent, TimeoutType timeout) {
         click(el, timeout);
         logger.info("After click, waiting for '{}' to NOT be present.", locatorToVerifyNotPresent);
@@ -1356,41 +1345,41 @@ Assert that the broken images collection is empty
                 ExpectedConditions.presenceOfAllElementsLocatedBy(locatorToVerifyNotPresent)));
     }
 
-    @Override
+    
     public void clickAndVerifyNotVisible(By locatorToClick, By locatorToVerifyNotVisible, TimeoutType timeout) {
         click(locatorToClick, timeout);
         logger.info("After click, waiting for '{}' to NOT be visible.", locatorToVerifyNotVisible);
         verifyElementInvisible(locatorToVerifyNotVisible, timeout);
     }
 
-    @Override
+    
     public void clickAndVerifyNotVisible(WebElement el, By locatorToVerifyNotVisible, TimeoutType timeout) {
         click(el, timeout);
         logger.info("After click, waiting for '{}' to NOT be visible.", locatorToVerifyNotVisible);
         verifyElementInvisible(locatorToVerifyNotVisible, timeout);
     }
 
-    @Override
+    
     public void clickAndSelectFromList(By locatorToClick, By popoverLocator) {
         invokeMenuItemAndSelect(getElement(locatorToClick), popoverLocator);
     }
 
-    @Override
+    
     public void clickAndSelectFromList(WebElement clickable, By popoverLocator) {
         invokeMenuItemAndSelect(clickable, popoverLocator);
     }
     
 
-    @Override
+    
     public String getWebPageReadyState() throws Exception {
         return (String) executeJavascript("return document.readyState;");
     }
 
-    @Override
+    
     public void waitForWebPageReadyStateToBeComplete() {
         final int waitSeconds = timeoutsConfig.getPageLoadTimeoutSeconds();
         waitOnPredicate(new Predicate() {
-            @Override
+            
             public boolean apply(@Nullable Object o) {
                 try {
                     String readyState = getWebPageReadyState();
@@ -1410,19 +1399,10 @@ Assert that the broken images collection is empty
      * According to Selenium Javadoc, this is the correct way to check for existence of an element.
      */
 	/*
-    @Override
-    public boolean exists(By locator) {
-        List<WebElement> elements = findElements(locator, null);
-        return elements.size() > 0;
-    }
+    
+    
 
-    @Override
-    public boolean exists(By locator, WebElement parentEl) {
-        List<WebElement> elements = findElements(locator, parentEl);
-        return elements.size() > 0;
-    }
-
-    @Override
+    
     public WebElement findElementContainingText(By locator, String text) {
         List<WebElement> matches = findElements(locator, null);
         for (WebElement el : matches) {
@@ -1439,7 +1419,7 @@ Assert that the broken images collection is empty
         return null;
     }
 
-    @Override
+    
     public WebElement findVisibleElementContainingText(By locator, String text) {
         List<WebElement> matches = findElements(locator, null);
         for (WebElement el : matches) {
@@ -1456,7 +1436,7 @@ Assert that the broken images collection is empty
         return null;
     }
 
-    @Override
+    
     public WebElement findVisibleElementContainingTextWithWait(final By locator, final String text, TimeoutType timeout) {
         int waitSeconds = getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
         final String message = String.format("Timeout waiting %d seconds to find element containing text '%s' with locator '%s'",
@@ -1466,7 +1446,7 @@ Assert that the broken images collection is empty
                 .withMessage(message);
 
         return wait.until(new ExpectedCondition<WebElement>() {
-            @Override
+            
             public WebElement apply(@Nullable WebDriver input) {
                 WebElement el = findVisibleElementContainingText(locator, text);
                 if (el == null) {
@@ -1477,12 +1457,12 @@ Assert that the broken images collection is empty
         });
     }
 
-    @Override
+    
     public WebElement findElementWithRefresh(final By locator, TimeoutType timeout) {
         return findElementContainingTextWithRefresh(locator, "", timeout);
     }
 
-    @Override
+    
     public WebElement findElementContainingTextWithRefresh(final By locator, final String text, TimeoutType timeout) {
         int waitSeconds = getTimeout(timeoutsConfig.getPollingWithRefreshTimeoutSeconds(), timeout);
         WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
@@ -1491,7 +1471,7 @@ Assert that the broken images collection is empty
         logger.info("Waiting for element containing text '{}' defined by locator '{}', timeout of {} seconds", new Object[]{text, locator, waitSeconds});
         try {
             WebElement found = wait.until(new ExpectedCondition<WebElement>() {
-                @Override
+                
                 public WebElement apply(@Nullable WebDriver input) {
                     long start = new Date().getTime();
                     while ((new Date().getTime() - start) / 1000 < timeoutsConfig.getPauseBetweenRefreshSeconds()) {
@@ -1514,12 +1494,12 @@ Assert that the broken images collection is empty
         }
     }
 
-    @Override
+    
     public WebElement findVisibleElementWithRefresh(final By locator, TimeoutType timeout) {
         return findVisibleElementContainingTextWithRefresh(locator, "", timeout);
     }
 
-    @Override
+    
     public WebElement findVisibleElementContainingTextWithRefresh(final By locator, final String text, TimeoutType timeout) {
         int waitSeconds = getTimeout(timeoutsConfig.getPollingWithRefreshTimeoutSeconds(), timeout);
         WebDriverWait wait = new WebDriverWait(webDriver(), waitSeconds);
@@ -1528,7 +1508,7 @@ Assert that the broken images collection is empty
         logger.info("Waiting for element containing text '{}' defined by locator '{}', timeout of {} seconds", new Object[]{text, locator, waitSeconds});
         try {
             WebElement found = wait.until(new ExpectedCondition<WebElement>() {
-                @Override
+                
                 public WebElement apply(@Nullable WebDriver input) {
                     long start = new Date().getTime();
                     while ((new Date().getTime() - start) / 1000 < timeoutsConfig.getPauseBetweenRefreshSeconds()) {
@@ -1551,7 +1531,7 @@ Assert that the broken images collection is empty
         }
     }
 
-    @Override
+    
     public WebElement findElementContainingTextWithWait(final By locator, final String text, TimeoutType timeout) {
         final int waitSeconds = getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
         final String msg = format("Failure in findElementContainingTextWithWait: never found text '%s' in element " +
@@ -1561,7 +1541,7 @@ Assert that the broken images collection is empty
             .withMessage(msg);
 
         return wait.until(new ExpectedCondition<WebElement>() {
-            @Override
+            
             public WebElement apply(@Nullable WebDriver input) {
                 WebElement el = findElementContainingText(locator, text);
                 if (el == null) {
@@ -1572,7 +1552,7 @@ Assert that the broken images collection is empty
         });
     }
 
-    @Override
+    
     public WebElement findElementContainingChild(final By parentLocator, final By childLocator) {
         List<WebElement> parents = webDriver().findElements(parentLocator);
         for (WebElement el: parents) {
@@ -1588,7 +1568,7 @@ Assert that the broken images collection is empty
         return null;
     }
 
-    @Override
+    
     public List<WebElement> findElementsContainingChild(final By parentLocator, final By childLocator) {
         List<WebElement> parents = webDriver().findElements(parentLocator);
         List<WebElement> parentsWithChild = Lists.newArrayList();
@@ -1605,7 +1585,7 @@ Assert that the broken images collection is empty
         return parentsWithChild;
     }
 
-    @Override
+    
     public WebElement findElementContainingChildWithWait(final By parentLocator, final By childLocator, TimeoutType timeout) {
         final int waitSeconds = getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
         final String msg = format("Failure in findElementContainingChildWithWait: never found element " +
@@ -1615,14 +1595,14 @@ Assert that the broken images collection is empty
                 .withMessage(msg);
 
         return wait.until(new ExpectedCondition<WebElement>() {
-            @Override
+            
             public WebElement apply(@Nullable WebDriver input) {
                 return findElementContainingChild(parentLocator, childLocator);
             }
         });
     }
 
-    @Override
+    
     public List<WebElement> findElementsContainingChildWithWait(final By parentLocator, final By childLocator, TimeoutType timeout) {
         final int waitSeconds = getTimeout(timeoutsConfig.getWebElementPresenceTimeoutSeconds(), timeout);
         final String msg = format("Failure in findElementContainingChildWithWait: never found element " +
@@ -1632,7 +1612,7 @@ Assert that the broken images collection is empty
                 .withMessage(msg);
 
         return wait.until(new ExpectedCondition<List<WebElement>>() {
-            @Override
+            
             public List<WebElement> apply(@Nullable WebDriver input) {
                List<WebElement> parents = findElementsContainingChild(parentLocator, childLocator);
                if (parents.size() > 0) {
@@ -1643,7 +1623,7 @@ Assert that the broken images collection is empty
         });
     }
 
-    @Override
+    
     @Nullable
     public WebElement getChildElement(By locator, WebElement parentEl) {
         List<WebElement> elements = findElements(locator, parentEl);
@@ -1655,53 +1635,46 @@ Assert that the broken images collection is empty
 
  
 
-    @Override
+    
     @Nonnull
     public List<WebElement> getChildElements(By locator, WebElement parentEl) {
         return findElements(locator, parentEl);
     }
 
-    @Override
+    
     @Nonnull
     public List<WebElement> getElements(By locator) {
         return findElements(locator, null);
     }
 
-  
-
-   
-
-    @Override
     public WebElement inputTextAndSelectFromList(WebElement inputField, String value, By popoverLocator) throws SeleniumActionsException {
         return inputTextAndSelectFromList(inputField, value, popoverLocator, 0);         // default is no retries
     }
 
-    @Override
+    
     public WebElement inputTextAndSelectFromList(WebElement inputField, String value, By popoverLocator,
                                                  int withRetryCount) throws SeleniumActionsException {
         return enterTextAndSelectFromList(inputField, value, popoverLocator, withRetryCount, false);
     }
 
    
-
-    @Override
     public WebElement inputTextSlowlyAndSelectFromList(WebElement inputField, String value, By popoverLocator) throws SeleniumActionsException {
         return inputTextSlowlyAndSelectFromList(inputField, value, popoverLocator, 0);      // default is no retries
     }
 
-    @Override
+    
     public WebElement inputTextSlowlyAndSelectFromList(WebElement inputField, String value, By popoverLocator,
                                                        int withRetryCount) throws SeleniumActionsException {
         return enterTextAndSelectFromList(inputField, value, popoverLocator, withRetryCount, true);
     }
 
-    @Override
+    
     public void enterTextForAutoCompleteAndSelectFirstMatch(By inputLocator, String text, By popoverLocator,
                                                             String requiredPopupText) {
         enterTextForAutoCompleteAndSelectFirstMatch(inputLocator, 0, text, popoverLocator, requiredPopupText);
     }
 
-    @Override
+    
     public void enterTextForAutoCompleteAndSelectFirstMatch(By inputLocator, int minChars, String text, By popoverLocator,
                                                             String requiredPopupText) {
         if (minChars > text.length()) {
@@ -1738,28 +1711,21 @@ Assert that the broken images collection is empty
         throw new RuntimeException(format("No popup defined by Locator  '%s' found with required text '%s'", popoverLocator, requiredPopupText));
     }
 
-    @Override
+    
     public void inputTinyMceText(String text) {
         waitForTinyMceToBeReady();
         ((JavascriptExecutor) webDriver()).executeScript(format("tinyMCE.activeEditor.setContent(\"%s\")", text));
     }
 
-    @Override
+    
     public void waitForTinyMceToBeReady() {
         waitForJavascriptSymbolToBeDefined("tinyMCE", TimeoutType.DEFAULT);
         waitForJavascriptSymbolToBeDefined("tinyMCE.activeEditor", TimeoutType.DEFAULT);
         waitForJavascriptSymbolToHaveValue("tinyMCE.activeEditor.initialized", "true", TimeoutType.DEFAULT);
     }
 
-   
-
-    
-   
-
-  
-
     //////////////////////////////////////Timeouts//////////////////////////////////////////////
-    @Override
+    
     public TimeoutsConfig getTimeoutsConfig() {
         return timeoutsConfig;
     }
@@ -1852,7 +1818,7 @@ Assert that the broken images collection is empty
     public WebElement verifyElementHasClass(final By locator, final String locatorClass, TimeoutType timeout) {
         return waitOnFunction(new Function<SeleniumActions, WebElement>() {
                                   @Nullable
-                                  @Override
+                                  
                                   public WebElement apply(SeleniumActions input) {
                                       WebElement el = input.verifyElementPresented(locator, TimeoutType.DEFAULT);
                                       if (WebElementHelpers.webElementHasClass(el, locatorClass)) {
@@ -1868,7 +1834,7 @@ Assert that the broken images collection is empty
     public WebElement verifyElementDoesNotHaveClass(final By locator, final String locatorClass, TimeoutType timeout) {
         return waitOnFunction(new Function<SeleniumActions, WebElement>() {
                                   @Nullable
-                                  @Override
+                                  
                                   public WebElement apply(SeleniumActions input) {
                                       WebElement el = input.verifyElementPresented(locator, TimeoutType.DEFAULT);
                                       if (!WebElementHelpers.webElementHasClass(el, locatorClass)) {
